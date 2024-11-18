@@ -40,16 +40,20 @@
             background: white;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+        }
+        .about-section {
             display: flex;
             align-items: center;
             gap: 20px;
         }
-        .section h2 {
-            color: #007acc;
-        }
-        .projects img, .section img {
+        .about-section img {
             width: 250px;
-            max-height: 250px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .projects img {
+            width: 100%;
+            max-height: 400px;
             object-fit: cover;
             border-radius: 8px;
         }
@@ -87,7 +91,7 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <div class="section" id="about">
+    <div class="section about-section" id="about">
         <img src="https://github.com/ABnano/abnano.github.io/raw/main/AB.jpg" alt="Profile Picture">
         <div>
             <h2>About Me <i class="fas fa-user"></i></h2>
@@ -156,7 +160,6 @@
         <p><i class="fas fa-graduation-cap"></i> Google Scholar: <a href="https://scholar.google.com/citations?user=J5UZz7sAAAAJ&hl=en">Google Scholar Profile</a></p>
         <img src="https://via.placeholder.com/800x300" alt="Contact Image">
     </div>
-
     <footer>
         <p>&copy; 2024 Anand Babu, Ph.D.</p>
     </footer>
