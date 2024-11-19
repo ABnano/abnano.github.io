@@ -4,245 +4,386 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anand Babu, Ph.D.</title>
-<style>
-        html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        }
-    body {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(to bottom, #f4f4f4, #e8e8e8);
-        color: #333;
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-    }
-    header {
-        background: linear-gradient(to right, #007acc, #005fa3);
-        color: white;
-        padding: 20px;
-        text-align: center;
-    }
-    header h1 {
-        margin: 0;
-    }
-    nav {
-        text-align: center;
-        margin: 20px 0;
-    }
-    nav a {
-        margin: 0 15px;
-        text-decoration: none;
-        color: #007acc;
-        font-weight: bold;
-    }
-    .section {
-        max-width: 900px;
-        margin: 20px auto;
-        padding: 20px;
-        background: white;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-    }
-    .scrollable-list {
-        max-height: 200px;
-        overflow-y: auto;
-        border: 1px solid #ccc;
-        padding: 10px;
-        background: #f9f9f9;
-        border-radius: 8px;
-        margin-bottom: 0; /* Remove extra margin */
-    }
-    .about-section {
-        display: flex;
-        align-items: flex-start; /* Top alignment */
-        gap: 20px;
-        margin-bottom: 0; /* Remove extra space */
-    }
-    .about-section img {
-        width: 250px;
-        height: auto;
-        border-radius: 8px;
-    }
-    footer {
-        text-align: center;
-        padding: 10px; /* Reduced padding */
-        background: linear-gradient(to right, #333, #555);
-        color: white;
-        margin: 0;
-    }
-    @media (max-width: 768px) {
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link to Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+    <style>
+        /* Global Styles */
         body {
-            padding: 10px;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
-        .about-section {
-            flex-direction: column;
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #007acc, #005fa3);
+            color: white;
+            padding: 60px 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-        .about-section img {
-            width: 100%;
-            max-width: 300px;
+        header::after {
+            content: '';
+            background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+            opacity: 0.2;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
         }
-        .projects img {
-            max-height: 300px;
-            object-fit: contain;
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            z-index: 1;
+            position: relative;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            margin: 0;
+            list-style: none;
+        }
+        nav li {
+            margin: 0 15px;
         }
         nav a {
-            display: block;
-            margin: 10px 0;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 8px 15px;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: 5px;
         }
-    }
-</style>
+        nav a:hover {
+            background-color: #007acc;
+            color: #fff;
+        }
+
+        /* Sections */
+        .section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            position: relative;
+            color: #005fa3;
+        }
+        .section h2::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: #007acc;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+        }
+
+        /* About Section */
+        .about-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+        .about-section img {
+            width: 350px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+        .about-section p {
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+
+        /* Skills Section */
+        .skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+        }
+        .skills li {
+            width: 45%;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        .skills li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin-right: 10px;
+            color: #007acc;
+        }
+
+        /* Other Sections */
+        .services ul, .grants ul, .awards ul, .hands-on-training ul {
+            list-style: none;
+            padding: 0;
+        }
+        .services li, .grants li, .awards li, .hands-on-training li {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            position: relative;
+            padding-left: 30px;
+        }
+        .services li::before, .grants li::before, .awards li::before, .hands-on-training li::before {
+            content: '\f0a9';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #007acc;
+        }
+
+        /* Projects Section */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .projects img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .projects p {
+            font-size: 1.1em;
+        }
+
+        /* Publications Section */
+        .scrollable-list {
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        .scrollable-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .scrollable-list li {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        .scrollable-list li::before {
+            content: '\f02d';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin-right: 10px;
+            color: #007acc;
+        }
+
+        /* Contact Section */
+        #contact p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        #contact a {
+            color: #007acc;
+            text-decoration: none;
+        }
+        #contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #005fa3;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Scrollbar Styling */
+        .scrollable-list::-webkit-scrollbar {
+            width: 8px;
+        }
+        .scrollable-list::-webkit-scrollbar-thumb {
+            background-color: #007acc;
+            border-radius: 4px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .about-section img {
+                width: 100%;
+                max-width: 400px;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav li {
+                margin: 10px 0;
+            }
+            .skills li {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <h1>Anand Babu, Ph.D.</h1>
         <p><i class="fas fa-flask"></i> Postdoctoral Research Scientist | <i class="fas fa-brain"></i> Machine Learning Enthusiast | <i class="fas fa-microchip"></i> Nanomaterials Expert</p>
     </header>
 
     <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#services">Services</a>
-        <a href="#grants">Grants & Funding</a>
-        <a href="#awards">Awards & Honors</a>
-        <a href="#projects">Highlighted Projects</a>
-        <a href="#publications">Selected Publications</a>
-        <a href="#invited-talks">Invited Talks</a>
-        <a href="#hands-on-training">Hands-On Training</a>
-        <a href="#contact">Contact</a>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#grants">Grants & Funding</a></li>
+            <li><a href="#awards">Awards & Honors</a></li>
+            <li><a href="#projects">Highlighted Projects</a></li>
+            <li><a href="#publications">Selected Publications</a></li>
+            <li><a href="#invited-talks">Invited Talks</a></li>
+            <li><a href="#hands-on-training">Hands-On Training</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
     <div class="section about-section" id="about">
-        <img src="https://github.com/ABnano/abnano.github.io/raw/main/AB2.jpg" alt="Profile Picture" style="width: auto; height: 200px; object-fit: contain; border-radius: 2px;>
+        <img src="https://github.com/ABnano/abnano.github.io/raw/main/AB2.jpg" alt="Profile Picture">
         <div>
             <h2>About Me <i class="fas fa-user"></i></h2>
             <p>
-                I am a Postdoctoral Research Scientist at Université catholique de Louvain (UCLouvain), specializing in
-                Bio-Integrated AI, nanomaterials, and machine learning applications. My research focuses on
-                cutting-edge innovations in healthcare diagnostics and electronic devices. Currently, I am working on the 
-                deployment of generative AI models, particularly Variational Autoencoders (VAEs) and Diffusion Models, 
-                for the discovery of novel material structures. I have completed my Ph.D. degree from the Institute of Nano 
-                Science and Technology (INST)-Indian Institute of Science Education and Research (IISER), Mohali. My doctoral 
-                thesis mainly focuses on the fabrication of piezo-, tribo- and flexo-electric sensors and mechanical energy 
-                harvesters and studying their nanoscale properties, 3D printing, self-powered biomedical devices, and acoustic 
-                sensors, including IoT and IoMT technologies, and integrating them with machine learning algorithms.
+                I am a Postdoctoral Research Scientist at Université catholique de Louvain (UCLouvain), specializing in Bio-Integrated AI, nanomaterials, and machine learning applications. My research focuses on cutting-edge innovations in healthcare diagnostics and electronic devices. Currently, I am working on the deployment of generative AI models, particularly Variational Autoencoders (VAEs) and Diffusion Models, for the discovery of novel material structures. I have completed my Ph.D. degree from the Institute of Nano Science and Technology (INST)-Indian Institute of Science Education and Research (IISER), Mohali. My doctoral thesis mainly focuses on the fabrication of piezo-, tribo- and flexo-electric sensors and mechanical energy harvesters and studying their nanoscale properties, 3D printing, self-powered biomedical devices, and acoustic sensors, including IoT and IoMT technologies, and integrating them with machine learning algorithms.
             </p>
         </div>
     </div>
 
-    <div class="section" id="skills">
+    <div class="section skills" id="skills">
         <h2>Skills <i class="fas fa-tools"></i></h2>
         <ul>
-            <li><i class="fas fa-code"></i> Machine Learning (ML), Deep Neural Networks (DNN), Python, R, and Data Science Tools</li>
-            <li><i class="fas fa-laptop-code"></i> Density Functional Theory (DFT), Finite Element Analysis (FEA), and Band Structure Analysis</li>
-            <li><i class="fas fa-print"></i> Device Fabrication Techniques: 3D Printing, Screen Printing, Lithography</li>
-            <li><i class="fas fa-stethoscope"></i> Programming for Biomedical Devices and Real-Time Sensor Integration</li>
-            <li><i class="fas fa-network-wired"></i> Development of IoT-enabled Systems Using ESP32, Arduino, and Raspberry Pi</li>
+            <li>Machine Learning (ML), Deep Neural Networks (DNN), Python, R, and Data Science Tools</li>
+            <li>Density Functional Theory (DFT), Finite Element Analysis (FEA), and Band Structure Analysis</li>
+            <li>Device Fabrication Techniques: 3D Printing, Screen Printing, Lithography</li>
+            <li>Programming for Biomedical Devices and Real-Time Sensor Integration</li>
+            <li>Development of IoT-enabled Systems Using ESP32, Arduino, and Raspberry Pi</li>
         </ul>
     </div>
 
-    <div class="section" id="services">
+    <div class="section services" id="services">
         <h2>Services <i class="fas fa-concierge-bell"></i></h2>
         <ul>
-            <li><i class="fas fa-user-tie"></i><b>Guest Editor</b> - <a href="https://iopscience.iop.org/collections/nano-240822-649" target="_blank">Nanotechnology (IOP Science)</a>.</li>
-            <li><i class="fas fa-clipboard-check"></i><b>Referee</b> - Journals such as Small, Advanced Materials, Applied Physics Letters, and Physical Review Letters.</li>
-            <li><i class="fas fa-users-cog"></i><b>Event Organizer</b> - ECPSC committee, Materials Research Society (MRS).</li>
-            <li><i class="fas fa-users"></i><b>Student Ambassador</b> - American Physical Society (APS).</li>
-            <li><i class="fas fa-flask"></i><b>Member and Volunteer</b> - American Chemical Society (ACS) and IEEE.</li>
-            <li><i class="fas fa-chalkboard-teacher"></i> Academic Mentorship and Research Guidance in Machine Learning and Nanotechnology</li>
+            <li><b>Guest Editor</b> - <a href="https://iopscience.iop.org/collections/nano-240822-649" target="_blank">Nanotechnology (IOP Science)</a></li>
+            <li><b>Referee</b> - Journals such as Small, Advanced Materials, Applied Physics Letters, and Physical Review Letters</li>
+            <li><b>Event Organizer</b> - ECPSC committee, Materials Research Society (MRS)</li>
+            <li><b>Student Ambassador</b> - American Physical Society (APS)</li>
+            <li><b>Member and Volunteer</b> - American Chemical Society (ACS) and IEEE</li>
+            <li>Academic Mentorship and Research Guidance in Machine Learning and Nanotechnology</li>
         </ul>
     </div>
 
-    <div class="section" id="grants">
+    <div class="section grants" id="grants">
         <h2>Grants & Funding <i class="fas fa-money-bill-alt"></i></h2>
         <ul>
-            <li><i class="fas fa-hand-holding-usd"></i><b>APS Annual Leadership Meeting Grant</b> - Awarded by the American Physical Society (APS), 2024.</li>
-            <li><i class="fas fa-hand-holding-usd"></i><b>APS GERA Energy Workshop Funding Grant</b> - Awarded by APS March Meeting, 2023.</li>
-            <li><i class="fas fa-hand-holding-usd"></i><b>Raman-Charpak Fellowship</b> - Awarded by the Indo-French Centre for Promotion of Advanced Research(IFCPAR/CEFIPRA), 2022.</li>
-            <li><i class="fas fa-hand-holding-usd"></i><b>SERB-ITS Funding Award</b> - Awarded by the Science and Engineering Research Board (SERB), Government of India, 2022.</li>
-            <li><i class="fas fa-hand-holding-usd"></i><b>UGC-JRF Fellowship</b> - Awarded by the University Grants Commission (UGC), Ministry of Education, Government of India.</li>
-            <li><i class="fas fa-hand-holding-usd"></i><b>DST-INSPIRE Scholarship</b> - Awarded by the Department of Science and Technology (DST), Government of India, for higher education and research excellence.</li>
+            <li><b>APS Annual Leadership Meeting Grant</b> - Awarded by the American Physical Society (APS), 2024</li>
+            <li><b>APS GERA Energy Workshop Funding Grant</b> - Awarded by APS March Meeting, 2023</li>
+            <li><b>Raman-Charpak Fellowship</b> - Awarded by the Indo-French Centre for Promotion of Advanced Research(IFCPAR/CEFIPRA), 2022</li>
+            <li><b>SERB-ITS Funding Award</b> - Awarded by the Science and Engineering Research Board (SERB), Government of India, 2022</li>
+            <li><b>UGC-JRF Fellowship</b> - Awarded by the University Grants Commission (UGC), Ministry of Education, Government of India</li>
+            <li><b>DST-INSPIRE Scholarship</b> - Awarded by the Department of Science and Technology (DST), Government of India, for higher education and research excellence</li>
         </ul>
     </div>
-    <div class="section" id="awards">
+
+    <div class="section awards" id="awards">
         <h2>Awards & Honors <i class="fas fa-trophy"></i></h2>
         <ul>
-            <li><i class="fas fa-award"></i><b>Young Scientist Award</b> - Materials Research Society of India (MRSI), 2023.</li>
-            <li><i class="fas fa-award"></i><b>Early Career Materials Researcher</b> - MRS Communications, 2023.</li>
-            <li><i class="fas fa-award"></i><b>Raman Charpak Fellow</b> - Indo-French Centre for Promotion of Advanced Research, 2022.</li>
-            <li><i class="fas fa-award"></i><b>Best Oral Presentation Award</b> - APA NANOFORUM, 2022.</li>
-            <li><i class="fas fa-award"></i><b>Best Poster Award</b> - 65th Solid State Physics Symposium, DAE, 2022.</li>
-            <li><i class="fas fa-award"></i><b>National Eligibility Test (NET)</b> - Qualified 3 times, Joint CSIR-UGC Examination, 2018-2019.</li>
-            <li><i class="fas fa-award"></i><b>Graduate Aptitude Test in Engineering (GATE)</b> - Qualified 2 times, 2018-2019.</li>
-            <li><i class="fas fa-award"></i><b>Joint Admission Test for Masters (JAM)</b> - Qualified, 2016.</li>
-            <li><i class="fas fa-award"></i><b>DST-INSPIRE Scholarship</b> - Department of Science and Technology (DST), 2013-2016.</li>
+            <li><b>Young Scientist Award</b> - Materials Research Society of India (MRSI), 2023</li>
+            <li><b>Early Career Materials Researcher</b> - MRS Communications, 2023</li>
+            <li><b>Raman Charpak Fellow</b> - Indo-French Centre for Promotion of Advanced Research, 2022</li>
+            <li><b>Best Oral Presentation Award</b> - APA NANOFORUM, 2022</li>
+            <li><b>Best Poster Award</b> - 65th Solid State Physics Symposium, DAE, 2022</li>
+            <li><b>National Eligibility Test (NET)</b> - Qualified 3 times, Joint CSIR-UGC Examination, 2018-2019</li>
+            <li><b>Graduate Aptitude Test in Engineering (GATE)</b> - Qualified 2 times, 2018-2019</li>
+            <li><b>Joint Admission Test for Masters (JAM)</b> - Qualified, 2016</li>
+            <li><b>DST-INSPIRE Scholarship</b> - Department of Science and Technology (DST), 2013-2016</li>
         </ul>
     </div>
-    <div class="section" id="projects">
+
+    <div class="section projects" id="projects">
         <h2>Highlighted Projects <i class="fas fa-project-diagram"></i></h2>
         <div class="projects">
-            <img src="https://github.com/ABnano/abnano.github.io/raw/main/Journal.jpg" alt="AI-Enabled Wearable Sensor" style="width: auto; height: 600px; object-fit: contain; border-radius: 8px;">
-            <p>
-                <i class="fas fa-microchip"></i>
-            </p>
+            <div>
+                <img src="https://github.com/ABnano/abnano.github.io/raw/main/Journal.jpg" alt="AI-Enabled Wearable Sensor">
+                <p>AI-Enabled Wearable Sensor</p>
+            </div>
+            <!-- You can add more project items here -->
         </div>
     </div>
+
     <div class="section" id="publications">
-    <h2>Publications <i class="fas fa-book"></i></h2>
-    <div class="scrollable-list">
+        <h2>Selected Publications <i class="fas fa-book"></i></h2>
+        <div class="scrollable-list">
+            <ul>
+                <!-- Your list of publications -->
+                <!-- Each list item is already styled -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="section" id="invited-talks">
+        <h2>Invited Talks <i class="fas fa-microphone-alt"></i></h2>
         <ul>
-            <li><i class="fas fa-book-open"></i><b>Algorithmically Enhanced Wearable Multimodal Emotion Sensor</b> - <a href="https://doi.org/10.1002/aisy.202400567">Advanced Intelligent Systems</a>, 2024.</li>
-            <li><i class="fas fa-book-open"></i><b>Machine Learning-enabled Nanoscale Phase Prediction</b> - <a href="https://doi.org/10.1002/smll.202405393">Small</a>, 2024.</li>
-            <li><i class="fas fa-book-open"></i><b>SciQu: Accelerating Materials Properties Prediction</b> - <a href="https://arxiv.org/abs/2407.08270">arXiv</a>, 2024.</li>
-            <li><i class="fas fa-book-open"></i><b>Self-learning e-Skin Respirometer</b> - <a href="#">Advanced Sensor Research</a>, 2024.</li>
-            <li><i class="fas fa-book-open"></i><b>Can Entanglement-enhanced Quantum Kernels Improve Data Classification?</b> - <a href="https://arxiv.org/abs/2406.01948">arXiv</a>, 2024.</li>
-            <li><i class="fas fa-book-open"></i><b>Roadmap to Human-Machine Interaction through Triboelectric Nanogenerator and Machine Learning Convergence</b> - <a href="https://doi.org/10.1021/acsaem.1c02782">ACS Applied Energy Materials</a>, 2024.</li>
-            <li><i class="fas fa-book-open"></i><b>Programmable Polymeric-Interface for Voiceprint Biometrics</b> - <a href="https://doi.org/10.1002/admt.202301551">Advanced Materials Technologies</a>, 2024. (Selected for Journal Cover Page)</li>
-            <li><i class="fas fa-book-open"></i><b>AI-enabled wearable sensor for real-time monitored personalized training for sportspersons</b> - <a href="https://doi.org/10.1557/s43579-023-00185-1">MRS Communications</a>, 2023. (Invited article for Early Career Materials Researcher)</li>
-            <li><i class="fas fa-book-open"></i><b>Deep Learning Enabled Perceptive Wearable Sensor: An Interactive Gadget for Tracking Movement Disorder</b> - <a href="https://doi.org/10.1002/admt.202300046">Advanced Materials Technologies</a>, 2023. (Selected as Hot Article in AI/ML Category)</li>
-            <li><i class="fas fa-book-open"></i><b>Deep Learning Enabled Early Predicting Cardiovascular Status Using Highly Sensitive Piezoelectric Sensor of Solution‐Processable Nylon‐11</b> - <a href="https://doi.org/10.1002/admt.202202021">Advanced Materials Technologies</a>, 2023. (Selected as Hot Article in AI/ML Category)</li>
-            <li><i class="fas fa-book-open"></i><b>Surface Potential Tuned Single Active Material Comprised Triboelectric Nanogenerator for High-Performance Voice Recognition Sensor</b> - <a href="https://doi.org/10.1002/smll.202201331">Small</a>, 2022. (Selected as Hot Article in Surface-Interface Category)</li>
-            <li><i class="fas fa-book-open"></i><b>Negatively Bias Driven Enhancement in Piezo response for Self-powered Biomedical and Facial Expression Sensor</b> - <a href="https://doi.org/10.1063/5.0079451">Applied Physics Letters</a>, 2022.</li>
-            <li><i class="fas fa-book-open"></i><b>Curved Structured 3D Printed Flexible Triboelectric Nanogenerator</b> - <a href="#">DAE Solid State Physics Symposium Proceedings</a>, 2021.</li>
-            <li><i class="fas fa-book-open"></i><b>Revisiting δ-PVDF Based Piezoelectric Nanogenerator for Self-powered Pressure Mapping Sensor</b> - <a href="https://doi.org/10.1063/5.0082797">Applied Physics Letters</a>, 2021.</li>
-            <li><i class="fas fa-book-open"></i><b>Futuristic Alzheimer's Therapy: Acoustic-Stimulated Piezoelectric Nanospheres for Amyloid Reduction</b> - <a href="https://doi.org/10.1039/D3BM01231H">Biomaterials Science</a>, 2024.</li>
-            <li><i class="fas fa-book-open"></i><b>Tunable, Conductive, Self-healing, and Injectable Hydrogels for Bioelectronics and Tissue Regeneration Applications</b> - <a href="https://doi.org/10.1039/D1TB00835G">Journal of Materials Chemistry B</a>, 2021.</li>
-            <li><i class="fas fa-book-open"></i><b>PVDF/AgCO3 Nanocomposites for Efficient Dye Degradation and Flexible Piezoelectric Mechanical Energy Harvester</b> - <a href="https://doi.org/10.1039/D1SE00425A">Sustainable Energy Fuels</a>, 2022.</li>
-            <li><i class="fas fa-book-open"></i><b>Lead-Free Perovskite Cs3Bi2I9 Derived Electroactive PVDF Composite Based Piezoelectric Nanogenerator</b> - <a href="https://doi.org/10.1021/acs.langmuir.2c01016">Langmuir</a>, 2022.</li>
-            <li><i class="fas fa-book-open"></i><b>Machine Learning Aided All-Organic Air Permeable Piezoelectric Nanogenerator</b> - <a href="https://doi.org/10.1021/acssuschemeng.3c02358">ACS Sustainable Chemistry and Engineering</a>, 2023.</li>
-            <li><i class="fas fa-book-open"></i><b>Mott interactions driven insulating behavior in Ruthenium based double perovskites: A2SmRuO6 (A = Ba & Sr)</b> - <a href="https://doi.org/10.1016/j.jallcom.2023.176184">Journal of Alloys and Compounds</a>, 2024.</li>
+            <li><b>AI-enabled self-powered sensors</b> - Jointly organized by Prakash Bharti and the IEEE Photonics Society</li>
+            <li><b>Intelligent Sensors for Next Generation Electronic Devices</b> - Organized by IMS, University of Bordeaux, France</li>
+            <li><b>Indo-French Science in the Spotlight</b> - Organized by The Ambassador of France, Emmanuel Lenain, with Dr. Antoine Petit, CEO of CNRS</li>
+            <li><b>IEEE Sensors Advisory Committee Leadership Summit</b> - October 2023, Department of Homeland Security and IEEE Sensors Council, Seattle, Washington</li>
+            <li><b>Programmable Piezoelectric Multimodal Emotional Sensors</b> - International Conference on Health, Safety and Environment, December 23-24, 2023, Institute of Fire and Safety Engineering, Haldia, West Bengal, India</li>
         </ul>
     </div>
-        <div class="section" id="invited-talks">
-    <h2>Invited Talks <i class="fas fa-microphone-alt"></i></h2>
-    <ul>
-            <li><i class="fas fa-chalkboard-teacher"></i><b>AI-enabled self-powered sensors</b> - Jointly organized by Prakash Bharti and the IEEE Photonics Society.</li>
-            <li><i class="fas fa-chalkboard-teacher"></i><b>Intelligent Sensors for Next Generation Electronic Devices</b> - Organized by IMS, University of Bordeaux, France.</li>
-            <li><i class="fas fa-chalkboard-teacher"></i><b>Indo-French Science in the Spotlight</b> - Organized by The Ambassador of France, Emmanuel Lenain, with Dr. Antoine Petit, CEO of CNRS.</li>
-            <li><i class="fas fa-chalkboard-teacher"></i><b>IEEE Sensors Advisory Committee Leadership Summit</b> - October 2023, Department of Homeland Security and IEEE Sensors Council, Seattle, Washington.</li>
-            <li><i class="fas fa-chalkboard-teacher"></i><b>Programmable Piezoelectric Multimodal Emotional Sensors</b> - International Conference on Health, Safety and Environment, December 23-24, 2023, Institute of Fire and Safety Engineering, Haldia, West Bengal, India.</li>
-    </ul>
-</div>
-    <div class="section" id="hands-on-training">
-    <h2>Hands-On Training <i class="fas fa-tools"></i></h2>
-    <ul>
-            <li><i class="fas fa-laptop-code"></i><b>AI/ML, QML, and Data Science</b> - Development of various supervised, unsupervised, and reinforcement learning models using Python and MATLAB, including Random Forest Regression (RFR), Logistic Regression, SVM, DNN, and Q-Learning.</li>
-            <li><i class="fas fa-cogs"></i><b>Device/Sensors Fabrication Instruments</b> - Experience with MEMS/NEMS fabrication using Micro Writer, 3D Printers, Professional Screen and Stencil Printers (Ekra X5), and Electrospinning equipment.</li>
-            <li><i class="fas fa-microscope"></i><b>Materials Characterizations/Electrical Measurements Instruments</b> - Expertise in Scanning Probe Microscopy techniques (AFM, PFM, KPFM, EFM, MFM), XPS, UPS, FTIR, Impedance Analyzer, and Digital Storage Oscilloscope.</li>
-            <li><i class="fas fa-network-wired"></i><b>Electronic Interfacing for IoT and Web Design Tools</b> - Development of IoT-enabled systems using ESP32, ESP8266, Arduino, and Raspberry Pi; web design with JavaScript and HTML.</li>
-            <li><i class="fas fa-flask"></i><b>Establishment and Development of Customized Setups/Instruments</b> - Designed experimental setups for contact electrification studies and nanoscale laser measurements.</li>
-    </ul>
-</div>
+
+    <div class="section hands-on-training" id="hands-on-training">
+        <h2>Hands-On Training <i class="fas fa-tools"></i></h2>
+        <ul>
+            <li><b>AI/ML, QML, and Data Science</b> - Development of various supervised, unsupervised, and reinforcement learning models using Python and MATLAB, including Random Forest Regression (RFR), Logistic Regression, SVM, DNN, and Q-Learning</li>
+            <li><b>Device/Sensors Fabrication Instruments</b> - Experience with MEMS/NEMS fabrication using Micro Writer, 3D Printers, Professional Screen and Stencil Printers (Ekra X5), and Electrospinning equipment</li>
+            <li><b>Materials Characterizations/Electrical Measurements Instruments</b> - Expertise in Scanning Probe Microscopy techniques (AFM, PFM, KPFM, EFM, MFM), XPS, UPS, FTIR, Impedance Analyzer, and Digital Storage Oscilloscope</li>
+            <li><b>Electronic Interfacing for IoT and Web Design Tools</b> - Development of IoT-enabled systems using ESP32, ESP8266, Arduino, and Raspberry Pi; web design with JavaScript and HTML</li>
+            <li><b>Establishment and Development of Customized Setups/Instruments</b> - Designed experimental setups for contact electrification studies and nanoscale laser measurements</li>
+        </ul>
+    </div>
+
     <div class="section" id="contact">
         <h2>Contact <i class="fas fa-envelope"></i></h2>
         <p><i class="fas fa-envelope"></i> Email: <a href="mailto:ababu.nano@gmail.com">ababu.nano@gmail.com</a></p>
         <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/ABnano">https://github.com/ABnano</a></p>
         <p><i class="fas fa-graduation-cap"></i> Google Scholar: <a href="https://scholar.google.com/citations?user=J5UZz7sAAAAJ&hl=en">Google Scholar Profile</a></p>
     </div>
+
     <footer>
         <p>&copy; 2024 Anand Babu, Ph.D.</p>
     </footer>
+
 </body>
 </html>
