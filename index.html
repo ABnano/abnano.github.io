@@ -6,25 +6,16 @@
     <title>Anand Babu, Ph.D.</title>
     <style>
         /* General Reset */
-        html, body {
+        * {
             margin: 0;
             padding: 0;
-            height: 100%;
             box-sizing: border-box;
         }
 
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(to bottom, #ffffff, #e6f7ff);
-            color: #2d2d2d;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        main {
-            flex: 1;
+            background: linear-gradient(to bottom, #f8f9fa, #e8f5e9);
+            color: #333;
         }
 
         header {
@@ -32,63 +23,62 @@
             color: white;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
-            font-size: 2.2em;
-            margin: 0;
-            letter-spacing: 1px;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
 
         header p {
-            font-size: 1.1em;
-            margin-top: 10px;
+            font-size: 1.2rem;
+            margin: 0;
         }
 
         nav {
-            text-align: center;
-            margin: 0;
-            padding: 15px;
             background: #e3f2fd;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
-            margin: 0 10px;
+            margin: 0 15px;
             text-decoration: none;
             color: #0d47a1;
             font-weight: bold;
-            font-size: 1em;
+            font-size: 1rem;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
             color: #42a5f5;
-            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
         }
 
         .section {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
             background: white;
-            border: 1px solid #e0e0e0;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            text-align: center;
-            min-height: 300px; /* Ensures all sections have consistent height */
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-height: 300px; /* Ensure consistent height */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
 
         .section h2 {
-            font-size: 1.8em;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
             color: #0d47a1;
-            margin-bottom: 15px;
+            text-align: center;
         }
 
         .about-section {
@@ -101,38 +91,43 @@
         .about-section img {
             width: 250px;
             height: auto;
-            border-radius: 12px;
+            border-radius: 8px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
 
         ul {
-            padding-left: 20px;
-            line-height: 1.8;
-            text-align: left;
-            list-style: none;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1rem;
         }
 
         ul li::before {
             content: "•";
             color: #0d47a1;
-            margin-right: 8px;
+            font-weight: bold;
+            margin-right: 10px;
         }
 
         .scrollable-list {
             max-height: 200px;
             overflow-y: auto;
-            border: 1px solid #d0d0d0;
+            border: 1px solid #ddd;
             padding: 10px;
             background: #f8f9fa;
             border-radius: 8px;
         }
 
         footer {
+            background: #0d47a1;
+            color: white;
             text-align: center;
             padding: 15px;
-            background: linear-gradient(to right, #0d47a1, #42a5f5);
-            color: white;
-            font-size: 0.9em;
+            font-size: 0.9rem;
         }
 
         footer a {
@@ -146,18 +141,6 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            body {
-                padding: 0 10px;
-            }
-
-            nav {
-                font-size: 0.9em;
-            }
-
-            nav a {
-                margin: 5px 8px;
-            }
-
             .about-section {
                 flex-direction: column;
                 text-align: center;
@@ -169,7 +152,12 @@
             }
 
             .section {
-                min-height: auto; /* Ensures flexible height on mobile */
+                min-height: auto;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 10px;
             }
         }
     </style>
