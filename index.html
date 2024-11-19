@@ -214,6 +214,29 @@
             margin-right: 10px;
             color: #007acc;
         }
+        /* Invited Talks Section */
+        #invited-talks ul {
+            list-style: none; /* Remove default list bullets */
+            padding: 0;       /* Remove default padding */
+        }
+
+        #invited-talks li {
+            margin-bottom: 15px;       /* Space between list items */
+            font-size: 1.1em;          /* Consistent font size */
+            position: relative;        /* For positioning the pseudo-element */
+            padding-left: 30px;        /* Space for the custom icon */
+        }
+
+        /* Add custom icon before each list item */
+        #invited-talks li::before {
+            content: '\f0a9'; /* Font Awesome icon code (adjust as needed) */
+            font-family: 'Font Awesome 5 Free'; /* Ensure Font Awesome is loaded */
+            font-weight: 900;  /* Required for solid icons */
+            position: absolute; /* Position the icon */
+            left: 0;            /* Align to the left */
+            top: 0;             /* Align to the top */
+            color: #007acc;     /* Icon color */
+        }
 
         /* Contact Section */
         #contact p {
