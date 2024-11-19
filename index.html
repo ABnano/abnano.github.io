@@ -1,82 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anand Babu, Ph.D. - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #f4f4f4, #e8e8e8);
+        color: #333;
+    }
+    header {
+        background: linear-gradient(to right, #007acc, #005fa3);
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    header h1 {
+        margin: 0;
+    }
+    nav {
+        text-align: center;
+        margin: 20px 0;
+    }
+    nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #007acc;
+        font-weight: bold;
+    }
+    .section {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    .scrollable-list {
+    max-height: 200px; /* Adjust height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Add a border for better visibility */
+    padding: 10px;
+    background: #f9f9f9; /* Light background */
+    border-radius: 8px;
+    }
+    .scrollable-list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Remove default list styles */
+    }
+    .scrollable-list ul li {
+    margin-bottom: 10px; /* Add spacing between items */
+    }
+    .scrollable-list ul li i {
+    color: #007acc; /* Icon color */
+    margin-right: 10px;
+    }
+    .about-section {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .about-section img {
+        width: 250px;
+        height: auto;
+        border-radius: 8px;
+    }
+    .about-section div {
+        font-family: 'VT323', monospace;
+        font-size: 1.5rem;
+        color: #4B0082; /* Digital font color */
+    }
+    h2 {
+        color: #FF8C00; /* Dark Orange */
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    ul li {
+        margin-bottom: 10px;
+    }
+    ul li i {
+        color: #007acc;
+        margin-right: 10px;
+    }
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(to right, #333, #555);
+        color: white;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
         body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom, #f4f4f4, #e8e8e8);
-            color: #333;
-        }
-        header {
-            background: linear-gradient(to right, #007acc, #005fa3);
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        nav {
-            text-align: center;
-            margin: 20px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #007acc;
-            font-weight: bold;
-        }
-        .section {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            padding: 10px;
         }
         .about-section {
-            display: flex;
-            align-items: center;
-            gap: 20px;
+            flex-direction: column; /* Stack image and text vertically */
+            text-align: center;
         }
         .about-section img {
-            width: 250px;
+            width: 100%;
+            max-width: 300px; /* Limit image size on smaller screens */
             height: auto;
+        }
+        .projects img {
+            width: 100%; /* Scale image to fit the container */
+            max-height: 300px; /* Limit height for journal cover */
+            object-fit: contain;
             border-radius: 8px;
         }
-        .about-section div {
-            font-family: 'VT323', monospace;
-            font-size: 1.5rem;
-            color: #4B0082; /* Digital font color */
+        nav a {
+            display: block;
+            margin: 10px 0; /* Stack navigation links */
         }
-        h2 {
-            color: #FF8C00; /* Dark Orange */
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-        ul li i {
-            color: #007acc;
-            margin-right: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(to right, #333, #555);
-            color: white;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <header>
@@ -152,15 +190,18 @@
             </p>
         </div>
     </div>
-
     <div class="section" id="publications">
-        <h2>Selected Publications <i class="fas fa-book"></i></h2>
+    <h2>Selected Publications <i class="fas fa-book"></i></h2>
+    <div class="scrollable-list">
         <ul>
-            <li><i class="fas fa-book-open"></i><b>Algorithmically Enhanced Wearable Multimodal Emotion Sensor</b> - <a href="https://example.com/advanced-intelligent-systems">Advanced Intelligent Systems</a>, 2024</li>
-            <li><i class="fas fa-book-open"></i><b>Machine Learning-enabled Nanoscale Phase Prediction</b> - <a href="https://example.com/small">Small</a>, 2024</li>
-            <li><i class="fas fa-book-open"></i><b>Programmable Polymeric-Interface for Voiceprint Biometrics</b> - <a href="https://example.com/advanced-materials-technologies">Advanced Materials Technologies</a>, 2024</li>
-            <li><i class="fas fa-book-open"></i><b>Deep Learning Enabled Perceptive Wearable Sensor</b> - <a href="https://example.com/advanced-materials-technologies-2023">Advanced Materials Technologies</a>, 2023</li>
+            <li><i class="fas fa-book-open"></i><b>Algorithmically Enhanced Wearable Multimodal Emotion Sensor</b> - <a href="https://doi.org/10.1002/aisy.202400567">Advanced Intelligent Systems</a>, 2024.</li>
+            <li><i class="fas fa-book-open"></i><b>Machine Learning-enabled Nanoscale Phase Prediction</b> - <a href="https://doi.org/10.1002/smll.202405393">Small</a>, 2024.</li>
+            <li><i class="fas fa-book-open"></i><b>SciQu: Accelerating Materials Properties Prediction</b> - <a href="https://arxiv.org/abs/2407.08270">arXiv</a>, 2024.</li>
+            <li><i class="fas fa-book-open"></i><b>Self-learning e-Skin Respirometer</b> - <a href="#">Advanced Sensor Research</a>, 2024.</li>
+            <li><i class="fas fa-book-open"></i><b>Can Entanglement-enhanced Quantum Kernels Improve Data Classification?</b> - <a href="https://arxiv.org/abs/2406.01948">arXiv</a>, 2024.</li>
+            <!-- Add other papers similarly -->
         </ul>
+    </div>
     </div>
 
     <div class="section" id="awards">
