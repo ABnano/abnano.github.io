@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             height: 100%;
+            box-sizing: border-box;
         }
 
         body {
@@ -29,32 +30,35 @@
         header {
             background: linear-gradient(to right, #0d47a1, #42a5f5);
             color: white;
-            padding: 30px;
+            padding: 20px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
-            font-size: 2.5em;
+            font-size: 2.2em;
             margin: 0;
             letter-spacing: 1px;
         }
 
         header p {
-            font-size: 1.2em;
+            font-size: 1.1em;
             margin-top: 10px;
         }
 
         nav {
             text-align: center;
-            margin: 15px 0;
+            margin: 0;
+            padding: 15px;
             background: #e3f2fd;
-            padding: 10px 0;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
-            margin: 0 12px;
+            margin: 0 10px;
             text-decoration: none;
             color: #0d47a1;
             font-weight: bold;
@@ -69,45 +73,49 @@
         .section {
             max-width: 900px;
             margin: 20px auto;
-            padding: 25px;
-            background: #ffffff;
+            padding: 20px;
+            background: white;
             border: 1px solid #e0e0e0;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
             border-radius: 12px;
+            text-align: center;
+            min-height: 300px; /* Ensures all sections have consistent height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .section h2 {
             font-size: 1.8em;
             color: #0d47a1;
             margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-
-        .section h2 i {
-            margin-right: 10px;
         }
 
         .about-section {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             gap: 20px;
+            flex-wrap: wrap;
         }
 
         .about-section img {
             width: 250px;
             height: auto;
-            border-radius: 8px;
+            border-radius: 12px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
 
         ul {
             padding-left: 20px;
             line-height: 1.8;
+            text-align: left;
+            list-style: none;
         }
 
-        li {
-            margin-bottom: 10px;
+        ul li::before {
+            content: "•";
+            color: #0d47a1;
+            margin-right: 8px;
         }
 
         .scrollable-list {
@@ -117,11 +125,6 @@
             padding: 10px;
             background: #f8f9fa;
             border-radius: 8px;
-            margin-bottom: 0;
-        }
-
-        .scrollable-list li {
-            margin-bottom: 8px;
         }
 
         footer {
@@ -130,7 +133,6 @@
             background: linear-gradient(to right, #0d47a1, #42a5f5);
             color: white;
             font-size: 0.9em;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
 
         footer a {
@@ -142,14 +144,23 @@
             text-decoration: underline;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
             body {
                 padding: 0 10px;
             }
 
+            nav {
+                font-size: 0.9em;
+            }
+
+            nav a {
+                margin: 5px 8px;
+            }
+
             .about-section {
                 flex-direction: column;
-                align-items: center;
+                text-align: center;
             }
 
             .about-section img {
@@ -157,9 +168,8 @@
                 max-width: 300px;
             }
 
-            nav a {
-                display: block;
-                margin: 5px 0;
+            .section {
+                min-height: auto; /* Ensures flexible height on mobile */
             }
         }
     </style>
