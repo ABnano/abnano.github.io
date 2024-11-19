@@ -116,7 +116,25 @@
             line-height: 1.8;
             font-size: 1.1em;
         }
-
+        .rolling-title {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 20px 0;
+        }
+        .rolling-title p {
+            display: inline-block;
+            font-style: italic;
+            font-size: 1.2em;
+            animation: marquee 15s linear infinite;
+            white-space: nowrap;
+            margin: 0;
+        }
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
         /* Skills Section */
         .skills ul {
             display: flex;
@@ -278,6 +296,10 @@
             <p>
                 I am a Postdoctoral Research Scientist at Université catholique de Louvain (UCLouvain), specializing in Bio-Integrated AI, nanomaterials, and machine learning applications. My research focuses on cutting-edge innovations in healthcare diagnostics and electronic devices. Currently, I am working on the deployment of generative AI models, particularly Variational Autoencoders (VAEs) and Diffusion Models, for the discovery of novel material structures. I have completed my Ph.D. degree from the Institute of Nano Science and Technology (INST)-Indian Institute of Science Education and Research (IISER), Mohali. My doctoral thesis mainly focuses on the fabrication of piezo-, tribo- and flexo-electric sensors and mechanical energy harvesters and studying their nanoscale properties, 3D printing, self-powered biomedical devices, and acoustic sensors, including IoT and IoMT technologies, and integrating them with machine learning algorithms.
             </p>
+            <h3>Thesis Title</h3>
+            <div class="rolling-title">
+                <p>Bio-Integrated Artificial Intelligence: Synergizing Nanomaterials, Machine Learning Algorithms, and Self-Powered Devices for Early-Stage Healthcare Diagnostics</p>
+            </div>
         </div>
     </div>
 
@@ -285,11 +307,11 @@
         <h2>Skills <i class="fas fa-tools"></i></h2>
         <ul>
             <li>Machine Learning (ML), Deep Neural Networks (DNN), Python, R, and Data Science Tools</li>
-            <li>Device Fabrication Techniques: 3D Printing, Screen Printing, Lithography</li>
+            <li>Device Fabrication Techniques: 3D Printing, Screen Printing, and Lithography</li>
             <li>Piezoelectric, Triboelectric, Flexoelectric, Ferroelectric and Pyroelectric devices</li>
-            <li>Programming for Biomedical Devices and Real-Time Sensor Integration</li>
+            <li>Nanoscale Materials Characterization including AFM, PFM, KPFM, MFM, Dielectric Spectroscopy, XPS, XRD, Electrospinning, and FEA Simulation </li>
             <li>Development of IoT-enabled Systems Using ESP32, Arduino, and Raspberry Pi</li>
-            <li>Nanoscale Materials Characterization including AFM, PFM, KPFM, MFM, Dielectric Spectroscopy, XPS, XRD, Electrospinning, and Finite Element Analysis (FEA) Simulation </li>
+            <li>Programming for Biomedical Devices and Real-Time Sensor Integration</li>
         </ul>
     </div>
 
@@ -336,7 +358,7 @@
         <h2>Highlighted Projects <i class="fas fa-project-diagram"></i></h2>
         <div class="projects">
             <div>
-                <img src="https://github.com/ABnano/abnano.github.io/raw/main/Journal.jpg" alt="AI-Enabled Wearable Sensor">
+                <img src="https://github.com/ABnano/abnano.github.io/raw/main/Journal.jpg">
                 <p>AI-Enabled Wearable Sensor</p>
             </div>
             <!-- You can add more project items here -->
@@ -398,6 +420,7 @@
         <p><i class="fas fa-envelope"></i> Email: <a href="mailto:ababu.nano@gmail.com">ababu.nano@gmail.com</a></p>
         <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/ABnano">https://github.com/ABnano</a></p>
         <p><i class="fas fa-graduation-cap"></i> Google Scholar: <a href="https://scholar.google.com/citations?user=J5UZz7sAAAAJ&hl=en">Google Scholar Profile</a></p>
+        <p><i class="fab fa-orcid"></i> ORCID: <a href="https://orcid.org/0000-0003-4746-6011">0000-0003-4746-6011</a></p>
     </div>
 
     <footer>
