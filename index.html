@@ -16,14 +16,14 @@
         font-family: 'Roboto', sans-serif;
         background: linear-gradient(to bottom, #f8f9fa, #e8f5e9);
         color: #333;
+        line-height: 1.6;
     }
 
     header {
         background: linear-gradient(to right, #0d47a1, #42a5f5);
         color: white;
-        padding: 20px;
+        padding: 40px 20px;
         text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     header h1 {
@@ -40,7 +40,6 @@
         background: #e3f2fd;
         padding: 10px 0;
         text-align: center;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
     nav a {
@@ -57,26 +56,22 @@
     }
 
     .container {
-        max-width: 800px;
-        margin: 0 auto; /* Center the container */
-        padding: 20px;
+        max-width: 1200px;
+        margin: 20px auto; /* Center the container */
+        padding: 0 20px;
     }
 
     .section {
         background: white;
-        padding: 20px;
+        padding: 30px;
         border-radius: 8px;
         margin-bottom: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        min-height: 300px; /* Ensure consistent height */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
     }
 
     .section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 10px;
+        font-size: 2rem;
+        margin-bottom: 20px;
         color: #0d47a1;
         text-align: center;
     }
@@ -95,10 +90,15 @@
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
+    .about-section p {
+        flex: 1;
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
     ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
+        list-style-type: disc;
+        padding-left: 20px;
     }
 
     ul li {
@@ -106,15 +106,8 @@
         font-size: 1rem;
     }
 
-    ul li::before {
-        content: "•";
-        color: #0d47a1;
-        font-weight: bold;
-        margin-right: 10px;
-    }
-
     .scrollable-list {
-        max-height: 200px;
+        max-height: 400px;
         overflow-y: auto;
         border: 1px solid #ddd;
         padding: 10px;
@@ -151,16 +144,12 @@
             max-width: 300px;
         }
 
-        .section {
-            min-height: auto;
-        }
-
         nav a {
             display: inline-block;
             margin: 10px;
         }
     }
-</style>
+    </style>
 </head>
 <body>
     <header>
