@@ -7,7 +7,7 @@
     <!-- Link to Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Link to Font Awesome for icons -->
-    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/YOUR_ACTUAL_KIT_ID.js" crossorigin="anonymous"></script>
     <style>
         /* Global Styles */
         body {
@@ -16,6 +16,7 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            box-sizing: border-box; /* Ensure all elements use border-box */
         }
 
         /* Header */
@@ -61,9 +62,10 @@
             padding: 10px 0;
             margin: 0;
             list-style: none;
+            flex-wrap: wrap; /* Allow navigation items to wrap on smaller screens */
         }
         nav li {
-            margin: 0 15px;
+            margin: 0 10px; /* Reduced margin for better fit on smaller screens */
         }
         nav a {
             text-decoration: none;
@@ -72,6 +74,7 @@
             padding: 8px 15px;
             transition: color 0.3s, background-color 0.3s;
             border-radius: 5px;
+            display: block; /* Ensure clickable area covers the entire padding */
         }
         nav a:hover {
             background-color: #007acc;
@@ -100,7 +103,6 @@
             bottom: -10px;
         }
 
-        
         /* About Section */
         .about-section {
             display: flex;
@@ -117,6 +119,7 @@
             border-radius: 4px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             object-fit: cover;
+            flex-shrink: 0; /* Prevents the image from shrinking */
         }
         .about-section p {
             line-height: 1.8;
@@ -141,6 +144,7 @@
             from { transform: translateX(100%); }
             to { transform: translateX(-100%); }
         }
+
         /* Skills Section */
         .skills ul {
             display: flex;
@@ -219,6 +223,7 @@
             margin-right: 10px;
             color: #007acc;
         }
+
         /* Invited Talks Section */
         #invited-talks ul {
             list-style: none; /* Remove default list bullets */
@@ -274,6 +279,22 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1200px) {
+            .section {
+                padding: 0 15px; /* Reduce padding on smaller screens */
+            }
+        }
+
+        @media (max-width: 992px) {
+            .about-section {
+                gap: 20px; /* Reduce gap between image and text */
+            }
+
+            .about-section img {
+                width: 200px; /* Adjust image size for smaller screens */
+            }
+        }
+
         @media (max-width: 768px) {
             .about-section {
                 flex-direction: column;
@@ -292,6 +313,36 @@
             }
             .skills li {
                 width: 100%;
+            }
+        }
+
+        /* Additional Media Queries for Enhanced Mobile Responsiveness */
+        @media (max-width: 576px) {
+            header h1 {
+                font-size: 2.5em; /* Reduce header font size on very small screens */
+            }
+            header p {
+                font-size: 1em; /* Reduce header paragraph font size */
+            }
+            .section h2 {
+                font-size: 2em; /* Reduce section headings */
+            }
+            .about-section img {
+                max-width: 100%; /* Ensure image doesn't exceed container */
+                height: auto; /* Maintain aspect ratio */
+            }
+            .about-section p {
+                font-size: 1em; /* Slightly smaller text for better readability */
+                padding: 0 10px; /* Add padding to prevent text touching screen edges */
+            }
+            .rolling-title p {
+                font-size: 1em; /* Adjust rolling title font size */
+            }
+            nav li {
+                margin: 5px 0; /* Further reduce margin */
+            }
+            .skills li {
+                width: 100%; /* Ensure skills list items take full width */
             }
         }
     </style>
@@ -392,7 +443,7 @@
         <h2>Highlighted Projects <i class="fas fa-project-diagram"></i></h2>
         <div class="projects">
             <div>
-                <img src="https://github.com/ABnano/abnano.github.io/raw/main/Journal.jpg">
+                <img src="https://github.com/ABnano/abnano.github.io/raw/main/Journal.jpg" alt="Project Image">
             </div>
             <!-- You can add more project items here -->
         </div>
