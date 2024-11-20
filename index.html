@@ -6,8 +6,8 @@
     <title>Anand Babu, Ph.D.</title>
     <!-- Link to Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Link to Font Awesome for icons -->
-    <script src="https://kit.fontawesome.com/YOUR_ACTUAL_KIT_ID.js" crossorigin="anonymous"></script>
+    <!-- Link to Font Awesome for icons (Updated to use CDN link) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-something" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Global Styles */
         body {
@@ -239,7 +239,7 @@
 
         /* Add custom icon before each list item */
         #invited-talks li::before {
-            content: '\f0a9'; /* Font Awesome icon code (adjust as needed) */
+            content: '\f0a9'; /* Font Awesome icon code */
             font-family: 'Font Awesome 5 Free'; /* Ensure Font Awesome is loaded */
             font-weight: 900;  /* Required for solid icons */
             position: absolute; /* Position the icon */
@@ -370,7 +370,7 @@
     </nav>
 
     <div class="section about-section" id="about">
-        <img src="https://github.com/ABnano/abnano.github.io/raw/main/AB2.jpg" alt="Profile Picture">
+        <img src="https://github.com/ABnano/abnano.github.io/raw/main/AB2.jpg" alt="Profile Picture" loading="lazy">
         <div>
             <h2>About Me <i class="fas fa-user"></i></h2>
             <p>
@@ -413,7 +413,7 @@
     </div>
 
     <div class="section grants" id="grants">
-        <h2>Grants & Funding <i class="fas fa-money-bill-alt"></i></h2>
+        <h2>Grants & Funding <i class="fas fa-money-bill"></i></h2> <!-- Updated icon class -->
         <ul>
             <li><b>APS Annual Leadership Meeting Grant</b> - Awarded by the American Physical Society (APS), 2024</li>
             <li><b>APS GERA Energy Workshop Funding Grant</b> - Awarded by APS March Meeting, 2023</li>
@@ -443,7 +443,7 @@
         <h2>Highlighted Projects <i class="fas fa-project-diagram"></i></h2>
         <div class="projects">
             <div>
-                <img src="https://github.com/ABnano/abnano.github.io/raw/main/Journal.jpg" alt="Project Image">
+                <img src="https://github.com/ABnano/abnano.github.io/raw/main/Journal.jpg" alt="Project Image" loading="lazy">
             </div>
             <!-- You can add more project items here -->
         </div>
@@ -475,7 +475,6 @@
                 <li><i class="fas fa-book-open"></i><b>Mott interactions driven insulating behavior in Ruthenium based double perovskites: A2SmRuO6 (A = Ba & Sr)</b> - <a href="https://doi.org/10.1016/j.jallcom.2023.176184">Journal of Alloys and Compounds</a>, 2024.</li>
             </ul>
         </div>
-    </div>
 
     <div class="section" id="invited-talks">
         <h2>Invited Talks <i class="fas fa-microphone-alt"></i></h2>
