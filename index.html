@@ -7,23 +7,26 @@
     <!-- Link to Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Link to Font Awesome for icons (Updated to use CDN link) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-something" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVnIY8r+..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Global Styles */
+        *, *::before, *::after {
+            box-sizing: border-box; /* Apply border-box to all elements */
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
-            box-sizing: border-box; /* Ensure all elements use border-box */
         }
 
         /* Header */
         header {
             background: linear-gradient(135deg, #007acc, #005fa3);
             color: white;
-            padding: 60px 0;
+            padding: 60px 20px; /* Added horizontal padding for better spacing */
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -49,6 +52,7 @@
             margin-top: 10px;
             z-index: 1;
             position: relative;
+            word-wrap: break-word; /* Ensure text wraps properly */
         }
 
         /* Navigation */
@@ -124,6 +128,7 @@
         .about-section p {
             line-height: 1.8;
             font-size: 1.1em;
+            word-wrap: break-word; /* Ensure long words wrap properly */
         }
         .rolling-title {
             overflow: hidden;
@@ -139,6 +144,7 @@
             animation: marquee 15s linear infinite;
             white-space: nowrap;
             margin: 0;
+            padding-right: 100%; /* Extra padding to ensure smooth animation */
         }
         @keyframes marquee {
             from { transform: translateX(100%); }
@@ -156,6 +162,9 @@
             width: 45%;
             margin-bottom: 15px;
             font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            word-wrap: break-word; /* Ensure long words wrap properly */
         }
         .skills li::before {
             content: '\f058';
@@ -163,6 +172,7 @@
             font-weight: 900;
             margin-right: 10px;
             color: #007acc;
+            flex-shrink: 0;
         }
 
         /* Other Sections */
@@ -175,6 +185,7 @@
             font-size: 1.1em;
             position: relative;
             padding-left: 30px;
+            word-wrap: break-word; /* Ensure long words wrap properly */
         }
         .services li::before, .grants li::before, .awards li::before, .hands-on-training li::before {
             content: '\f0a9';
@@ -184,6 +195,7 @@
             left: 0;
             top: 0;
             color: #007acc;
+            flex-shrink: 0;
         }
 
         /* Projects Section */
@@ -197,9 +209,11 @@
             border-radius: 8px;
             object-fit: cover;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            loading="lazy";
         }
         .projects p {
             font-size: 1.1em;
+            word-wrap: break-word; /* Ensure long words wrap properly */
         }
 
         /* Publications Section */
@@ -215,6 +229,9 @@
         .scrollable-list li {
             margin-bottom: 20px;
             font-size: 1.1em;
+            display: flex;
+            align-items: flex-start;
+            word-wrap: break-word; /* Ensure long words wrap properly */
         }
         .scrollable-list li::before {
             content: '\f02d';
@@ -222,6 +239,7 @@
             font-weight: 900;
             margin-right: 10px;
             color: #007acc;
+            flex-shrink: 0;
         }
 
         /* Invited Talks Section */
@@ -235,6 +253,7 @@
             font-size: 1.1em;          /* Consistent font size */
             position: relative;        /* For positioning the pseudo-element */
             padding-left: 30px;        /* Space for the custom icon */
+            word-wrap: break-word;      /* Ensure long words wrap properly */
         }
 
         /* Add custom icon before each list item */
@@ -246,12 +265,14 @@
             left: 0;            /* Align to the left */
             top: 0;             /* Align to the top */
             color: #007acc;     /* Icon color */
+            flex-shrink: 0;
         }
 
         /* Contact Section */
         #contact p {
             font-size: 1.1em;
             margin-bottom: 10px;
+            word-wrap: break-word; /* Ensure long words wrap properly */
         }
         #contact a {
             color: #007acc;
@@ -337,12 +358,22 @@
             }
             .rolling-title p {
                 font-size: 1em; /* Adjust rolling title font size */
+                animation: none; /* Disable marquee on very small screens to prevent overflow */
+                white-space: normal; /* Allow text to wrap */
             }
             nav li {
                 margin: 5px 0; /* Further reduce margin */
             }
             .skills li {
                 width: 100%; /* Ensure skills list items take full width */
+            }
+            .services li, .grants li, .awards li, .hands-on-training li {
+                padding-left: 20px; /* Reduce padding for smaller screens */
+            }
+            #invited-talks li::before {
+                left: 0; /* Adjust icon positioning */
+                top: 50%; /* Center icon vertically */
+                transform: translateY(-50%);
             }
         }
     </style>
