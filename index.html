@@ -3,551 +3,1780 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anand Babu, Ph.D.</title>
-    <!-- Link to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Link to Font Awesome for icons (Updated to use CDN link) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVnIY8r+..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Anand Babu, Ph.D. | AI Materials Scientist</title>
+    <meta name="description" content="Postdoctoral Researcher at UCLouvain. AI for Materials, MLIP, Self-Driving Laboratories, Nanofabrication, Wearable Sensors.">
+
+    <!-- Custom Atom Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f172a'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%2338bdf8'/%3E%3Cellipse cx='50' cy='50' rx='40' ry='16' fill='none' stroke='%2338bdf8' stroke-width='2.5' opacity='0.9'/%3E%3Cellipse cx='50' cy='50' rx='40' ry='16' fill='none' stroke='%23818cf8' stroke-width='2.5' opacity='0.9' transform='rotate(60 50 50)'/%3E%3Cellipse cx='50' cy='50' rx='40' ry='16' fill='none' stroke='%23fbbf24' stroke-width='2.5' opacity='0.9' transform='rotate(120 50 50)'/%3E%3C/svg%3E">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
-        /* Global Styles */
-        *, *::before, *::after {
-            box-sizing: border-box; /* Apply border-box to all elements */
+        :root {
+            --bg-0: #0a0f1e;
+            --bg-1: #0f172a;
+            --bg-2: #1e293b;
+            --bg-3: #1a2744;
+            --primary: #38bdf8;
+            --primary-dim: rgba(56,189,248,0.15);
+            --secondary: #818cf8;
+            --secondary-dim: rgba(129,140,248,0.15);
+            --gold: #fbbf24;
+            --gold-dim: rgba(251,191,36,0.15);
+            --green: #34d399;
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+            --border: rgba(148,163,184,0.1);
+            --card-bg: rgba(30,41,59,0.7);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --shadow: 0 4px 24px rgba(0,0,0,0.4);
+            --shadow-lg: 0 8px 48px rgba(0,0,0,0.5);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-0);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
         }
 
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #007acc, #005fa3);
-            color: white;
-            padding: 60px 20px; /* Added horizontal padding for better spacing */
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        header::after {
-            content: '';
-            background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-            opacity: 0.2;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            position: absolute;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            z-index: 1;
-            position: relative;
-        }
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-            z-index: 1;
-            position: relative;
-            word-wrap: break-word; /* Ensure text wraps properly */
-        }
+        /* ─── Scrollbar ─── */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg-1); }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
 
-        /* Navigation */
+        /* ─── Nav ─── */
         nav {
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-            margin: 0;
-            list-style: none;
-            flex-wrap: wrap; /* Allow navigation items to wrap on smaller screens */
-        }
-        nav li {
-            margin: 0 10px; /* Reduced margin for better fit on smaller screens */
-        }
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            padding: 8px 15px;
-            transition: color 0.3s, background-color 0.3s;
-            border-radius: 5px;
-            display: block; /* Ensure clickable area covers the entire padding */
-        }
-        nav a:hover {
-            background-color: #007acc;
-            color: #fff;
-        }
-
-        /* Sections */
-        .section {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        .section h2 {
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            position: relative;
-            color: #005fa3;
-        }
-        .section h2::after {
-            content: '';
-            width: 80px;
-            height: 4px;
-            background-color: #007acc;
-            position: absolute;
-            left: 0;
-            bottom: -10px;
-        }
-
-        /* About Section */
-        .about-section {
-            display: flex;
-            align-items: flex-start;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        .about-section > div {
-            flex: 1; /* Allows the text div to take up remaining space */
-            min-width: 0; /* Prevents the div from overflowing */
-        }
-        .about-section img {
-            width: 250px;
-            border-radius: 4px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            object-fit: cover;
-            flex-shrink: 0; /* Prevents the image from shrinking */
-        }
-        .about-section p {
-            line-height: 1.8;
-            font-size: 1.1em;
-            word-wrap: break-word; /* Ensure long words wrap properly */
-        }
-        .rolling-title {
-            overflow: hidden;
-            white-space: nowrap;
-            width: 100%;
-            box-sizing: border-box;
-            margin: 20px 0;
-        }
-        .rolling-title p {
-            display: inline-block;
-            font-style: italic;
-            font-size: 1.2em;
-            animation: marquee 15s linear infinite;
-            white-space: nowrap;
-            margin: 0;
-            padding-right: 100%; /* Extra padding to ensure smooth animation */
-        }
-        @keyframes marquee {
-            from { transform: translateX(100%); }
-            to { transform: translateX(-100%); }
-        }
-
-        /* Skills Section */
-        .skills ul {
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-            padding: 0;
-        }
-        .skills li {
-            width: 45%;
-            margin-bottom: 15px;
-            font-size: 1.1em;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 12px 32px;
             display: flex;
             align-items: center;
-            word-wrap: break-word; /* Ensure long words wrap properly */
+            justify-content: space-between;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background: rgba(10,15,30,0.8);
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
         }
-        .skills li::before {
-            content: '\f058';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            margin-right: 10px;
-            color: #007acc;
-            flex-shrink: 0;
+        .nav-brand {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
         }
-
-        /* Other Sections */
-        .services ul, .grants ul, .awards ul, .hands-on-training ul {
+        .nav-brand span { color: var(--text); }
+        .nav-links {
+            display: flex;
+            gap: 4px;
             list-style: none;
-            padding: 0;
+            align-items: center;
+            flex-wrap: wrap;
         }
-        .services li, .grants li, .awards li, .hands-on-training li {
-            margin-bottom: 15px;
-            font-size: 1.1em;
-            position: relative;
-            padding-left: 30px;
-            word-wrap: break-word; /* Ensure long words wrap properly */
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 8px;
+            transition: var(--transition);
+            letter-spacing: 0.01em;
         }
-        .services li::before, .grants li::before, .awards li::before, .hands-on-training li::before {
-            content: '\f0a9';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: #007acc;
-            flex-shrink: 0;
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary);
+            background: var(--primary-dim);
+        }
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.4rem;
+            cursor: pointer;
         }
 
-        /* Projects Section */
-        .projects {
+        /* ─── Hero ─── */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 24px 60px;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 60% at 20% 40%, rgba(56,189,248,0.12) 0%, transparent 60%),
+                        radial-gradient(ellipse 60% 80% at 80% 60%, rgba(129,140,248,0.10) 0%, transparent 60%),
+                        radial-gradient(ellipse 40% 40% at 50% 90%, rgba(251,191,36,0.06) 0%, transparent 50%),
+                        var(--bg-0);
+        }
+        .hero-particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            animation: float-particle linear infinite;
+            opacity: 0;
+        }
+        @keyframes float-particle {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(-20vh) rotate(720deg); opacity: 0; }
+        }
+        .grid-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(56,189,248,0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(56,189,248,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            max-width: 1100px;
+            width: 100%;
+        }
+        .hero-photo-wrap {
+            flex-shrink: 0;
+            position: relative;
+        }
+        .hero-photo-ring {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            padding: 4px;
+            background: conic-gradient(from 0deg, var(--primary), var(--secondary), var(--gold), var(--primary));
+            animation: spin-ring 8s linear infinite;
+            box-shadow: 0 0 60px rgba(56,189,248,0.3);
+        }
+        @keyframes spin-ring {
+            to { transform: rotate(360deg); }
+        }
+        .hero-photo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--bg-0);
+            display: block;
+        }
+        .hero-badge {
+            position: absolute;
+            bottom: 10px;
+            right: -10px;
+            background: var(--gold);
+            color: #1a1a2e;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.05em;
+            box-shadow: 0 2px 12px rgba(251,191,36,0.4);
+        }
+        .hero-text { flex: 1; }
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-dim);
+            border: 1px solid rgba(56,189,248,0.3);
+            color: var(--primary);
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .hero-tag i { font-size: 0.7rem; }
+        .hero-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 8px;
+        }
+        .hero-name .highlight {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+        .hero-affiliation {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .hero-affiliation i { color: var(--primary); font-size: 0.85rem; }
+        .hero-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 32px;
+        }
+        .chip {
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            background: var(--bg-2);
+            transition: var(--transition);
+        }
+        .chip:hover { border-color: var(--primary); color: var(--primary); }
+        .hero-stats {
+            display: flex;
+            gap: 28px;
+            margin-bottom: 36px;
+        }
+        .stat-item { text-align: center; }
+        .stat-num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+            display: block;
+        }
+        .stat-label {
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: 4px;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #0f172a;
+            font-weight: 700;
+            font-size: 0.88rem;
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 20px rgba(56,189,248,0.3);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(56,189,248,0.4); }
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 0.88rem;
+            padding: 11px 24px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        .btn-outline:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-dim); transform: translateY(-2px); }
+
+        /* ─── Section Commons ─── */
+        section { padding: 90px 24px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .section-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-label::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--primary);
+        }
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 48px;
+            line-height: 1.2;
+        }
+        .section-title span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ─── Card ─── */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            transition: var(--transition);
+            backdrop-filter: blur(12px);
+        }
+        .card:hover {
+            border-color: rgba(56,189,248,0.3);
+            box-shadow: 0 8px 40px rgba(56,189,248,0.08);
+            transform: translateY(-3px);
+        }
+
+        /* ─── About ─── */
+        #about { background: var(--bg-1); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .about-card-left {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            text-align: center;
+            backdrop-filter: blur(12px);
+        }
+        .about-avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+            margin: 0 auto 20px;
+            display: block;
+            box-shadow: 0 0 30px rgba(56,189,248,0.2);
+        }
+        .about-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .about-pos { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; }
+        .about-socials {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+        .social-btn:hover { background: var(--primary-dim); border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
+        .about-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        .metric-box {
+            background: var(--bg-2);
+            border-radius: var(--radius-sm);
+            padding: 12px 8px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        .metric-val {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+        .metric-lbl { font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; }
+        .about-text { font-size: 1rem; color: var(--text-muted); line-height: 1.8; }
+        .about-text p { margin-bottom: 16px; }
+        .about-text strong { color: var(--text); }
+        .thesis-box {
+            margin-top: 24px;
+            padding: 16px 20px;
+            background: var(--bg-2);
+            border-left: 3px solid var(--gold);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+        .thesis-box strong { color: var(--gold); font-style: normal; display: block; margin-bottom: 6px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; }
+
+        /* ─── Research Interests ─── */
+        #research { background: var(--bg-0); }
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .research-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 20px;
+            text-align: center;
+            backdrop-filter: blur(12px);
+            transition: var(--transition);
+            cursor: default;
+        }
+        .research-card:hover {
+            border-color: rgba(56,189,248,0.4);
+            background: var(--bg-3);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(56,189,248,0.1);
+        }
+        .research-card .icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin: 0 auto 16px;
+            transition: var(--transition);
+        }
+        .research-card:hover .icon { transform: scale(1.1) rotate(5deg); }
+        .research-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 8px; }
+        .research-card p { font-size: 0.78rem; color: var(--text-dim); line-height: 1.5; }
+
+        /* ─── Skills ─── */
+        #skills { background: var(--bg-1); }
+        .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            gap: 24px;
         }
-        .projects img {
-            width: 120%;
-            border-radius: 8px;
-            object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            loading="lazy";
-        }
-        .projects p {
-            font-size: 1.1em;
-            word-wrap: break-word; /* Ensure long words wrap properly */
-        }
-
-        /* Publications Section */
-        .scrollable-list {
-            max-height: 400px;
-            overflow-y: auto;
-            padding-right: 10px;
-        }
-        .scrollable-list ul {
-            list-style: none;
-            padding: 0;
-        }
-        .scrollable-list li {
-            margin-bottom: 20px;
-            font-size: 1.1em;
+        .skill-category h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 14px;
             display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .skill-tag {
+            font-size: 0.78rem;
+            padding: 6px 13px;
+            border-radius: 20px;
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+        .skill-tag:hover { color: var(--primary); border-color: var(--primary); background: var(--primary-dim); }
+
+        /* ─── Publications ─── */
+        #publications { background: var(--bg-0); }
+        .pub-filter {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+        .filter-btn {
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 7px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: var(--bg-2);
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #0f172a;
+        }
+        .pub-list { display: flex; flex-direction: column; gap: 16px; }
+        .pub-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 22px 26px;
+            backdrop-filter: blur(12px);
+            transition: var(--transition);
+            display: flex;
+            gap: 20px;
             align-items: flex-start;
-            word-wrap: break-word; /* Ensure long words wrap properly */
         }
-        .scrollable-list li::before {
-            content: '\f02d';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            margin-right: 10px;
-            color: #007acc;
-            flex-shrink: 0;
+        .pub-item:hover {
+            border-color: rgba(56,189,248,0.3);
+            transform: translateX(4px);
+            box-shadow: -4px 0 24px rgba(56,189,248,0.08);
         }
-
-        /* Invited Talks Section */
-        #invited-talks ul {
-            list-style: none; /* Remove default list bullets */
-            padding: 0;       /* Remove default padding */
+        .pub-rank {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-dim);
+            min-width: 32px;
+            text-align: right;
+            line-height: 1.6;
         }
-
-        #invited-talks li {
-            margin-bottom: 15px;       /* Space between list items */
-            font-size: 1.1em;          /* Consistent font size */
-            position: relative;        /* For positioning the pseudo-element */
-            padding-left: 30px;        /* Space for the custom icon */
-            word-wrap: break-word;      /* Ensure long words wrap properly */
+        .pub-body { flex: 1; min-width: 0; }
+        .pub-title {
+            font-size: 0.96rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 5px;
+            line-height: 1.5;
         }
-
-        /* Add custom icon before each list item */
-        #invited-talks li::before {
-            content: '\f0a9'; /* Font Awesome icon code */
-            font-family: 'Font Awesome 5 Free'; /* Ensure Font Awesome is loaded */
-            font-weight: 900;  /* Required for solid icons */
-            position: absolute; /* Position the icon */
-            left: 0;            /* Align to the left */
-            top: 0;             /* Align to the top */
-            color: #007acc;     /* Icon color */
-            flex-shrink: 0;
+        .pub-title a { color: inherit; text-decoration: none; transition: var(--transition); }
+        .pub-title a:hover { color: var(--primary); }
+        .pub-authors { font-size: 0.8rem; color: var(--text-dim); margin-bottom: 8px; }
+        .pub-authors strong { color: var(--primary); }
+        .pub-meta { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+        .pub-journal {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--secondary);
+            background: var(--secondary-dim);
+            padding: 3px 10px;
+            border-radius: 20px;
         }
-
-        /* Contact Section */
-        #contact p {
-            font-size: 1.1em;
-            margin-bottom: 10px;
-            word-wrap: break-word; /* Ensure long words wrap properly */
+        .pub-year {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            padding: 3px 8px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
         }
-        #contact a {
-            color: #007acc;
-            text-decoration: none;
+        .pub-badge {
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
         }
-        #contact a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #005fa3;
-            color: white;
+        .badge-hot { background: rgba(251,191,36,0.15); color: var(--gold); border: 1px solid rgba(251,191,36,0.3); }
+        .badge-cover { background: rgba(52,211,153,0.15); color: var(--green); border: 1px solid rgba(52,211,153,0.3); }
+        .badge-invited { background: var(--secondary-dim); color: var(--secondary); border: 1px solid rgba(129,140,248,0.3); }
+        .pub-citations {
+            margin-left: auto;
             text-align: center;
-            padding: 20px 0;
+            flex-shrink: 0;
+        }
+        .cite-num {
+            display: block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+        }
+        .cite-label { font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* ─── Services / Awards / Grants ─── */
+        #services, #grants { background: var(--bg-1); }
+        #awards { background: var(--bg-0); }
+        .list-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .list-item-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 20px 22px;
+            backdrop-filter: blur(12px);
+            transition: var(--transition);
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .list-item-card:hover { border-color: rgba(56,189,248,0.3); transform: translateY(-2px); }
+        .list-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        .list-item-card h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; color: var(--text); }
+        .list-item-card p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+        .list-item-card a { color: var(--primary); text-decoration: none; }
+        .list-item-card a:hover { text-decoration: underline; }
+        .year-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--gold);
+            background: var(--gold-dim);
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-top: 6px;
+            display: inline-block;
         }
 
-        /* Scrollbar Styling */
-        .scrollable-list::-webkit-scrollbar {
-            width: 8px;
+        /* ─── Talks ─── */
+        #talks { background: var(--bg-1); }
+        .talks-list { display: flex; flex-direction: column; gap: 16px; }
+        .talk-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 20px 24px;
+            backdrop-filter: blur(12px);
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            transition: var(--transition);
         }
-        .scrollable-list::-webkit-scrollbar-thumb {
-            background-color: #007acc;
-            border-radius: 4px;
+        .talk-item:hover { border-color: rgba(129,140,248,0.4); transform: translateX(4px); }
+        .talk-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--secondary);
+            margin-top: 6px;
+            flex-shrink: 0;
+            box-shadow: 0 0 10px var(--secondary);
+        }
+        .talk-body h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 5px; }
+        .talk-body p { font-size: 0.82rem; color: var(--text-muted); }
+
+        /* ─── Training ─── */
+        #training { background: var(--bg-0); }
+
+        /* ─── Contact ─── */
+        #contact { background: var(--bg-1); }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+        .contact-info p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 32px; }
+        .contact-links { display: flex; flex-direction: column; gap: 14px; }
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 20px;
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            color: var(--text);
+            transition: var(--transition);
+        }
+        .contact-link:hover { border-color: var(--primary); background: var(--primary-dim); color: var(--primary); }
+        .contact-link-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 9px;
+            background: var(--bg-3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+        .contact-link-body { flex: 1; }
+        .contact-link-body small { display: block; font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px; }
+        .contact-link-body span { font-size: 0.88rem; font-weight: 500; }
+        .contact-map-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            height: 100%;
+            min-height: 300px;
+        }
+        .map-header {
+            padding: 20px 24px;
+            background: var(--bg-2);
+            border-bottom: 1px solid var(--border);
+        }
+        .map-header h4 { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; margin-bottom: 4px; }
+        .map-header p { font-size: 0.82rem; color: var(--text-muted); }
+        .map-visual {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .location-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--bg-2);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+        }
+        .location-row i { color: var(--primary); font-size: 1rem; }
+        .location-row strong { display: block; font-size: 0.88rem; }
+        .location-row small { font-size: 0.75rem; color: var(--text-dim); }
+
+        /* ─── Footer ─── */
+        footer {
+            background: var(--bg-0);
+            border-top: 1px solid var(--border);
+            padding: 32px 24px;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+        }
+        footer a { color: var(--primary); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* ─── Animations ─── */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .section {
-                padding: 0 15px; /* Reduce padding on smaller screens */
-            }
+        /* ─── Responsive ─── */
+        @media (max-width: 900px) {
+            .hero-content { flex-direction: column; text-align: center; gap: 36px; }
+            .hero-stats { justify-content: center; }
+            .hero-actions { justify-content: center; }
+            .hero-affiliation { justify-content: center; }
+            .hero-chips { justify-content: center; }
+            .hero-tag { margin-left: auto; margin-right: auto; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: rgba(10,15,30,0.97); padding: 16px 24px; border-bottom: 1px solid var(--border); gap: 4px; }
+            .nav-links.open { display: flex; }
+            .nav-toggle { display: block; }
+            nav { padding: 12px 20px; }
         }
-
-        @media (max-width: 992px) {
-            .about-section {
-                gap: 20px; /* Reduce gap between image and text */
-            }
-
-            .about-section img {
-                width: 200px; /* Adjust image size for smaller screens */
-            }
-        }
-
-        @media (max-width: 768px) {
-            .about-section {
-                flex-direction: column;
-                align-items: center;
-            }
-            .about-section img {
-                width: 100%;
-                max-width: 400px;
-            }
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav li {
-                margin: 10px 0;
-            }
-            .skills li {
-                width: 100%;
-            }
-        }
-
-        /* Additional Media Queries for Enhanced Mobile Responsiveness */
-        @media (max-width: 576px) {
-            header h1 {
-                font-size: 2.5em; /* Reduce header font size on very small screens */
-            }
-            header p {
-                font-size: 1em; /* Reduce header paragraph font size */
-            }
-            .section h2 {
-                font-size: 2em; /* Reduce section headings */
-            }
-            .about-section img {
-                max-width: 100%; /* Ensure image doesn't exceed container */
-                height: auto; /* Maintain aspect ratio */
-            }
-            .about-section p {
-                font-size: 1em; /* Slightly smaller text for better readability */
-                padding: 0 10px; /* Add padding to prevent text touching screen edges */
-            }
-            .rolling-title p {
-                font-size: 1em; /* Adjust rolling title font size */
-                animation: none; /* Disable marquee on very small screens to prevent overflow */
-                white-space: normal; /* Allow text to wrap */
-            }
-            nav li {
-                margin: 5px 0; /* Further reduce margin */
-            }
-            .skills li {
-                width: 100%; /* Ensure skills list items take full width */
-            }
-            .services li, .grants li, .awards li, .hands-on-training li {
-                padding-left: 20px; /* Reduce padding for smaller screens */
-            }
-            #invited-talks li::before {
-                left: 0; /* Adjust icon positioning */
-                top: 50%; /* Center icon vertically */
-                transform: translateY(-50%);
-            }
+        @media (max-width: 600px) {
+            section { padding: 64px 16px; }
+            .hero-photo-ring { width: 180px; height: 180px; }
+            .hero-stats { gap: 20px; }
+            .pub-item { flex-direction: column; }
+            .pub-citations { margin-left: 0; display: flex; align-items: center; gap: 8px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Anand Babu, Ph.D.</h1>
-        <p>
-            <i class="fas fa-flask"></i> Sensor Fabrication |
-            <i class="fas fa-brain"></i> Artificial Intelligence (AI)/Machine Learning (ML) Algorithms |
-            <i class="fas fa-microchip"></i> Nanomaterials Synthesis and Characterizations |
-            <i class="fas fa-heartbeat"></i> Digital Healthcare Solutions |
-            <i class="fas fa-database"></i> Materials Informatics |
-            <i class="fas fa-atom"></i> Quantum Computing and Information Processing   
-        </p> 
-    </header>
+<!-- ═══════ NAV ═══════ -->
+<nav id="navbar">
+    <a href="#hero" class="nav-brand">AB<span>.nano</span></a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#talks">Talks</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+</nav>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#grants">Grants & Funding</a></li>
-            <li><a href="#awards">Awards & Honors</a></li>
-            <li><a href="#projects">Highlighted Projects</a></li>
-            <li><a href="#publications">Selected Publications</a></li>
-            <li><a href="#invited-talks">Invited Talks</a></li>
-            <li><a href="#hands-on-training">Hands-On Training</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="section about-section" id="about">
-        <img src="https://github.com/ABnano/abnano.github.io/raw/main/AB2.jpg" alt="Profile Picture" loading="lazy">
-        <div>
-            <h2>About Me <i class="fas fa-user"></i></h2>
-            <p>
-                I am a Postdoctoral Research Scientist at Université catholique de Louvain (UCLouvain), where I am working on the deployment of 
-                generative AI models, particularly Variational Autoencoders (VAEs) and Diffusion Models for developing multimodal machine learning and inverse design of materials. I have 
-                completed my Ph.D. at the Institute of Nano Science and Technology (INST)-Indian Institute of Science Education and Research (IISER), 
-                Mohali. My doctoral thesis mainly focuses on the fabrication of piezo-, tribo- and flexo-electric sensors and mechanical energy harvesters 
-                and integrating them with Artificial Intelligence (AI)/Machine Learning (ML) algorithms for digital health applications. During my Ph.D. I have 
-                been a Raman-Charpak Fellow in the Organic Electronics Group at IMS, University of Bordeaux, France, where I work on the development of Voiceprint Biometrics, e-skin 
-                Respirometer and the Emotions Sensing devices. 
+<!-- ═══════ HERO ═══════ -->
+<section id="hero">
+    <div class="hero-bg"></div>
+    <div class="grid-overlay"></div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+        <div class="hero-photo-wrap">
+            <div class="hero-photo-ring">
+                <img src="https://github.com/ABnano/abnano.github.io/raw/main/AB2.jpg" alt="Anand Babu" class="hero-photo">
+            </div>
+            <span class="hero-badge">Postdoctoral Researcher</span>
+        </div>
+        <div class="hero-text">
+            <div class="hero-tag"><i class="fas fa-atom"></i> AI for Materials Science</div>
+            <h1 class="hero-name">Anand Babu<br><span class="highlight">Ph.D.</span></h1>
+            <p class="hero-subtitle">AI/ML · Nanofabrication · Wearable Sensors · Quantum ML</p>
+            <p class="hero-affiliation">
+                <i class="fas fa-map-marker-alt"></i> IMCN, UCLouvain, Belgium
+                <span style="color:var(--border)">|</span>
+                <i class="fas fa-flask"></i> R-C Fellow, UBx, France
             </p>
-            <div class="rolling-title">
-                <p>Thesis Title: Bio-Integrated Artificial Intelligence: Synergizing Nanomaterials, Machine Learning Algorithms, and Self-Powered Devices for Early-Stage Healthcare Diagnostics</p>
+            <div class="hero-chips">
+                <span class="chip">MLIP</span>
+                <span class="chip">Generative AI</span>
+                <span class="chip">Self-Driving Labs</span>
+                <span class="chip">Piezoelectric</span>
+                <span class="chip">Triboelectric</span>
+                <span class="chip">Quantum ML</span>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num" data-target="547">0</span>
+                    <span class="stat-label">Citations</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num" data-target="12">0</span>
+                    <span class="stat-label">h-index</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num" data-target="13">0</span>
+                    <span class="stat-label">i10-index</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num" data-target="20">0</span>
+                    <span class="stat-label">Publications</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="#publications" class="btn-primary"><i class="fas fa-book-open"></i> View Publications</a>
+                <a href="https://scholar.google.com/citations?user=J5UZz7sAAAAJ&hl=en" target="_blank" class="btn-outline"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                <a href="#contact" class="btn-outline"><i class="fas fa-envelope"></i> Contact</a>
             </div>
         </div>
     </div>
+</section>
 
-    <div class="section skills" id="skills">
-        <h2>Skills <i class="fas fa-tools"></i></h2>
-        <ul>
-            <li>Machine Learning (ML), Deep Neural Networks (DNN), Python, R, and Data Science Tools</li>
-            <li>Device Fabrication Techniques: 3D Printing, Screen Printing, and Lithography</li>
-            <li>Piezoelectric, Triboelectric, Flexoelectric, Ferroelectric and Pyroelectric Materials and Devices</li>
-            <li>Nanomaterials Characterizations: AFM, PFM, KPFM, MFM, Dielectric Spectroscopy, XPS, XRD, Electrospinning, and FEA Simulation</li>
-            <li>Development of IoT-enabled Systems Using ESP32, Arduino, and Raspberry Pi</li>
-            <li>Programming for Biomedical Devices and Real-Time Sensor Integration</li>
-        </ul>
-    </div>
-
-    <div class="section services" id="services">
-        <h2>Services <i class="fas fa-concierge-bell"></i></h2>
-        <ul>
-            <li><b>Editorial Advisory Board Member</b> - <a href="https://pubs.aip.org/aip/aml/pages/advisory" target="_blank">APL Machine Learning (AIP)</a></li>
-            <li><b>Guest Editor</b> - <a href="https://iopscience.iop.org/collections/nano-240822-649" target="_blank">Nanotechnology (IOP Science)</a></li>
-            <li><b>Reviewer</b> - Advanced Functional Materials, Small, 2D Materials, Advanced Materials, Applied Physics Letters, APL Quantum, and Physical Review Letters</li>
-            <li><b>Active Committee Member</b> - Early Career Professionals Subcommittee (ECPSC), Materials Research Society (MRS)</li>
-            <li><b>Student Ambassador</b> - American Physical Society (APS)</li>
-            <li><b>Member and Volunteer</b> - American Chemical Society (ACS) and IEEE</li>
-            <li>Academic Mentorship and Research Guidance in Machine Learning and Nanotechnology</li>
-        </ul>
-    </div>
-
-    <div class="section grants" id="grants">
-        <h2>Grants & Funding <i class="fas fa-money-bill"></i></h2> <!-- Updated icon class -->
-        <ul>
-            <li><b>APS Annual Leadership Meeting Grant</b> - Awarded by the American Physical Society (APS), 2024</li>
-            <li><b>Raman-Charpak Fellowship</b> - Awarded by the Indo-French Centre for Promotion of Advanced Research(IFCPAR/CEFIPRA), 2022</li>
-            <li><b>SERB-ITS Funding Award</b> - Awarded by the Science and Engineering Research Board (SERB), Government of India, 2022</li>
-            <li><b>APS GERA Energy Workshop Funding Grant</b> - Awarded by APS March Meeting, 2023</li>
-            <li><b>UGC-JRF Fellowship</b> - Awarded by the University Grants Commission (UGC), Ministry of Education, Government of India</li>
-            <li><b>DST-INSPIRE Scholarship</b> - Awarded by the Department of Science and Technology (DST), Government of India, for higher education and research excellence</li>
-        </ul>
-    </div>
-
-    <div class="section awards" id="awards">
-        <h2>Awards & Honors <i class="fas fa-trophy"></i></h2>
-        <ul>
-            <li><b>Young Scientist Award</b> - Materials Research Society of India (MRSI), 2023</li>
-            <li><b>Early Career Materials Researcher</b> - MRS Communications, 2023</li>
-            <li><b>Raman Charpak Fellow</b> - Indo-French Centre for Promotion of Advanced Research, 2022</li>
-            <li><b>Best Oral Presentation Award</b> - APA NANOFORUM, 2022</li>
-            <li><b>Best Poster Award</b> - 65th Solid State Physics Symposium, DAE, 2022</li>
-            <li><b>National Eligibility Test (NET)</b> - Qualified 3 times, Joint CSIR-UGC Examination, 2018-2019</li>
-            <li><b>Graduate Aptitude Test in Engineering (GATE)</b> - Qualified 2 times, 2018-2019</li>
-            <li><b>Joint Admission Test for Masters (JAM)</b> - Qualified, 2016</li>
-            <li><b>DST-INSPIRE Scholarship</b> - Department of Science and Technology (DST), 2013-2016</li>
-        </ul>
-    </div>
-
-    <div class="section projects" id="projects">
-        <h2>Highlighted Projects <i class="fas fa-project-diagram"></i></h2>
-        <div class="projects">
+<!-- ═══════ ABOUT ═══════ -->
+<section id="about">
+    <div class="container">
+        <div class="section-label">Profile</div>
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-grid fade-up">
+            <div class="about-card-left">
+                <img src="https://github.com/ABnano/abnano.github.io/raw/main/AB2.jpg" alt="Anand Babu" class="about-avatar" loading="lazy">
+                <div class="about-name">Anand Babu</div>
+                <div class="about-pos">Postdoc Researcher · UCLouvain</div>
+                <div class="about-socials">
+                    <a href="https://github.com/ABnano" target="_blank" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://scholar.google.com/citations?user=J5UZz7sAAAAJ&hl=en" target="_blank" class="social-btn" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://orcid.org/0000-0003-4746-6011" target="_blank" class="social-btn" title="ORCID"><i class="fab fa-orcid"></i></a>
+                    <a href="mailto:ababu.nano@gmail.com" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <div class="about-metrics">
+                    <div class="metric-box"><span class="metric-val">547</span><span class="metric-lbl">Citations</span></div>
+                    <div class="metric-box"><span class="metric-val">12</span><span class="metric-lbl">h-index</span></div>
+                    <div class="metric-box"><span class="metric-val">13</span><span class="metric-lbl">i10</span></div>
+                </div>
+            </div>
             <div>
-                <img src="https://github.com/ABnano/abnano.github.io/raw/main/Journal.jpg" alt="Project Image" loading="lazy">
+                <div class="about-text">
+                    <p>
+                        I am a <strong>Postdoctoral Research Scientist at Université catholique de Louvain (UCLouvain), Belgium</strong>, where I deploy generative AI models — particularly <strong>Variational Autoencoders (VAEs) and Diffusion Models</strong> — for multimodal machine learning and inverse design of materials.
+                    </p>
+                    <p>
+                        I completed my <strong>Ph.D. at INST-IISER Mohali, India</strong>, focusing on piezo-, tribo-, and flexo-electric sensors integrated with <strong>AI/ML algorithms for digital health applications</strong>. During my doctoral research, as a <strong>Raman-Charpak Fellow</strong> at IMS, University of Bordeaux, I developed Voiceprint Biometrics, e-skin Respirometers, and Emotion Sensing devices.
+                    </p>
+                    <p>
+                        My current research interests span <strong>AI for Materials, Machine Learning Interatomic Potentials (MLIP), Self-Driving Laboratories, Quantum Machine Learning, and Wearable Sensor Systems</strong>. I serve on the Editorial Advisory Board of <strong>APL Machine Learning (AIP)</strong> and as a Guest Editor for <strong>Nanotechnology (IOP Science)</strong>.
+                    </p>
+                </div>
+                <div class="thesis-box">
+                    <strong>Ph.D. Thesis</strong>
+                    Bio-Integrated Artificial Intelligence: Synergizing Nanomaterials, Machine Learning Algorithms, and Self-Powered Devices for Early-Stage Healthcare Diagnostics
+                </div>
             </div>
-            <!-- You can add more project items here -->
         </div>
     </div>
+</section>
 
-    <div class="section" id="publications">
-        <h2>Selected Publications <i class="fas fa-book"></i></h2>
-        <div class="scrollable-list">
-            <ul>
-                <li><i class="fas fa-book-open"></i><b>Algorithmically Enhanced Wearable Multimodal Emotion Sensor</b> - <a href="https://doi.org/10.1002/aisy.202400567">Advanced Intelligent Systems</a>, 2024. (In Production)</li>
-                <li><i class="fas fa-book-open"></i><b>Machine Learning-enabled Nanoscale Phase Prediction in Engineered Poly(Vinylidene Fluoride)</b> - <a href="https://doi.org/10.1002/smll.202405393">Small</a>, 2024.</li>
-                <li><i class="fas fa-book-open"></i><b>SciQu: Accelerating Materials Properties Prediction with Automated Literature Mining for Self-Driving Laboratories</b> - <a href="https://arxiv.org/abs/2407.08270">arXiv</a>, 2024.</li>
-                <li><i class="fas fa-book-open"></i><b>Self-learning e-Skin Respirometer for Pulmonary Disease Detection</b> - <a href="#">Advanced Sensor Research</a>, 2024.</li>
-                <li><i class="fas fa-book-open"></i><b>Can Entanglement-enhanced Quantum Kernels Improve Data Classification?</b> - <a href="https://arxiv.org/abs/2406.01948">arXiv</a>, 2024.</li>
-                <li><i class="fas fa-book-open"></i><b>Roadmap to Human-Machine Interaction through Triboelectric Nanogenerator and Machine Learning Convergence</b> - <a href="https://doi.org/10.1021/acsaem.1c02782">ACS Applied Energy Materials</a>, 2024.</li>
-                <li><i class="fas fa-book-open"></i><b>Programmable Polymeric-Interface for Voiceprint Biometrics</b> - <a href="https://doi.org/10.1002/admt.202301551">Advanced Materials Technologies</a>, 2024. (Selected for Journal Cover Page)</li>
-                <li><i class="fas fa-book-open"></i><b>AI-enabled wearable sensor for real-time monitored personalized training for sportspersons</b> - <a href="https://doi.org/10.1557/s43579-023-00185-1">MRS Communications</a>, 2023. (Invited article for Early Career Materials Researcher)</li>
-                <li><i class="fas fa-book-open"></i><b>Deep Learning Enabled Perceptive Wearable Sensor: An Interactive Gadget for Tracking Movement Disorder</b> - <a href="https://doi.org/10.1002/admt.202300046">Advanced Materials Technologies</a>, 2023. (Selected as Hot Article in AI/ML Category)</li>
-                <li><i class="fas fa-book-open"></i><b>Deep Learning Enabled Early Predicting Cardiovascular Status Using Highly Sensitive Piezoelectric Sensor of Solution‐Processable Nylon‐11</b> - <a href="https://doi.org/10.1002/admt.202202021">Advanced Materials Technologies</a>, 2023. (Selected as Hot Article in AI/ML Category)</li>
-                <li><i class="fas fa-book-open"></i><b>Surface Potential Tuned Single Active Material Comprised Triboelectric Nanogenerator for High-Performance Voice Recognition Sensor</b> - <a href="https://doi.org/10.1002/smll.202201331">Small</a>, 2022. (Selected as Hot Article in Surface-Interface Category)</li>
-                <li><i class="fas fa-book-open"></i><b>Negatively Bias Driven Enhancement in Piezo response for Self-powered Biomedical and Facial Expression Sensor</b> - <a href="https://doi.org/10.1063/5.0079451">Applied Physics Letters</a>, 2022.</li>
-                <li><i class="fas fa-book-open"></i><b>Curved Structured 3D Printed Flexible Triboelectric Nanogenerator</b> - <a href="#">DAE Solid State Physics Symposium Proceedings</a>, 2021.</li>
-                <li><i class="fas fa-book-open"></i><b>Revisiting δ-PVDF Based Piezoelectric Nanogenerator for Self-powered Pressure Mapping Sensor</b> - <a href="https://doi.org/10.1063/5.0082797">Applied Physics Letters</a>, 2021.</li>
-                <li><i class="fas fa-book-open"></i><b>Futuristic Alzheimer's Therapy: Acoustic-Stimulated Piezoelectric Nanospheres for Amyloid Reduction</b> - <a href="https://doi.org/10.1039/D3BM01231H">Biomaterials Science</a>, 2024.</li>
-                <li><i class="fas fa-book-open"></i><b>Tunable, Conductive, Self-healing, and Injectable Hydrogels for Bioelectronics and Tissue Regeneration Applications</b> - <a href="https://doi.org/10.1039/D1TB00835G">Journal of Materials Chemistry B</a>, 2021.</li>
-                <li><i class="fas fa-book-open"></i><b>PVDF/AgCO3 Nanocomposites for Efficient Dye Degradation and Flexible Piezoelectric Mechanical Energy Harvester</b> - <a href="https://doi.org/10.1039/D1SE00425A">Sustainable Energy Fuels</a>, 2022.</li>
-                <li><i class="fas fa-book-open"></i><b>Lead-Free Perovskite Cs3Bi2I9 Derived Electroactive PVDF Composite Based Piezoelectric Nanogenerator</b> - <a href="https://doi.org/10.1021/acs.langmuir.2c01016">Langmuir</a>, 2022.</li>
-                <li><i class="fas fa-book-open"></i><b>Machine Learning Aided All-Organic Air Permeable Piezoelectric Nanogenerator</b> - <a href="https://doi.org/10.1021/acssuschemeng.3c02358">ACS Sustainable Chemistry and Engineering</a>, 2023.</li>
-                <li><i class="fas fa-book-open"></i><b>Mott interactions driven insulating behavior in Ruthenium based double perovskites: A2SmRuO6 (A = Ba & Sr)</b> - <a href="https://doi.org/10.1016/j.jallcom.2023.176184">Journal of Alloys and Compounds</a>, 2024.</li>
-            </ul>
+<!-- ═══════ RESEARCH ═══════ -->
+<section id="research">
+    <div class="container">
+        <div class="section-label">Focus Areas</div>
+        <h2 class="section-title">Research <span>Interests</span></h2>
+        <div class="research-grid">
+            <div class="research-card fade-up">
+                <div class="icon" style="background:rgba(56,189,248,0.15);color:var(--primary)"><i class="fas fa-brain"></i></div>
+                <h3>AI for Materials</h3>
+                <p>Generative models, diffusion models, and VAEs for inverse design and property prediction</p>
+            </div>
+            <div class="research-card fade-up">
+                <div class="icon" style="background:rgba(129,140,248,0.15);color:var(--secondary)"><i class="fas fa-robot"></i></div>
+                <h3>MLIP & Self-Driving Labs</h3>
+                <p>Machine learning interatomic potentials, automated materials discovery pipelines</p>
+            </div>
+            <div class="research-card fade-up">
+                <div class="icon" style="background:rgba(52,211,153,0.15);color:var(--green)"><i class="fas fa-heartbeat"></i></div>
+                <h3>Wearable Health Sensors</h3>
+                <p>AI-integrated piezoelectric and triboelectric nanogenerators for healthcare diagnostics</p>
+            </div>
+            <div class="research-card fade-up">
+                <div class="icon" style="background:rgba(251,191,36,0.15);color:var(--gold)"><i class="fas fa-atom"></i></div>
+                <h3>Nanomaterials</h3>
+                <p>PVDF-based nanocomposites, perovskites, electrospun nanofibres and characterization</p>
+            </div>
+            <div class="research-card fade-up">
+                <div class="icon" style="background:rgba(249,115,22,0.15);color:#fb923c"><i class="fas fa-project-diagram"></i></div>
+                <h3>Quantum ML</h3>
+                <p>Entanglement-enhanced quantum kernels, quantum computing for data classification</p>
+            </div>
+            <div class="research-card fade-up">
+                <div class="icon" style="background:rgba(236,72,153,0.15);color:#f472b6"><i class="fas fa-microchip"></i></div>
+                <h3>Smart IoT Systems</h3>
+                <p>ESP32/Raspberry Pi-based IoT sensor platforms for real-time biomonitoring</p>
+            </div>
         </div>
-
-    <div class="section" id="invited-talks">
-        <h2>Invited Talks <i class="fas fa-microphone-alt"></i></h2>
-        <ul>
-            <li><b>AI-enabled self-powered sensors</b> - Jointly organized by Prakash Bharti and the IEEE Photonics Society</li>
-            <li><b>Intelligent Sensors for Next Generation Electronic Devices</b> - Organized by IMS, University of Bordeaux, France</li>
-            <li><b>Indo-French Science in the Spotlight</b> - Organized by The Ambassador of France, Emmanuel Lenain, with Dr. Antoine Petit, CEO of CNRS</li>
-            <li><b>IEEE Sensors Advisory Committee Leadership Summit</b> - October 2023, Department of Homeland Security and IEEE Sensors Council, Seattle, Washington</li>
-            <li><b>Programmable Piezoelectric Multimodal Emotional Sensors</b> - International Conference on Health, Safety and Environment, December 23-24, 2023, Institute of Fire and Safety Engineering, Haldia, West Bengal, India</li>
-        </ul>
     </div>
+</section>
 
-    <div class="section hands-on-training" id="hands-on-training">
-        <h2>Hands-On Training <i class="fas fa-tools"></i></h2>
-        <ul>
-            <li><b>AI/ML, QML, and Data Science</b> - Development of various supervised, unsupervised, and reinforcement learning models using Python and MATLAB, including Random Forest Regression (RFR), Logistic Regression, SVM, DNN, and Q-Learning</li>
-            <li><b>Device/Sensors Fabrication Instruments</b> - Experience with MEMS/NEMS fabrication using Micro Writer, 3D Printers, Professional Screen and Stencil Printers (Ekra X5), and Electrospinning equipment</li>
-            <li><b>Materials Characterizations/Electrical Measurements Instruments</b> - Expertise in Scanning Probe Microscopy techniques (AFM, PFM, KPFM, EFM, MFM), XPS, UPS, FTIR, Impedance Analyzer, and Digital Storage Oscilloscope</li>
-            <li><b>Electronic Interfacing for IoT and Web Design Tools</b> - Development of IoT-enabled systems using ESP32, ESP8266, Arduino, and Raspberry Pi; web design with JavaScript and HTML</li>
-            <li><b>Establishment and Development of Customized Setups/Instruments</b> - Designed experimental setups for contact electrification studies and nanoscale laser measurements</li>
-        </ul>
+<!-- ═══════ SKILLS ═══════ -->
+<section id="skills">
+    <div class="container">
+        <div class="section-label">Expertise</div>
+        <h2 class="section-title">Technical <span>Skills</span></h2>
+        <div class="skills-grid fade-up">
+            <div class="card skill-category">
+                <h3><i class="fas fa-code"></i> AI / ML & Data Science</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Scikit-learn</span>
+                    <span class="skill-tag">Deep Neural Networks</span>
+                    <span class="skill-tag">VAEs</span>
+                    <span class="skill-tag">Diffusion Models</span>
+                    <span class="skill-tag">Random Forest</span>
+                    <span class="skill-tag">SVM</span>
+                    <span class="skill-tag">MATLAB</span>
+                    <span class="skill-tag">R</span>
+                </div>
+            </div>
+            <div class="card skill-category">
+                <h3><i class="fas fa-flask"></i> Device Fabrication</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">3D Printing</span>
+                    <span class="skill-tag">Screen Printing</span>
+                    <span class="skill-tag">Lithography</span>
+                    <span class="skill-tag">Electrospinning</span>
+                    <span class="skill-tag">MEMS/NEMS</span>
+                    <span class="skill-tag">Micro Writer</span>
+                    <span class="skill-tag">Stencil Printer (Ekra X5)</span>
+                </div>
+            </div>
+            <div class="card skill-category">
+                <h3><i class="fas fa-microscope"></i> Characterization</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">AFM</span>
+                    <span class="skill-tag">PFM</span>
+                    <span class="skill-tag">KPFM</span>
+                    <span class="skill-tag">EFM</span>
+                    <span class="skill-tag">MFM</span>
+                    <span class="skill-tag">XPS</span>
+                    <span class="skill-tag">UPS</span>
+                    <span class="skill-tag">XRD</span>
+                    <span class="skill-tag">FTIR</span>
+                    <span class="skill-tag">Impedance Analysis</span>
+                </div>
+            </div>
+            <div class="card skill-category">
+                <h3><i class="fas fa-microchip"></i> Electronics & IoT</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">ESP32</span>
+                    <span class="skill-tag">ESP8266</span>
+                    <span class="skill-tag">Arduino</span>
+                    <span class="skill-tag">Raspberry Pi</span>
+                    <span class="skill-tag">FEA Simulation</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">JavaScript</span>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
 
-    <div class="section" id="contact">
-        <h2>Contact <i class="fas fa-envelope"></i></h2>
-        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:ababu.nano@gmail.com">ababu.nano@gmail.com</a></p>
-        <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/ABnano">https://github.com/ABnano</a></p>
-        <p><i class="fas fa-graduation-cap"></i> Google Scholar: <a href="https://scholar.google.com/citations?user=J5UZz7sAAAAJ&hl=en">Google Scholar Profile</a></p>
-        <p><i class="fab fa-orcid"></i> ORCID: <a href="https://orcid.org/0000-0003-4746-6011">0000-0003-4746-6011</a></p>
+<!-- ═══════ PUBLICATIONS ═══════ -->
+<section id="publications">
+    <div class="container">
+        <div class="section-label">Research Output</div>
+        <h2 class="section-title">Publications <span>(Google Scholar)</span></h2>
+        <div class="pub-filter">
+            <button class="filter-btn active" data-filter="all">All (20)</button>
+            <button class="filter-btn" data-filter="2025">2025</button>
+            <button class="filter-btn" data-filter="2024">2024</button>
+            <button class="filter-btn" data-filter="2023">2023</button>
+            <button class="filter-btn" data-filter="2022">2022</button>
+            <button class="filter-btn" data-filter="2021">2021</button>
+        </div>
+        <div class="pub-list" id="pubList">
+
+            <div class="pub-item fade-up" data-year="2022">
+                <div class="pub-rank">#1</div>
+                <div class="pub-body">
+                    <div class="pub-title">Revisiting of δ-PVDF nanoparticles via phase separation with giant piezoelectric response</div>
+                    <div class="pub-authors">HK Mishra, V Gupta, K Roy, <strong>A Babu</strong>, A Kumar, D Mandal</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">Nano Energy</span>
+                        <span class="pub-year">2022</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">78</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2022">
+                <div class="pub-rank">#2</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://doi.org/10.1002/smll.202201331" target="_blank">Surface potential tuned single active material comprised triboelectric nanogenerator for high-performance voice recognition</a></div>
+                    <div class="pub-authors"><strong>A Babu</strong>, P Malik, N Das, D Mandal</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">Small</span>
+                        <span class="pub-year">2022</span>
+                        <span class="pub-badge badge-hot">Hot Article</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">68</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2022">
+                <div class="pub-rank">#3</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://doi.org/10.1021/acs.langmuir.2c01016" target="_blank">Lead-Free Perovskite Cs₃Bi₂I₉-Derived Electroactive PVDF Composite Based Piezoelectric Nanogenerator</a></div>
+                    <div class="pub-authors">B Mondal, HK Mishra, D Sengupta, A Kumar, <strong>A Babu</strong>, et al.</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">Langmuir</span>
+                        <span class="pub-year">2022</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">56</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2021">
+                <div class="pub-rank">#4</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://doi.org/10.1063/5.0082797" target="_blank">Revisiting δ-PVDF based piezoelectric nanogenerator for self-powered pressure mapping sensor</a></div>
+                    <div class="pub-authors">V Gupta, <strong>A Babu</strong>, SK Ghosh, Z Mallick, HK Mishra, et al.</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">Applied Physics Letters</span>
+                        <span class="pub-year">2021</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">50</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2021">
+                <div class="pub-rank">#5</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://doi.org/10.1039/D1TB00835G" target="_blank">Tunable, conductive, self-healing, adhesive and injectable hydrogels for bioelectronics and tissue regeneration</a></div>
+                    <div class="pub-authors">V Panwar, <strong>A Babu</strong>, A Sharma, J Thomas, V Chopra, et al.</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">J. Materials Chemistry B</span>
+                        <span class="pub-year">2021</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">50</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2022">
+                <div class="pub-rank">#6</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://doi.org/10.1039/D1SE00425A" target="_blank">PVDF/Ag₂CO₃ nanocomposites for efficient dye degradation and flexible piezoelectric energy harvester</a></div>
+                    <div class="pub-authors">HK Mishra, D Sengupta, <strong>A Babu</strong>, BM Pirzada, R Sarkar, et al.</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">Sustainable Energy & Fuels</span>
+                        <span class="pub-year">2022</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">40</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2023">
+                <div class="pub-rank">#7</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://doi.org/10.1002/admt.202300046" target="_blank">Deep learning enabled perceptive wearable sensor for tracking movement disorder</a></div>
+                    <div class="pub-authors"><strong>A Babu</strong>, S Ranpariya, DK Sinha, D Mandal</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">Advanced Materials Technologies</span>
+                        <span class="pub-year">2023</span>
+                        <span class="pub-badge badge-hot">Hot Article</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">34</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2023">
+                <div class="pub-rank">#8</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://doi.org/10.1002/admt.202202021" target="_blank">Deep learning enabled early predicting cardiovascular status using piezoelectric Nylon-11 sensor</a></div>
+                    <div class="pub-authors"><strong>A Babu</strong>, S Ranpariya, DK Sinha, A Chatterjee, D Mandal</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">Advanced Materials Technologies</span>
+                        <span class="pub-year">2023</span>
+                        <span class="pub-badge badge-hot">Hot Article</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">32</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2024">
+                <div class="pub-rank">#9</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://doi.org/10.1021/acsaem.1c02782" target="_blank">Roadmap to human–machine interaction through triboelectric nanogenerator and machine learning convergence</a></div>
+                    <div class="pub-authors"><strong>A Babu</strong>, D Mandal</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">ACS Applied Energy Materials</span>
+                        <span class="pub-year">2024</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">28</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2024">
+                <div class="pub-rank">#10</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://doi.org/10.1002/admt.202301551" target="_blank">Programmable Polymeric-Interface for Voiceprint Biometrics</a></div>
+                    <div class="pub-authors"><strong>A Babu</strong>, E Raoul, G Kassahun, I Dufour, D Mandal, D Thuau</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">Advanced Materials Technologies</span>
+                        <span class="pub-year">2024</span>
+                        <span class="pub-badge badge-cover">Journal Cover</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">24</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2023">
+                <div class="pub-rank">#11</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://doi.org/10.1021/acssuschemeng.3c02358" target="_blank">Machine learning-aided all-organic air-permeable piezoelectric nanogenerator</a></div>
+                    <div class="pub-authors">V Gupta, A Kumar, B Mondal, <strong>A Babu</strong>, S Ranpariya, DK Sinha, D Mandal</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">ACS Sus. Chemistry & Engineering</span>
+                        <span class="pub-year">2023</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">21</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2022">
+                <div class="pub-rank">#12</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://doi.org/10.1063/5.0079451" target="_blank">Negatively bias driven enhancement in piezo response for self-powered facial expression sensor</a></div>
+                    <div class="pub-authors"><strong>A Babu</strong>, V Gupta, D Mandal</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">Applied Physics Letters</span>
+                        <span class="pub-year">2022</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">14</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2023">
+                <div class="pub-rank">#13</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://doi.org/10.1557/s43579-023-00185-1" target="_blank">AI-enabled wearable sensor for real-time monitored personalized training for sportspersons</a></div>
+                    <div class="pub-authors"><strong>A Babu</strong>, D Thuau, D Mandal</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">MRS Communications</span>
+                        <span class="pub-year">2023</span>
+                        <span class="pub-badge badge-invited">Invited</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">12</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2025">
+                <div class="pub-rank">#14</div>
+                <div class="pub-body">
+                    <div class="pub-title">Entanglement-Enabled Quantum Kernels for Enhanced Feature Mapping in Classification Tasks</div>
+                    <div class="pub-authors"><strong>A Babu</strong>, S G. Ghatnekar, A Saxena, D Mandal</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">APL Quantum</span>
+                        <span class="pub-year">2025</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">6</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2024">
+                <div class="pub-rank">#15</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://doi.org/10.1002/smll.202405393" target="_blank">Machine Learning-Enabled Nanoscale Phase Prediction in Engineered PVDF</a></div>
+                    <div class="pub-authors"><strong>A Babu</strong>, BM Abraham, S Naskar, S Ranpariya, D Mandal</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">Small</span>
+                        <span class="pub-year">2024</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">6</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2024">
+                <div class="pub-rank">#16</div>
+                <div class="pub-body">
+                    <div class="pub-title">Self-Learning e-Skin Respirometer for Pulmonary Disease Detection</div>
+                    <div class="pub-authors"><strong>A Babu</strong>, G Kassahun, I Dufour, D Mandal, D Thuau</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">Advanced Sensor Research</span>
+                        <span class="pub-year">2024</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">6</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2024">
+                <div class="pub-rank">#17</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://arxiv.org/abs/2406.01948" target="_blank">Can Entanglement-enhanced Quantum Kernels Improve Data Classification?</a></div>
+                    <div class="pub-authors"><strong>A Babu</strong>, SG Ghatnekar, A Saxena, D Mandal</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">arXiv preprint</span>
+                        <span class="pub-year">2024</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">6</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2025">
+                <div class="pub-rank">#18</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://doi.org/10.1002/aisy.202400567" target="_blank">Algorithmically Enhanced Wearable Multimodal Emotion Sensor</a></div>
+                    <div class="pub-authors"><strong>A Babu</strong>, G Kassahun, I Dufour, D Mandal, D Thuau</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">Advanced Intelligent Systems</span>
+                        <span class="pub-year">2025</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">4</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2024">
+                <div class="pub-rank">#19</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://doi.org/10.1016/j.jallcom.2023.176184" target="_blank">Mott interactions driven insulating behaviour in ruthenium based perovskites: A₂SmRuO₆</a></div>
+                    <div class="pub-authors">S Dani, R Pandit, <strong>A Babu</strong>, R Kumar</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">J. Alloys and Compounds</span>
+                        <span class="pub-year">2024</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">4</span><span class="cite-label">cited by</span></div>
+            </div>
+
+            <div class="pub-item fade-up" data-year="2024">
+                <div class="pub-rank">#20</div>
+                <div class="pub-body">
+                    <div class="pub-title"><a href="https://doi.org/10.1039/D3BM01231H" target="_blank">Futuristic Alzheimer's therapy: acoustic-stimulated piezoelectric nanospheres for amyloid reduction</a></div>
+                    <div class="pub-authors">M Sharma, S Choudhury, <strong>A Babu</strong>, V Gupta, D Sengupta, SA Ali</div>
+                    <div class="pub-meta">
+                        <span class="pub-journal">Biomaterials Science</span>
+                        <span class="pub-year">2024</span>
+                    </div>
+                </div>
+                <div class="pub-citations"><span class="cite-num">3</span><span class="cite-label">cited by</span></div>
+            </div>
+
+        </div>
+        <div style="text-align:center; margin-top:32px;">
+            <a href="https://scholar.google.com/citations?user=J5UZz7sAAAAJ&hl=en" target="_blank" class="btn-outline">
+                <i class="fas fa-graduation-cap"></i> View Full Profile on Google Scholar
+            </a>
+        </div>
     </div>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Anand Babu, Ph.D.</p>
-    </footer>
+<!-- ═══════ AWARDS ═══════ -->
+<section id="awards">
+    <div class="container">
+        <div class="section-label">Recognition</div>
+        <h2 class="section-title">Awards & <span>Honors</span></h2>
+        <div class="list-grid">
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(251,191,36,0.15);color:var(--gold)"><i class="fas fa-trophy"></i></div>
+                <div>
+                    <h4>Young Scientist Award</h4>
+                    <p>Materials Research Society of India (MRSI)</p>
+                    <span class="year-tag">2023</span>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(56,189,248,0.15);color:var(--primary)"><i class="fas fa-star"></i></div>
+                <div>
+                    <h4>Early Career Materials Researcher</h4>
+                    <p>MRS Communications — Invited recognition</p>
+                    <span class="year-tag">2023</span>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(129,140,248,0.15);color:var(--secondary)"><i class="fas fa-medal"></i></div>
+                <div>
+                    <h4>Raman Charpak Fellow</h4>
+                    <p>Indo-French Centre for Promotion of Advanced Research</p>
+                    <span class="year-tag">2022</span>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(52,211,153,0.15);color:var(--green)"><i class="fas fa-award"></i></div>
+                <div>
+                    <h4>Best Oral Presentation Award</h4>
+                    <p>APA NANOFORUM</p>
+                    <span class="year-tag">2022</span>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(251,191,36,0.15);color:var(--gold)"><i class="fas fa-certificate"></i></div>
+                <div>
+                    <h4>Best Poster Award</h4>
+                    <p>65th Solid State Physics Symposium, DAE</p>
+                    <span class="year-tag">2022</span>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(56,189,248,0.15);color:var(--primary)"><i class="fas fa-check-circle"></i></div>
+                <div>
+                    <h4>National Eligibility Test (NET)</h4>
+                    <p>Qualified 3 times — Joint CSIR-UGC Examination</p>
+                    <span class="year-tag">2018–2019</span>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(129,140,248,0.15);color:var(--secondary)"><i class="fas fa-graduation-cap"></i></div>
+                <div>
+                    <h4>GATE Qualified</h4>
+                    <p>Graduate Aptitude Test in Engineering — 2 times</p>
+                    <span class="year-tag">2018–2019</span>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(52,211,153,0.15);color:var(--green)"><i class="fas fa-university"></i></div>
+                <div>
+                    <h4>DST-INSPIRE Scholarship</h4>
+                    <p>Dept. of Science and Technology, Govt. of India</p>
+                    <span class="year-tag">2013–2016</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<!-- ═══════ GRANTS ═══════ -->
+<section id="grants">
+    <div class="container">
+        <div class="section-label">Funding</div>
+        <h2 class="section-title">Grants & <span>Fellowships</span></h2>
+        <div class="list-grid">
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(56,189,248,0.15);color:var(--primary)"><i class="fas fa-dollar-sign"></i></div>
+                <div>
+                    <h4>APS Annual Leadership Meeting Grant</h4>
+                    <p>American Physical Society (APS)</p>
+                    <span class="year-tag">2024</span>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(129,140,248,0.15);color:var(--secondary)"><i class="fas fa-globe"></i></div>
+                <div>
+                    <h4>Raman-Charpak Fellowship</h4>
+                    <p>Indo-French Centre (IFCPAR/CEFIPRA) — University of Bordeaux</p>
+                    <span class="year-tag">2022</span>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(251,191,36,0.15);color:var(--gold)"><i class="fas fa-landmark"></i></div>
+                <div>
+                    <h4>SERB-ITS Funding Award</h4>
+                    <p>Science and Engineering Research Board, Govt. of India</p>
+                    <span class="year-tag">2022</span>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(52,211,153,0.15);color:var(--green)"><i class="fas fa-bolt"></i></div>
+                <div>
+                    <h4>APS GERA Energy Workshop Grant</h4>
+                    <p>APS March Meeting</p>
+                    <span class="year-tag">2023</span>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(56,189,248,0.15);color:var(--primary)"><i class="fas fa-book"></i></div>
+                <div>
+                    <h4>UGC-JRF Fellowship</h4>
+                    <p>University Grants Commission, Ministry of Education, India</p>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(251,191,36,0.15);color:var(--gold)"><i class="fas fa-flask"></i></div>
+                <div>
+                    <h4>DST-INSPIRE Scholarship</h4>
+                    <p>Dept. of Science and Technology, Govt. of India — higher education</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ SERVICES ═══════ -->
+<section id="services">
+    <div class="container">
+        <div class="section-label">Community</div>
+        <h2 class="section-title">Academic <span>Services</span></h2>
+        <div class="list-grid">
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(56,189,248,0.15);color:var(--primary)"><i class="fas fa-edit"></i></div>
+                <div>
+                    <h4>Editorial Advisory Board Member</h4>
+                    <p><a href="https://pubs.aip.org/aip/aml/pages/advisory" target="_blank">APL Machine Learning (AIP Publishing)</a></p>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(129,140,248,0.15);color:var(--secondary)"><i class="fas fa-pen-nib"></i></div>
+                <div>
+                    <h4>Guest Editor</h4>
+                    <p><a href="https://iopscience.iop.org/collections/nano-240822-649" target="_blank">Nanotechnology (IOP Science)</a></p>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(52,211,153,0.15);color:var(--green)"><i class="fas fa-search"></i></div>
+                <div>
+                    <h4>Peer Reviewer</h4>
+                    <p>Advanced Functional Materials, Small, 2D Materials, Advanced Materials, APL, APL Quantum, Physical Review Letters</p>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(251,191,36,0.15);color:var(--gold)"><i class="fas fa-users"></i></div>
+                <div>
+                    <h4>Active Committee Member</h4>
+                    <p>Early Career Professionals Subcommittee (ECPSC), Materials Research Society (MRS)</p>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(56,189,248,0.15);color:var(--primary)"><i class="fas fa-user-graduate"></i></div>
+                <div>
+                    <h4>Student Ambassador</h4>
+                    <p>American Physical Society (APS)</p>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(129,140,248,0.15);color:var(--secondary)"><i class="fas fa-handshake"></i></div>
+                <div>
+                    <h4>Member & Volunteer</h4>
+                    <p>American Chemical Society (ACS) and IEEE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ TALKS ═══════ -->
+<section id="talks" style="background:var(--bg-0)">
+    <div class="container">
+        <div class="section-label">Invited Talks</div>
+        <h2 class="section-title">Conferences & <span>Talks</span></h2>
+        <div class="talks-list">
+            <div class="talk-item fade-up">
+                <div class="talk-dot"></div>
+                <div class="talk-body">
+                    <h4>AI-enabled Self-Powered Sensors</h4>
+                    <p>Jointly organized by Prakash Bharti and the IEEE Photonics Society</p>
+                </div>
+            </div>
+            <div class="talk-item fade-up">
+                <div class="talk-dot"></div>
+                <div class="talk-body">
+                    <h4>Intelligent Sensors for Next Generation Electronic Devices</h4>
+                    <p>Organized by IMS, University of Bordeaux, France</p>
+                </div>
+            </div>
+            <div class="talk-item fade-up">
+                <div class="talk-dot"></div>
+                <div class="talk-body">
+                    <h4>Indo-French Science in the Spotlight</h4>
+                    <p>Organized by The Ambassador of France, Emmanuel Lenain, with Dr. Antoine Petit, CEO of CNRS</p>
+                </div>
+            </div>
+            <div class="talk-item fade-up">
+                <div class="talk-dot"></div>
+                <div class="talk-body">
+                    <h4>IEEE Sensors Advisory Committee Leadership Summit</h4>
+                    <p>October 2023 — Dept. of Homeland Security and IEEE Sensors Council, Seattle, Washington</p>
+                </div>
+            </div>
+            <div class="talk-item fade-up">
+                <div class="talk-dot"></div>
+                <div class="talk-body">
+                    <h4>Programmable Piezoelectric Multimodal Emotional Sensors</h4>
+                    <p>International Conference on Health, Safety and Environment, Dec. 2023 — Institute of Fire and Safety Engineering, Haldia, India</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ TRAINING ═══════ -->
+<section id="training">
+    <div class="container">
+        <div class="section-label">Expertise</div>
+        <h2 class="section-title">Hands-On <span>Training</span></h2>
+        <div class="list-grid">
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(56,189,248,0.15);color:var(--primary)"><i class="fas fa-brain"></i></div>
+                <div>
+                    <h4>AI/ML, QML & Data Science</h4>
+                    <p>Random Forest, Logistic Regression, SVM, DNN, Q-Learning, Quantum Kernels using Python and MATLAB</p>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(129,140,248,0.15);color:var(--secondary)"><i class="fas fa-cogs"></i></div>
+                <div>
+                    <h4>Device/Sensor Fabrication</h4>
+                    <p>Micro Writer, 3D Printers, Screen/Stencil Printers (Ekra X5), Electrospinning</p>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(52,211,153,0.15);color:var(--green)"><i class="fas fa-microscope"></i></div>
+                <div>
+                    <h4>Materials Characterization</h4>
+                    <p>Scanning Probe Microscopy (AFM, PFM, KPFM, EFM, MFM), XPS, UPS, FTIR, Impedance Analyzer, DSO</p>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(251,191,36,0.15);color:var(--gold)"><i class="fas fa-wifi"></i></div>
+                <div>
+                    <h4>IoT & Web Development</h4>
+                    <p>ESP32, ESP8266, Arduino, Raspberry Pi IoT platforms; JavaScript and HTML web design</p>
+                </div>
+            </div>
+            <div class="list-item-card fade-up">
+                <div class="list-icon" style="background:rgba(56,189,248,0.15);color:var(--primary)"><i class="fas fa-tools"></i></div>
+                <div>
+                    <h4>Custom Experimental Setups</h4>
+                    <p>Designed setups for contact electrification studies and nanoscale laser measurements</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ CONTACT ═══════ -->
+<section id="contact">
+    <div class="container">
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-title">Contact <span>Me</span></h2>
+        <div class="contact-grid fade-up">
+            <div>
+                <div class="contact-info">
+                    <h3>Let's Collaborate</h3>
+                    <p>Open to research collaborations, invited talks, peer review requests, and mentorship opportunities in AI for Materials and Sensor Systems.</p>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:ababu.nano@gmail.com" class="contact-link">
+                        <div class="contact-link-icon" style="color:var(--primary)"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-link-body">
+                            <small>Email</small>
+                            <span>ababu.nano@gmail.com</span>
+                        </div>
+                        <i class="fas fa-external-link-alt" style="color:var(--text-dim);font-size:0.75rem"></i>
+                    </a>
+                    <a href="https://github.com/ABnano" target="_blank" class="contact-link">
+                        <div class="contact-link-icon" style="color:var(--text)"><i class="fab fa-github"></i></div>
+                        <div class="contact-link-body">
+                            <small>GitHub</small>
+                            <span>ABnano</span>
+                        </div>
+                        <i class="fas fa-external-link-alt" style="color:var(--text-dim);font-size:0.75rem"></i>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=J5UZz7sAAAAJ&hl=en" target="_blank" class="contact-link">
+                        <div class="contact-link-icon" style="color:var(--gold)"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="contact-link-body">
+                            <small>Google Scholar</small>
+                            <span>547 citations · h-index 12</span>
+                        </div>
+                        <i class="fas fa-external-link-alt" style="color:var(--text-dim);font-size:0.75rem"></i>
+                    </a>
+                    <a href="https://orcid.org/0000-0003-4746-6011" target="_blank" class="contact-link">
+                        <div class="contact-link-icon" style="color:var(--green)"><i class="fab fa-orcid"></i></div>
+                        <div class="contact-link-body">
+                            <small>ORCID</small>
+                            <span>0000-0003-4746-6011</span>
+                        </div>
+                        <i class="fas fa-external-link-alt" style="color:var(--text-dim);font-size:0.75rem"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-map-card">
+                <div class="map-header">
+                    <h4>Current Positions</h4>
+                    <p>Active research affiliations</p>
+                </div>
+                <div class="map-visual">
+                    <div class="location-row">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>UCLouvain, Belgium</strong>
+                            <small>IMCN — Postdoctoral Research Scientist</small>
+                        </div>
+                    </div>
+                    <div class="location-row">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>University of Bordeaux, France</strong>
+                            <small>IMS — Raman-Charpak Fellow</small>
+                        </div>
+                    </div>
+                    <div class="location-row">
+                        <i class="fas fa-university"></i>
+                        <div>
+                            <strong>INST–IISER Mohali, India</strong>
+                            <small>Ph.D. — Nanoscience &amp; Technology</small>
+                        </div>
+                    </div>
+                    <div class="location-row" style="margin-top:8px;border-color:rgba(56,189,248,0.2)">
+                        <i class="fas fa-envelope" style="color:var(--primary)"></i>
+                        <div>
+                            <strong>ababu.nano@gmail.com</strong>
+                            <small>Primary contact — responds within 48h</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer>
+    <p>
+        &copy; 2025 <strong>Anand Babu, Ph.D.</strong> ·
+        <a href="https://abnano.github.io/">abnano.github.io</a> ·
+        <a href="https://scholar.google.com/citations?user=J5UZz7sAAAAJ&hl=en" target="_blank">Google Scholar</a> ·
+        <a href="https://orcid.org/0000-0003-4746-6011" target="_blank">ORCID</a>
+    </p>
+</footer>
+
+<script>
+    /* ── Nav toggle ── */
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    /* ── Active nav on scroll ── */
+    const sections = document.querySelectorAll('section[id]');
+    const navAs = document.querySelectorAll('.nav-links a');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+            }
+        });
+    }, { threshold: 0.3 });
+    sections.forEach(s => observer.observe(s));
+
+    /* ── Fade-up on scroll ── */
+    const fadeObs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); fadeObs.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-up').forEach(el => fadeObs.observe(el));
+
+    /* ── Counter animation ── */
+    function animateCounter(el) {
+        const target = +el.dataset.target;
+        const duration = 1600;
+        const step = target / (duration / 16);
+        let cur = 0;
+        const timer = setInterval(() => {
+            cur = Math.min(cur + step, target);
+            el.textContent = Math.floor(cur);
+            if (cur >= target) clearInterval(timer);
+        }, 16);
+    }
+    const counterObs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); counterObs.unobserve(e.target); } });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat-num[data-target]').forEach(el => counterObs.observe(el));
+
+    /* ── Particles ── */
+    const container = document.getElementById('particles');
+    const colors = ['#38bdf8', '#818cf8', '#fbbf24', '#34d399'];
+    for (let i = 0; i < 28; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const size = Math.random() * 4 + 2;
+        p.style.cssText = `
+            width:${size}px; height:${size}px;
+            left:${Math.random() * 100}%;
+            background:${colors[Math.floor(Math.random() * colors.length)]};
+            animation-duration:${Math.random() * 18 + 10}s;
+            animation-delay:${Math.random() * -20}s;
+            box-shadow:0 0 ${size * 2}px currentColor;
+        `;
+        container.appendChild(p);
+    }
+
+    /* ── Publication filter ── */
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.dataset.filter;
+            document.querySelectorAll('.pub-item').forEach(item => {
+                item.style.display = (filter === 'all' || item.dataset.year === filter) ? 'flex' : 'none';
+            });
+        });
+    });
+</script>
 </body>
 </html>
