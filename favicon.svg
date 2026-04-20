@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#1a2a50"/>
+      <stop offset="100%" stop-color="#060c18"/>
+    </radialGradient>
+    <radialGradient id="core" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#e0f7ff"/>
+      <stop offset="40%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </radialGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Outer ring subtle glow -->
+  <circle cx="32" cy="32" r="31" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.25"/>
+
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#bg)"/>
+
+  <!-- Inner subtle ring -->
+  <circle cx="32" cy="32" r="26" fill="none" stroke="#38bdf8" stroke-width="0.4" stroke-opacity="0.15"/>
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5"/>
+
+  <!-- Orbit 1 — cyan -->
+  <ellipse cx="32" cy="32" rx="27" ry="10.5" fill="none" stroke="#38bdf8" stroke-width="1.6" stroke-opacity="0.85"/>
+  <!-- Orbit 2 — purple, rotated 60° -->
+  <ellipse cx="32" cy="32" rx="27" ry="10.5" fill="none" stroke="#818cf8" stroke-width="1.6" stroke-opacity="0.85" transform="rotate(60 32 32)"/>
+  <!-- Orbit 3 — gold, rotated 120° -->
+  <ellipse cx="32" cy="32" rx="27" ry="10.5" fill="none" stroke="#fbbf24" stroke-width="1.6" stroke-opacity="0.85" transform="rotate(120 32 32)"/>
+
+  <!-- Nucleus glow halo -->
+  <circle cx="32" cy="32" r="12" fill="url(#glow1)"/>
+  <circle cx="32" cy="32" r="8"  fill="#38bdf8" opacity="0.3"/>
+  <!-- Nucleus -->
+  <circle cx="32" cy="32" r="5"  fill="url(#core)"/>
+  <!-- Nucleus highlight -->
+  <circle cx="30" cy="30" r="1.5" fill="white" opacity="0.7"/>
+
+  <!-- Electron 1 on orbit 1 — far right (cyan) -->
+  <circle cx="59" cy="32" r="3.2" fill="url(#glow1)"/>
+  <circle cx="59" cy="32" r="2.2" fill="#38bdf8"/>
+  <circle cx="58.2" cy="31.2" r="0.7" fill="white" opacity="0.6"/>
+
+  <!-- Electron 2 on orbit 2 — upper left (purple) -->
+  <circle cx="18.5" cy="10.5" r="3.2" fill="url(#glow2)"/>
+  <circle cx="18.5" cy="10.5" r="2.2" fill="#818cf8"/>
+  <circle cx="17.8" cy="9.8"  r="0.7" fill="white" opacity="0.6"/>
+
+  <!-- Electron 3 on orbit 3 — lower left (gold) -->
+  <circle cx="18.5" cy="53.5" r="3.2" fill="url(#glow3)"/>
+  <circle cx="18.5" cy="53.5" r="2.2" fill="#fbbf24"/>
+  <circle cx="17.8" cy="52.8" r="0.7" fill="white" opacity="0.6"/>
+</svg>
