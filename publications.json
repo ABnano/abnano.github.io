@@ -1,0 +1,193 @@
+{
+  "updated": "2026-04-20T00:00:00Z",
+  "total_citations": 547,
+  "h_index": 12,
+  "i10_index": 13,
+  "publications": [
+    {
+      "rank": 1,
+      "title": "Revisiting of δ-PVDF nanoparticles via phase separation with giant piezoelectric response",
+      "authors": "HK Mishra, V Gupta, K Roy, A Babu, A Kumar, D Mandal",
+      "journal": "Nano Energy",
+      "year": "2022",
+      "citations": 78,
+      "url": ""
+    },
+    {
+      "rank": 2,
+      "title": "Surface potential tuned single active material comprised triboelectric nanogenerator for high-performance voice recognition",
+      "authors": "A Babu, P Malik, N Das, D Mandal",
+      "journal": "Small",
+      "year": "2022",
+      "citations": 68,
+      "url": "https://doi.org/10.1002/smll.202201331",
+      "badges": ["Hot Article"]
+    },
+    {
+      "rank": 3,
+      "title": "Lead-Free Perovskite Cs₃Bi₂I₉-Derived Electroactive PVDF Composite Based Piezoelectric Nanogenerator",
+      "authors": "B Mondal, HK Mishra, D Sengupta, A Kumar, A Babu, et al.",
+      "journal": "Langmuir",
+      "year": "2022",
+      "citations": 56,
+      "url": "https://doi.org/10.1021/acs.langmuir.2c01016"
+    },
+    {
+      "rank": 4,
+      "title": "Revisiting δ-PVDF based piezoelectric nanogenerator for self-powered pressure mapping sensor",
+      "authors": "V Gupta, A Babu, SK Ghosh, Z Mallick, HK Mishra, et al.",
+      "journal": "Applied Physics Letters",
+      "year": "2021",
+      "citations": 50,
+      "url": "https://doi.org/10.1063/5.0082797"
+    },
+    {
+      "rank": 5,
+      "title": "Tunable, conductive, self-healing, adhesive and injectable hydrogels for bioelectronics and tissue regeneration",
+      "authors": "V Panwar, A Babu, A Sharma, J Thomas, V Chopra, et al.",
+      "journal": "J. Materials Chemistry B",
+      "year": "2021",
+      "citations": 50,
+      "url": "https://doi.org/10.1039/D1TB00835G"
+    },
+    {
+      "rank": 6,
+      "title": "PVDF/Ag₂CO₃ nanocomposites for efficient dye degradation and flexible piezoelectric energy harvester",
+      "authors": "HK Mishra, D Sengupta, A Babu, BM Pirzada, R Sarkar, et al.",
+      "journal": "Sustainable Energy & Fuels",
+      "year": "2022",
+      "citations": 40,
+      "url": "https://doi.org/10.1039/D1SE00425A"
+    },
+    {
+      "rank": 7,
+      "title": "Deep learning enabled perceptive wearable sensor for tracking movement disorder",
+      "authors": "A Babu, S Ranpariya, DK Sinha, D Mandal",
+      "journal": "Advanced Materials Technologies",
+      "year": "2023",
+      "citations": 34,
+      "url": "https://doi.org/10.1002/admt.202300046",
+      "badges": ["Hot Article"]
+    },
+    {
+      "rank": 8,
+      "title": "Deep learning enabled early predicting cardiovascular status using piezoelectric Nylon-11 sensor",
+      "authors": "A Babu, S Ranpariya, DK Sinha, A Chatterjee, D Mandal",
+      "journal": "Advanced Materials Technologies",
+      "year": "2023",
+      "citations": 32,
+      "url": "https://doi.org/10.1002/admt.202202021",
+      "badges": ["Hot Article"]
+    },
+    {
+      "rank": 9,
+      "title": "Roadmap to human–machine interaction through triboelectric nanogenerator and machine learning convergence",
+      "authors": "A Babu, D Mandal",
+      "journal": "ACS Applied Energy Materials",
+      "year": "2024",
+      "citations": 28,
+      "url": "https://doi.org/10.1021/acsaem.1c02782"
+    },
+    {
+      "rank": 10,
+      "title": "Programmable Polymeric-Interface for Voiceprint Biometrics",
+      "authors": "A Babu, E Raoul, G Kassahun, I Dufour, D Mandal, D Thuau",
+      "journal": "Advanced Materials Technologies",
+      "year": "2024",
+      "citations": 24,
+      "url": "https://doi.org/10.1002/admt.202301551",
+      "badges": ["Journal Cover"]
+    },
+    {
+      "rank": 11,
+      "title": "Machine learning-aided all-organic air-permeable piezoelectric nanogenerator",
+      "authors": "V Gupta, A Kumar, B Mondal, A Babu, S Ranpariya, DK Sinha, D Mandal",
+      "journal": "ACS Sus. Chemistry & Engineering",
+      "year": "2023",
+      "citations": 21,
+      "url": "https://doi.org/10.1021/acssuschemeng.3c02358"
+    },
+    {
+      "rank": 12,
+      "title": "Negatively bias driven enhancement in piezo response for self-powered facial expression sensor",
+      "authors": "A Babu, V Gupta, D Mandal",
+      "journal": "Applied Physics Letters",
+      "year": "2022",
+      "citations": 14,
+      "url": "https://doi.org/10.1063/5.0079451"
+    },
+    {
+      "rank": 13,
+      "title": "AI-enabled wearable sensor for real-time monitored personalized training for sportspersons",
+      "authors": "A Babu, D Thuau, D Mandal",
+      "journal": "MRS Communications",
+      "year": "2023",
+      "citations": 12,
+      "url": "https://doi.org/10.1557/s43579-023-00185-1",
+      "badges": ["Invited"]
+    },
+    {
+      "rank": 14,
+      "title": "Entanglement-Enabled Quantum Kernels for Enhanced Feature Mapping in Classification Tasks",
+      "authors": "A Babu, SG Ghatnekar, A Saxena, D Mandal",
+      "journal": "APL Quantum",
+      "year": "2025",
+      "citations": 6,
+      "url": ""
+    },
+    {
+      "rank": 15,
+      "title": "Machine Learning-Enabled Nanoscale Phase Prediction in Engineered PVDF",
+      "authors": "A Babu, BM Abraham, S Naskar, S Ranpariya, D Mandal",
+      "journal": "Small",
+      "year": "2024",
+      "citations": 6,
+      "url": "https://doi.org/10.1002/smll.202405393"
+    },
+    {
+      "rank": 16,
+      "title": "Self-Learning e-Skin Respirometer for Pulmonary Disease Detection",
+      "authors": "A Babu, G Kassahun, I Dufour, D Mandal, D Thuau",
+      "journal": "Advanced Sensor Research",
+      "year": "2024",
+      "citations": 6,
+      "url": ""
+    },
+    {
+      "rank": 17,
+      "title": "Can Entanglement-enhanced Quantum Kernels Improve Data Classification?",
+      "authors": "A Babu, SG Ghatnekar, A Saxena, D Mandal",
+      "journal": "arXiv preprint",
+      "year": "2024",
+      "citations": 6,
+      "url": "https://arxiv.org/abs/2406.01948"
+    },
+    {
+      "rank": 18,
+      "title": "Algorithmically Enhanced Wearable Multimodal Emotion Sensor",
+      "authors": "A Babu, G Kassahun, I Dufour, D Mandal, D Thuau",
+      "journal": "Advanced Intelligent Systems",
+      "year": "2025",
+      "citations": 4,
+      "url": "https://doi.org/10.1002/aisy.202400567"
+    },
+    {
+      "rank": 19,
+      "title": "Mott interactions driven insulating behaviour in ruthenium based perovskites: A₂SmRuO₆",
+      "authors": "S Dani, R Pandit, A Babu, R Kumar",
+      "journal": "J. Alloys and Compounds",
+      "year": "2024",
+      "citations": 4,
+      "url": "https://doi.org/10.1016/j.jallcom.2023.176184"
+    },
+    {
+      "rank": 20,
+      "title": "Futuristic Alzheimer's therapy: acoustic-stimulated piezoelectric nanospheres for amyloid reduction",
+      "authors": "M Sharma, S Choudhury, A Babu, V Gupta, D Sengupta, SA Ali",
+      "journal": "Biomaterials Science",
+      "year": "2024",
+      "citations": 3,
+      "url": "https://doi.org/10.1039/D3BM01231H"
+    }
+  ]
+}
