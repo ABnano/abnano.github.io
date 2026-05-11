@@ -8,42 +8,53 @@ SCHOLAR_ID = "J5UZz7sAAAAJ"
 
 def fetch_with_scholarly():
     from scholarly import scholarly, ProxyGenerator
+
+    def _build_data(author):
+        publications = []
+        for i, pub in enumerate(author.get("publications", [])):
+            try:
+                filled = scholarly.fill(pub)
+                bib = filled.get("bib", {})
+                publications.append({
+                    "rank": i + 1,
+                    "title": bib.get("title", ""),
+                    "authors": bib.get("author", ""),
+                    "journal": bib.get("journal") or bib.get("booktitle") or bib.get("publisher") or "",
+                    "year": str(bib.get("pub_year", "")),
+                    "citations": filled.get("num_citations", 0),
+                    "url": filled.get("pub_url") or filled.get("eprint_url") or "",
+                    "badges": []
+                })
+            except Exception as e:
+                print(f"Warning: could not fill pub {i}: {e}", file=sys.stderr)
+
+        publications.sort(key=lambda x: x["citations"], reverse=True)
+        for i, p in enumerate(publications):
+            p["rank"] = i + 1
+
+        return {
+            "updated": datetime.now(timezone.utc).isoformat(),
+            "total_citations": author.get("citedby", 0),
+            "h_index": author.get("hindex", 0),
+            "i10_index": author.get("i10index", 0),
+            "publications": publications
+        }
+
+    # Try direct request first — GitHub Actions IPs are not aggressively blocked
+    try:
+        author = scholarly.search_author_id(SCHOLAR_ID)
+        author = scholarly.fill(author, sections=["basics", "indices", "counts", "publications"])
+        return _build_data(author)
+    except Exception as e:
+        print(f"Direct fetch failed ({e}), retrying with free proxies...", file=sys.stderr)
+
+    # Fall back to free proxies
     pg = ProxyGenerator()
     pg.FreeProxies()
     scholarly.use_proxy(pg)
-
     author = scholarly.search_author_id(SCHOLAR_ID)
     author = scholarly.fill(author, sections=["basics", "indices", "counts", "publications"])
-
-    publications = []
-    for i, pub in enumerate(author.get("publications", [])):
-        try:
-            filled = scholarly.fill(pub)
-            bib = filled.get("bib", {})
-            publications.append({
-                "rank": i + 1,
-                "title": bib.get("title", ""),
-                "authors": bib.get("author", ""),
-                "journal": bib.get("journal") or bib.get("booktitle") or bib.get("publisher") or "",
-                "year": str(bib.get("pub_year", "")),
-                "citations": filled.get("num_citations", 0),
-                "url": filled.get("pub_url") or filled.get("eprint_url") or "",
-                "badges": []
-            })
-        except Exception as e:
-            print(f"Warning: could not fill pub {i}: {e}", file=sys.stderr)
-
-    publications.sort(key=lambda x: x["citations"], reverse=True)
-    for i, p in enumerate(publications):
-        p["rank"] = i + 1
-
-    return {
-        "updated": datetime.now(timezone.utc).isoformat(),
-        "total_citations": author.get("citedby", 0),
-        "h_index": author.get("hindex", 0),
-        "i10_index": author.get("i10index", 0),
-        "publications": publications
-    }
+    return _build_data(author)
 
 def load_existing():
     try:
