@@ -96,7 +96,7 @@
         #projects{background:var(--bg-0);position:relative;overflow:hidden;padding:88px 24px 100px}
         .galaxy-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
         .projects-intro{max-width:640px;margin-bottom:52px;position:relative;z-index:2}
-        .projects-intro p{color:var(--text-muted);font-size:.95rem;margin-top:-30px}
+        .projects-intro p{color:var(--text-muted);font-size:.95rem;margin-top:8px}
         .projects-intro .live-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.35);color:var(--green);font-size:.72rem;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
         .live-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse-dot 1.8s ease-in-out infinite}
         @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
@@ -194,6 +194,8 @@
             line-height:1.45;
         }
         .proj-paper strong{color:var(--card-color,var(--primary));display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px}
+        a.proj-paper{text-decoration:none;display:block;cursor:pointer;transition:var(--transition)}
+        a.proj-paper:hover{border-color:var(--card-color,var(--primary));background:rgba(255,255,255,.04);color:var(--text-muted)}
         .proj-footer{display:flex;gap:8px}
         .proj-btn{
             flex:1;
@@ -460,10 +462,10 @@
                             <span class="proj-tag">TensorFlow</span><span class="proj-tag">Materials AI</span>
                             <span class="proj-tag">PVDF</span>
                         </div>
-                        <div class="proj-paper">
+                        <a class="proj-paper" href="https://doi.org/10.1002/smll.202405393" target="_blank">
                             <strong>Linked Publication</strong>
                             ML-Enabled Nanoscale Phase Prediction in PVDF — <em>Small</em> 2024 · 6 citations
-                        </div>
+                        </a>
                         <div class="proj-footer">
                             <a href="https://github.com/ABnano/NanoPhasePredictor" target="_blank" class="proj-btn">
                                 <i class="fab fa-github"></i> View Code
@@ -490,10 +492,10 @@
                             <span class="proj-tag">Biometrics</span><span class="proj-tag">Wearable</span>
                             <span class="proj-tag">Python</span>
                         </div>
-                        <div class="proj-paper">
+                        <a class="proj-paper" href="https://doi.org/10.1002/admt.202301551" target="_blank">
                             <strong>Linked Publication</strong>
                             Programmable Polymeric-Interface for Voiceprint — <em>Adv. Mater. Technol.</em> 2024 · 24 citations
-                        </div>
+                        </a>
                         <div class="proj-footer">
                             <a href="https://github.com/ABnano/Voicotromics" target="_blank" class="proj-btn">
                                 <i class="fab fa-github"></i> View Code
@@ -523,10 +525,10 @@
                             <span class="proj-tag">Ridge Regression</span><span class="proj-tag">Healthcare</span>
                             <span class="proj-tag">Python</span>
                         </div>
-                        <div class="proj-paper">
+                        <a class="proj-paper" href="https://doi.org/10.1002/adsr.202400079" target="_blank">
                             <strong>Linked Publication</strong>
                             Self-Learning e-Skin Respirometer — <em>Adv. Sensor Res.</em> 2024 · 6 citations
-                        </div>
+                        </a>
                         <div class="proj-footer">
                             <a href="https://github.com/ABnano/BreathInfo" target="_blank" class="proj-btn">
                                 <i class="fab fa-github"></i> View Code
@@ -556,10 +558,10 @@
                             <span class="proj-tag">SVM</span><span class="proj-tag">MATLAB</span>
                             <span class="proj-tag">IoT</span><span class="proj-tag">Gesture</span>
                         </div>
-                        <div class="proj-paper">
+                        <a class="proj-paper" href="https://doi.org/10.1021/acsaem.3c02642" target="_blank">
                             <strong>Linked Publication</strong>
                             Roadmap to Human-Machine Interaction via TENG — <em>ACS AEM</em> 2024 · 28 citations
-                        </div>
+                        </a>
                         <div class="proj-footer">
                             <a href="https://github.com/ABnano/Gest-RECOG" target="_blank" class="proj-btn">
                                 <i class="fab fa-github"></i> View Code
@@ -586,10 +588,10 @@
                             <span class="proj-tag">ROC Analysis</span><span class="proj-tag">Triboelectric</span>
                             <span class="proj-tag">Speech</span><span class="proj-tag">Python</span>
                         </div>
-                        <div class="proj-paper">
+                        <a class="proj-paper" href="https://doi.org/10.1002/smll.202201331" target="_blank">
                             <strong>Linked Publication</strong>
                             Surface Potential Tuned TENG for Voice Recognition — <em>Small</em> 2022 · 68 citations
-                        </div>
+                        </a>
                         <div class="proj-footer">
                             <a href="https://github.com/ABnano/TriboLexNet" target="_blank" class="proj-btn">
                                 <i class="fab fa-github"></i> View Code
