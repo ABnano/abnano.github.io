@@ -571,10 +571,10 @@
             </div>
             <div class="formula-tag"><i class="fas fa-infinity"></i> ψ(AI) ⊗ φ(Physics) → emergent materials intelligence</div>
             <div class="hero-stats" style="margin-top:22px">
-                <div class="stat-item"><span class="stat-num" data-target="547" id="sc-cit">0</span><span class="stat-label">Citations</span></div>
+                <div class="stat-item"><span class="stat-num" data-target="559" id="sc-cit">0</span><span class="stat-label">Citations</span></div>
                 <div class="stat-item"><span class="stat-num" data-target="12" id="sc-h">0</span><span class="stat-label">h-index</span></div>
                 <div class="stat-item"><span class="stat-num" data-target="13" id="sc-i10">0</span><span class="stat-label">i10-index</span></div>
-                <div class="stat-item"><span class="stat-num" data-target="20" id="sc-pubs">0</span><span class="stat-label">Publications</span></div>
+                <div class="stat-item"><span class="stat-num" data-target="32" id="sc-pubs">0</span><span class="stat-label">Publications</span></div>
             </div>
             <div class="hero-actions">
                 <a href="#research" class="btn-primary"><i class="fas fa-atom"></i> Research Universe</a>
@@ -829,7 +829,7 @@
                     <a href="mailto:ababu.nano@gmail.com" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
                 </div>
                 <div class="about-metrics">
-                    <div class="metric-box"><span class="metric-val" id="met-cit">547</span><span class="metric-lbl">Citations</span></div>
+                    <div class="metric-box"><span class="metric-val" id="met-cit">559</span><span class="metric-lbl">Citations</span></div>
                     <div class="metric-box"><span class="metric-val" id="met-h">12</span><span class="metric-lbl">h-index</span></div>
                     <div class="metric-box"><span class="metric-val" id="met-i10">13</span><span class="metric-lbl">i10</span></div>
                 </div>
@@ -937,8 +937,9 @@
                 <div id="pubLastUpdated"></div>
             </div>
         </div>
-        <div class="pub-filter">
-            <button class="filter-btn active" data-filter="all">All (20)</button>
+        <div class="pub-filter" id="pubFilterBar">
+            <button class="filter-btn active" data-filter="all">All (32)</button>
+            <button class="filter-btn" data-filter="2026">2026</button>
             <button class="filter-btn" data-filter="2025">2025</button>
             <button class="filter-btn" data-filter="2024">2024</button>
             <button class="filter-btn" data-filter="2023">2023</button>
@@ -1050,7 +1051,7 @@
                 <div class="contact-links">
                     <a href="mailto:ababu.nano@gmail.com" class="contact-link"><div class="contact-link-icon" style="color:var(--primary)"><i class="fas fa-envelope"></i></div><div class="contact-link-body"><small>Email</small><span>ababu.nano@gmail.com</span></div><i class="fas fa-external-link-alt" style="color:var(--text-dim);font-size:.73rem"></i></a>
                     <a href="https://github.com/ABnano" target="_blank" class="contact-link"><div class="contact-link-icon" style="color:var(--text)"><i class="fab fa-github"></i></div><div class="contact-link-body"><small>GitHub</small><span>ABnano</span></div><i class="fas fa-external-link-alt" style="color:var(--text-dim);font-size:.73rem"></i></a>
-                    <a href="https://scholar.google.com/citations?user=J5UZz7sAAAAJ&hl=en" target="_blank" class="contact-link"><div class="contact-link-icon" style="color:var(--gold)"><i class="fas fa-graduation-cap"></i></div><div class="contact-link-body"><small>Google Scholar</small><span>547 citations · h-index 12</span></div><i class="fas fa-external-link-alt" style="color:var(--text-dim);font-size:.73rem"></i></a>
+                    <a href="https://scholar.google.com/citations?user=J5UZz7sAAAAJ&hl=en" target="_blank" class="contact-link"><div class="contact-link-icon" style="color:var(--gold)"><i class="fas fa-graduation-cap"></i></div><div class="contact-link-body"><small>Google Scholar</small><span id="scholar-contact-stat">559 citations · h-index 12</span></div><i class="fas fa-external-link-alt" style="color:var(--text-dim);font-size:.73rem"></i></a>
                     <a href="https://orcid.org/0000-0003-4746-6011" target="_blank" class="contact-link"><div class="contact-link-icon" style="color:var(--green)"><i class="fab fa-orcid"></i></div><div class="contact-link-body"><small>ORCID</small><span>0000-0003-4746-6011</span></div><i class="fas fa-external-link-alt" style="color:var(--text-dim);font-size:.73rem"></i></a>
                 </div>
             </div>
@@ -1300,8 +1301,8 @@ function updateStats(cit, h, i10, pubs) {
         const el = document.getElementById(id);
         if (el) { el.dataset.target = val; animateNum(el, +val); }
     });
-    const sl = document.querySelector('.contact-link .contact-link-body span');
-    if (sl && sl.closest('a[href*="scholar"]')) sl.textContent = `${cit} citations · h-index ${h}`;
+    const sl = document.getElementById('scholar-contact-stat');
+    if (sl) sl.textContent = `${cit} citations · h-index ${h}`;
 }
 
 function formatSyncTime(isoStr) {
