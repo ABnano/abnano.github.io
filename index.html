@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anand Babu, Ph.D. | AI Materials Scientist</title>
-    <meta name="description" content="Postdoctoral Researcher at UCLouvain. AI for Materials, MLIP, Self-Driving Laboratories, Nanofabrication, Wearable Sensors.">
+    <title>Anand Babu, Ph.D. | Physics × AI</title>
+    <meta name="description" content="Physicist & AI researcher at UCLouvain. Where quantum mechanics meets machine learning — condensed matter, generative AI, self-driving laboratories, and wearable sensor physics.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="./favicon.svg">
@@ -18,19 +18,138 @@
 
     <style>
         :root {
-            --bg-0:#0a0f1e; --bg-1:#0f172a; --bg-2:#1e293b; --bg-3:#1a2744;
-            --primary:#38bdf8; --primary-dim:rgba(56,189,248,.15);
-            --secondary:#818cf8; --secondary-dim:rgba(129,140,248,.15);
-            --gold:#fbbf24; --gold-dim:rgba(251,191,36,.15);
-            --green:#34d399; --green-dim:rgba(52,211,153,.15);
-            --orange:#fb923c; --orange-dim:rgba(249,115,22,.15);
-            --text:#f1f5f9; --text-muted:#94a3b8; --text-dim:#64748b;
-            --border:rgba(148,163,184,.1);
-            --card-bg:rgba(30,41,59,.7);
-            --radius:16px; --radius-sm:10px;
-            --shadow:0 4px 24px rgba(0,0,0,.4);
+            --bg-0:#07090f; --bg-1:#0b0f1a; --bg-2:#111827; --bg-3:#162032;
+            --primary:#60a5fa; --primary-dim:rgba(96,165,250,.14);
+            --secondary:#a78bfa; --secondary-dim:rgba(167,139,250,.14);
+            --gold:#f59e0b; --gold-dim:rgba(245,158,11,.14);
+            --green:#34d399; --green-dim:rgba(52,211,153,.14);
+            --orange:#fb923c; --orange-dim:rgba(249,115,22,.14);
+            --rose:#f43f5e; --rose-dim:rgba(244,63,94,.12);
+            --text:#e2e8f0; --text-muted:#94a3b8; --text-dim:#4b5563;
+            --border:rgba(148,163,184,.09);
+            --card-bg:rgba(17,24,39,.75);
+            --radius:18px; --radius-sm:11px;
+            --shadow:0 4px 32px rgba(0,0,0,.55);
             --transition:all .3s cubic-bezier(.4,0,.2,1);
+            --phys-accent:#818cf8;
+            --ai-accent:#38bdf8;
         }
+
+        /* ── PHYSICS WAVE BACKGROUND ── */
+        @keyframes wave-shift {
+            0%   { background-position: 0% 50% }
+            50%  { background-position: 100% 50% }
+            100% { background-position: 0% 50% }
+        }
+        @keyframes float-orb {
+            0%,100%{transform:translate(0,0) scale(1)}
+            33%{transform:translate(30px,-20px) scale(1.06)}
+            66%{transform:translate(-20px,15px) scale(.96)}
+        }
+        .orb {
+            position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;animation:float-orb 14s ease-in-out infinite;
+        }
+
+        /* ── DUAL-IDENTITY BANNER ── */
+        .identity-banner {
+            display:flex;align-items:center;gap:0;font-family:'Space Grotesk',sans-serif;
+            font-size:clamp(.75rem,1.2vw,.9rem);font-weight:700;letter-spacing:.04em;
+            text-transform:uppercase;margin-bottom:22px;
+        }
+        .identity-pill {
+            padding:7px 18px;border-radius:30px;display:flex;align-items:center;gap:7px;
+        }
+        .identity-pill.phys {
+            background:rgba(167,139,250,.16);border:1px solid rgba(167,139,250,.35);color:var(--secondary);
+        }
+        .identity-pill.ai {
+            background:rgba(96,165,250,.16);border:1px solid rgba(96,165,250,.35);color:var(--primary);
+        }
+        .identity-divider {
+            width:32px;height:2px;background:linear-gradient(90deg,var(--secondary),var(--primary));
+            margin:0 6px;flex-shrink:0;
+        }
+
+        /* ── MISSION TAG ── */
+        .mission-tag {
+            display:inline-flex;align-items:center;gap:7px;
+            background:linear-gradient(135deg,rgba(245,158,11,.13),rgba(167,139,250,.1));
+            border:1px solid rgba(245,158,11,.32);
+            color:var(--gold);font-size:.72rem;font-weight:700;
+            padding:5px 14px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;
+            margin-bottom:14px;
+        }
+        .mission-tag i{color:var(--gold)}
+
+        /* ── PHYSICS FORMULA ACCENT ── */
+        .formula-tag {
+            display:inline-flex;align-items:center;gap:6px;
+            font-family:'Space Grotesk',sans-serif;font-size:.82rem;
+            color:var(--secondary);opacity:.55;letter-spacing:.02em;
+            margin-top:8px;font-style:italic;
+        }
+
+        /* ── DUAL-AXIS RESEARCH SECTION ── */
+        .research-axis {
+            display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:44px;
+        }
+        .axis-block {
+            background:var(--card-bg);border:1px solid var(--border);
+            border-radius:var(--radius);padding:26px 24px;
+            backdrop-filter:blur(14px);position:relative;overflow:hidden;
+        }
+        .axis-block::before {
+            content:'';position:absolute;top:0;left:0;right:0;height:3px;
+        }
+        .axis-block.phys-block::before { background:linear-gradient(90deg,var(--secondary),var(--rose)); }
+        .axis-block.ai-block::before   { background:linear-gradient(90deg,var(--primary),var(--green)); }
+        .axis-title {
+            font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700;
+            margin-bottom:7px;display:flex;align-items:center;gap:9px;
+        }
+        .axis-title.phys { color:var(--secondary); }
+        .axis-title.ai   { color:var(--primary); }
+        .axis-desc { font-size:.82rem;color:var(--text-muted);line-height:1.65;margin-bottom:14px; }
+        .axis-tags { display:flex;flex-wrap:wrap;gap:6px; }
+        .axis-tag {
+            font-size:.72rem;padding:3px 10px;border-radius:20px;
+            background:var(--bg-2);border:1px solid var(--border);color:var(--text-dim);
+        }
+
+        /* ── FACULTY VISION SECTION ── */
+        #vision {background:var(--bg-1)}
+        .vision-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+        .vision-card {
+            background:var(--card-bg);border:1px solid var(--border);
+            border-radius:var(--radius);padding:26px 22px;
+            backdrop-filter:blur(12px);transition:var(--transition);
+        }
+        .vision-card:hover{border-color:rgba(96,165,250,.35);transform:translateY(-4px);box-shadow:0 12px 40px rgba(96,165,250,.09)}
+        .vision-icon {
+            width:50px;height:50px;border-radius:13px;
+            display:flex;align-items:center;justify-content:center;
+            font-size:1.25rem;margin-bottom:16px;
+        }
+        .vision-card h3{font-family:'Space Grotesk',sans-serif;font-size:.95rem;font-weight:700;margin-bottom:7px}
+        .vision-card p{font-size:.8rem;color:var(--text-muted);line-height:1.6}
+
+        /* ── TEACHING HIGHLIGHT ── */
+        .teaching-highlight {
+            background:linear-gradient(135deg,rgba(167,139,250,.08),rgba(96,165,250,.06));
+            border:1px solid rgba(167,139,250,.2);border-radius:var(--radius);
+            padding:28px 32px;margin-top:32px;display:flex;gap:24px;align-items:flex-start;
+        }
+        .teaching-highlight .th-icon {
+            width:52px;height:52px;border-radius:14px;
+            background:rgba(167,139,250,.15);border:1px solid rgba(167,139,250,.3);
+            display:flex;align-items:center;justify-content:center;font-size:1.3rem;
+            flex-shrink:0;color:var(--secondary);
+        }
+        .teaching-highlight h4 {
+            font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700;
+            color:var(--secondary);margin-bottom:6px;
+        }
+        .teaching-highlight p {font-size:.85rem;color:var(--text-muted);line-height:1.65}
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
         html{scroll-behavior:smooth}
         body{font-family:'Inter',sans-serif;background:var(--bg-0);color:var(--text);line-height:1.7;overflow-x:hidden}
@@ -49,21 +168,17 @@
 
         /* ── HERO ── */
         #hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:100px 24px 60px}
-        .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 20% 40%,rgba(56,189,248,.10) 0%,transparent 60%),radial-gradient(ellipse 60% 80% at 80% 60%,rgba(129,140,248,.08) 0%,transparent 60%),radial-gradient(ellipse 40% 40% at 50% 90%,rgba(251,191,36,.04) 0%,transparent 50%),var(--bg-0)}
-        /* Neural network canvas — full-hero background */
-        .nn-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
-        .grid-overlay{position:absolute;inset:0;background-image:linear-gradient(rgba(56,189,248,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(56,189,248,.025) 1px,transparent 1px);background-size:70px 70px;opacity:.6}
+        .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 15% 35%,rgba(167,139,250,.1) 0%,transparent 60%),radial-gradient(ellipse 55% 70% at 80% 55%,rgba(96,165,250,.09) 0%,transparent 60%),radial-gradient(ellipse 35% 35% at 55% 88%,rgba(244,63,94,.06) 0%,transparent 50%),var(--bg-0)}
+        .hero-particles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+        .particle{position:absolute;border-radius:50%;animation:float-particle linear infinite;opacity:0}
+        @keyframes float-particle{0%{transform:translateY(100vh) rotate(0deg);opacity:0}10%{opacity:1}90%{opacity:.6}100%{transform:translateY(-20vh) rotate(720deg);opacity:0}}
+        .grid-overlay{position:absolute;inset:0;background-image:linear-gradient(rgba(56,189,248,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(56,189,248,.03) 1px,transparent 1px);background-size:60px 60px}
         .hero-content{position:relative;z-index:2;display:flex;align-items:center;gap:56px;max-width:1100px;width:100%}
         .hero-photo-wrap{flex-shrink:0;position:relative}
-        /* Professional photo frame — clean gradient border with glow pulse */
-        .hero-photo-ring{width:230px;height:230px;border-radius:50%;padding:3px;background:linear-gradient(145deg,var(--primary),var(--secondary));box-shadow:0 0 0 1px rgba(56,189,248,.15),0 0 50px rgba(56,189,248,.2),0 20px 60px rgba(0,0,0,.55);animation:photo-glow 5s ease-in-out infinite;position:relative;z-index:2}
-        @keyframes photo-glow{0%,100%{box-shadow:0 0 0 1px rgba(56,189,248,.15),0 0 50px rgba(56,189,248,.2),0 20px 60px rgba(0,0,0,.55)}50%{box-shadow:0 0 0 1px rgba(56,189,248,.4),0 0 90px rgba(56,189,248,.35),0 20px 60px rgba(0,0,0,.55)}}
-        /* Thin scanning arc — single sweep, subtle */
-        .hero-photo-ring::after{content:'';position:absolute;inset:-5px;border-radius:50%;background:conic-gradient(from 0deg,transparent 78%,rgba(56,189,248,.0) 80%,rgba(56,189,248,.7) 87%,rgba(129,140,248,.9) 91%,rgba(56,189,248,.0) 93%,transparent 95%);animation:scan-arc 5s linear infinite;pointer-events:none}
-        @keyframes scan-arc{to{transform:rotate(360deg)}}
-        .hero-photo{width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid var(--bg-0);display:block;position:relative;z-index:1}
-        /* Badge — centered below photo, dark glass style */
-        .hero-badge{position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);background:rgba(10,15,30,.88);border:1px solid rgba(56,189,248,.38);color:var(--primary);font-size:.67rem;font-weight:600;padding:5px 15px;border-radius:20px;letter-spacing:.07em;white-space:nowrap;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 2px 16px rgba(56,189,248,.18);z-index:3}
+        .hero-photo-ring{width:230px;height:230px;border-radius:50%;padding:4px;background:conic-gradient(from 0deg,var(--primary),var(--secondary),var(--gold),var(--primary));animation:spin-ring 8s linear infinite;box-shadow:0 0 60px rgba(56,189,248,.3)}
+        @keyframes spin-ring{to{transform:rotate(360deg)}}
+        .hero-photo{width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid var(--bg-0);display:block}
+        .hero-badge{position:absolute;bottom:10px;right:-8px;background:linear-gradient(135deg,var(--gold),var(--rose));color:#0f172a;font-size:.62rem;font-weight:700;padding:5px 11px;border-radius:20px;letter-spacing:.04em;box-shadow:0 2px 16px rgba(245,158,11,.45);white-space:nowrap;max-width:230px;text-align:center}
         .hero-text{flex:1}
         .hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--primary-dim);border:1px solid rgba(56,189,248,.3);color:var(--primary);font-size:.75rem;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:18px;letter-spacing:.05em;text-transform:uppercase}
         .hero-name{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.2rem,4.5vw,3.5rem);font-weight:700;line-height:1.1;letter-spacing:-.03em;margin-bottom:8px}
@@ -100,7 +215,7 @@
         #projects{background:var(--bg-0);position:relative;overflow:hidden;padding:88px 24px 100px}
         .galaxy-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
         .projects-intro{max-width:640px;margin-bottom:52px;position:relative;z-index:2}
-        .projects-intro p{color:var(--text-muted);font-size:.95rem;margin-top:8px}
+        .projects-intro p{color:var(--text-muted);font-size:.95rem;margin-top:-30px}
         .projects-intro .live-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.35);color:var(--green);font-size:.72rem;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
         .live-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse-dot 1.8s ease-in-out infinite}
         @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
@@ -198,8 +313,6 @@
             line-height:1.45;
         }
         .proj-paper strong{color:var(--card-color,var(--primary));display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px}
-        a.proj-paper{text-decoration:none;display:block;cursor:pointer;transition:var(--transition)}
-        a.proj-paper:hover{border-color:var(--card-color,var(--primary));background:rgba(255,255,255,.04);color:var(--text-muted)}
         .proj-footer{display:flex;gap:8px}
         .proj-btn{
             flex:1;
@@ -355,11 +468,15 @@
             .hero-actions{justify-content:center}
             .hero-affiliation{justify-content:center}
             .hero-chips{justify-content:center}
+            .identity-banner{justify-content:center}
+            .formula-tag{justify-content:center}
             .about-grid{grid-template-columns:1fr}
             .contact-grid{grid-template-columns:1fr}
             .proj-grid{grid-template-columns:1fr 1fr}
             .proj-card.span-center{grid-column:span 2;max-width:420px;justify-self:center}
-            .nav-links{display:none;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:rgba(10,15,30,.97);padding:14px 22px;border-bottom:1px solid var(--border);gap:3px}
+            .research-axis{grid-template-columns:1fr}
+            .teaching-highlight{flex-direction:column;gap:16px}
+            .nav-links{display:none;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:rgba(7,9,15,.97);padding:14px 22px;border-bottom:1px solid var(--border);gap:3px}
             .nav-links.open{display:flex}
             .nav-toggle{display:block}
             nav{padding:10px 18px}
@@ -367,11 +484,13 @@
         @media(max-width:600px){
             section{padding:60px 16px}
             .hero-photo-ring{width:170px;height:170px}
+            .hero-badge{right:-4px;font-size:.6rem}
             .hero-stats{gap:18px}
             .pub-item{flex-direction:column}
             .pub-citations{margin-left:0;display:flex;align-items:center;gap:8px}
             .proj-grid{grid-template-columns:1fr}
             .proj-card.span-center{grid-column:1}
+            .identity-banner{flex-wrap:wrap;justify-content:center}
         }
     </style>
 </head>
@@ -382,8 +501,9 @@
     <a href="#hero" class="nav-brand">AB<span>.nano</span></a>
     <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#research">Research</a></li>
+        <li><a href="#vision">Teaching</a></li>
+        <li><a href="#projects">Code</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#awards">Awards</a></li>
         <li><a href="#services">Services</a></li>
@@ -396,39 +516,98 @@
 <!-- ═══════ HERO ═══════ -->
 <section id="hero">
     <div class="hero-bg"></div>
-    <canvas class="nn-canvas" id="nnCanvas"></canvas>
+    <!-- Ambient physics orbs -->
+    <div class="orb" style="width:420px;height:420px;background:radial-gradient(circle,rgba(167,139,250,.18),transparent 70%);top:-80px;left:-120px;animation-delay:-3s"></div>
+    <div class="orb" style="width:360px;height:360px;background:radial-gradient(circle,rgba(96,165,250,.14),transparent 70%);bottom:-60px;right:-80px;animation-delay:-7s;animation-duration:18s"></div>
+    <div class="orb" style="width:200px;height:200px;background:radial-gradient(circle,rgba(244,63,94,.1),transparent 70%);top:40%;right:20%;animation-delay:-12s;animation-duration:22s"></div>
     <div class="grid-overlay"></div>
+    <div class="hero-particles" id="particles"></div>
     <div class="hero-content">
         <div class="hero-photo-wrap">
             <div class="hero-photo-ring">
                 <img src="https://github.com/ABnano/abnano.github.io/raw/main/AB2.jpg" alt="Anand Babu" class="hero-photo">
             </div>
-            <span class="hero-badge">Postdoctoral Researcher</span>
+            <span class="hero-badge">Postdoc Researcher · UCLouvain, Belgium</span>
         </div>
         <div class="hero-text">
-            <div class="hero-tag"><i class="fas fa-atom"></i> AI for Materials Science</div>
+            <!-- Dual-identity banner -->
+            <div class="identity-banner">
+                <div class="identity-pill phys"><i class="fas fa-wave-square"></i> Physics</div>
+                <div class="identity-divider"></div>
+                <div class="identity-pill ai"><i class="fas fa-brain"></i> AI</div>
+            </div>
+            <div class="mission-tag"><i class="fas fa-infinity"></i> Physics is the grammar of intelligence</div>
             <h1 class="hero-name">Anand Babu<br><span class="highlight">Ph.D.</span></h1>
-            <p class="hero-subtitle">AI/ML · Nanofabrication · Wearable Sensors · Quantum ML</p>
+            <p class="hero-subtitle">Condensed Matter Physics · AI/ML · Quantum Computing · Nanomaterials</p>
             <p class="hero-affiliation">
                 <i class="fas fa-map-marker-alt"></i> IMCN, UCLouvain, Belgium
                 <span style="color:var(--border)">|</span>
-                <i class="fas fa-flask"></i> R-C Fellow, UBx, France
+                <i class="fas fa-flask"></i> Raman-Charpak Fellow, UBx, France
+                <span style="color:var(--border)">|</span>
+                <i class="fas fa-user-graduate"></i> Ph.D. INST-IISER Mohali
             </p>
             <div class="hero-chips">
-                <span class="chip">MLIP</span><span class="chip">Generative AI</span>
-                <span class="chip">Self-Driving Labs</span><span class="chip">Piezoelectric</span>
-                <span class="chip">Triboelectric</span><span class="chip">Quantum ML</span>
+                <span class="chip" style="border-color:rgba(167,139,250,.3);color:var(--secondary)">Quantum ML</span>
+                <span class="chip" style="border-color:rgba(167,139,250,.3);color:var(--secondary)">Condensed Matter</span>
+                <span class="chip" style="border-color:rgba(96,165,250,.3);color:var(--primary)">MLIP</span>
+                <span class="chip" style="border-color:rgba(96,165,250,.3);color:var(--primary)">Generative AI</span>
+                <span class="chip" style="border-color:rgba(96,165,250,.3);color:var(--primary)">Self-Driving Labs</span>
+                <span class="chip">Piezoelectric · Triboelectric</span>
             </div>
-            <div class="hero-stats">
-                <div class="stat-item"><span class="stat-num" data-target="550" id="sc-cit">0</span><span class="stat-label">Citations</span></div>
+            <div class="formula-tag"><i class="fas fa-infinity"></i> ψ(AI) ⊗ φ(Physics) → emergent materials intelligence</div>
+            <div class="hero-stats" style="margin-top:22px">
+                <div class="stat-item"><span class="stat-num" data-target="547" id="sc-cit">0</span><span class="stat-label">Citations</span></div>
                 <div class="stat-item"><span class="stat-num" data-target="12" id="sc-h">0</span><span class="stat-label">h-index</span></div>
                 <div class="stat-item"><span class="stat-num" data-target="13" id="sc-i10">0</span><span class="stat-label">i10-index</span></div>
                 <div class="stat-item"><span class="stat-num" data-target="20" id="sc-pubs">0</span><span class="stat-label">Publications</span></div>
             </div>
             <div class="hero-actions">
-                <a href="#projects" class="btn-primary"><i class="fas fa-code-branch"></i> Live Projects</a>
+                <a href="#research" class="btn-primary"><i class="fas fa-atom"></i> Research Universe</a>
+                <a href="#vision" class="btn-outline"><i class="fas fa-telescope"></i> Vision & Teaching</a>
                 <a href="#publications" class="btn-outline"><i class="fas fa-book-open"></i> Publications</a>
-                <a href="https://scholar.google.com/citations?user=J5UZz7sAAAAJ&hl=en" target="_blank" class="btn-outline"><i class="fas fa-graduation-cap"></i> Scholar</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ VISION & TEACHING ═══════ -->
+<section id="vision">
+    <div class="container">
+        <div class="section-label">Vision & Teaching</div>
+        <h2 class="section-title">Building the <span>Physics × AI</span> Future</h2>
+        <p style="color:var(--text-muted);font-size:.97rem;max-width:760px;margin-bottom:44px;line-height:1.85">
+            I believe the most important scientific breakthroughs of this decade will emerge where <em style="color:var(--secondary)">quantum intuition meets machine intelligence</em> — where a researcher understands a Hamiltonian as deeply as they understand a loss function, and where a sensor is both a physical object and a living dataset.
+        </p>
+        <div class="vision-grid">
+            <div class="vision-card fade-up">
+                <div class="vision-icon" style="background:rgba(167,139,250,.14);color:var(--secondary)"><i class="fas fa-chalkboard"></i></div>
+                <h3>Teaching Physics Through AI</h3>
+                <p>Courses where students derive Maxwell's equations on Tuesday and train a physics-informed neural network on Thursday. Quantum mechanics labs that produce ML-ready datasets. Statistical mechanics problems that run on real hardware.</p>
+            </div>
+            <div class="vision-card fade-up">
+                <div class="vision-icon" style="background:rgba(96,165,250,.14);color:var(--primary)"><i class="fas fa-robot"></i></div>
+                <h3>The Autonomous Materials Lab</h3>
+                <p>A self-driving laboratory where ML interatomic potentials guide robotic synthesis, generative models propose quantum materials at 3 AM, and every experiment closes a loop between theory, computation, and physical reality.</p>
+            </div>
+            <div class="vision-card fade-up">
+                <div class="vision-icon" style="background:rgba(52,211,153,.14);color:var(--green)"><i class="fas fa-user-astronaut"></i></div>
+                <h3>The Next Generation of Researchers</h3>
+                <p>Students who write Hamiltonians and train transformers in the same afternoon — who understand why a diffusion model works by analogy to a Langevin equation, who go from DFT to deployment without losing physical intuition.</p>
+            </div>
+            <div class="vision-card fade-up">
+                <div class="vision-icon" style="background:rgba(244,63,94,.14);color:var(--rose)"><i class="fas fa-network-wired"></i></div>
+                <h3>Open Collaborative Science</h3>
+                <p>Extending partnerships across UCLouvain, University of Bordeaux, and IISER into an open network for physics-AI benchmarks, shared self-driving infrastructure, and reproducible quantum materials datasets.</p>
+            </div>
+            <div class="vision-card fade-up">
+                <div class="vision-icon" style="background:rgba(245,158,11,.14);color:var(--gold)"><i class="fas fa-atom"></i></div>
+                <h3>Courses I Bring</h3>
+                <p>Quantum Mechanics · Condensed Matter Physics · Statistical Mechanics · Machine Learning for Scientists · Quantum Computing · Nanomaterials & Sensors · Computational Materials Science · Data Science for Physics</p>
+            </div>
+            <div class="vision-card fade-up">
+                <div class="vision-icon" style="background:rgba(96,165,250,.14);color:var(--primary)"><i class="fas fa-seedling"></i></div>
+                <h3>Funding the Future</h3>
+                <p>Building interdisciplinary research programs anchored in NSF AI for Science, ERC Quantum ML, ANR Physics+AI, and DST India streams — grounded in existing community leadership at APS, MRS, IEEE, and IOP.</p>
             </div>
         </div>
     </div>
@@ -440,9 +619,9 @@
     <div class="container">
         <div class="projects-intro fade-up">
             <div class="section-label" style="margin-bottom:18px">Open Source · Live on GitHub</div>
-            <h2 class="section-title" style="margin-bottom:14px">Code & <span>Demos</span></h2>
+            <h2 class="section-title" style="margin-bottom:14px">Physics-Grounded <span>AI Code</span></h2>
             <div class="live-badge"><span class="live-dot"></span> Active Repositories</div>
-            <p>Beyond publications — working ML deployments, open-source notebooks, and interactive demos. Research that ships.</p>
+            <p>Open-source ML pipelines built on physical principles — each project starts with a sensor physics problem and ends with a deployable AI solution.</p>
         </div>
 
         <div style="position:relative">
@@ -466,10 +645,10 @@
                             <span class="proj-tag">TensorFlow</span><span class="proj-tag">Materials AI</span>
                             <span class="proj-tag">PVDF</span>
                         </div>
-                        <a class="proj-paper" href="https://doi.org/10.1002/smll.202405393" target="_blank">
+                        <div class="proj-paper">
                             <strong>Linked Publication</strong>
                             ML-Enabled Nanoscale Phase Prediction in PVDF — <em>Small</em> 2024 · 6 citations
-                        </a>
+                        </div>
                         <div class="proj-footer">
                             <a href="https://github.com/ABnano/NanoPhasePredictor" target="_blank" class="proj-btn">
                                 <i class="fab fa-github"></i> View Code
@@ -496,10 +675,10 @@
                             <span class="proj-tag">Biometrics</span><span class="proj-tag">Wearable</span>
                             <span class="proj-tag">Python</span>
                         </div>
-                        <a class="proj-paper" href="https://doi.org/10.1002/admt.202301551" target="_blank">
+                        <div class="proj-paper">
                             <strong>Linked Publication</strong>
                             Programmable Polymeric-Interface for Voiceprint — <em>Adv. Mater. Technol.</em> 2024 · 24 citations
-                        </a>
+                        </div>
                         <div class="proj-footer">
                             <a href="https://github.com/ABnano/Voicotromics" target="_blank" class="proj-btn">
                                 <i class="fab fa-github"></i> View Code
@@ -529,10 +708,10 @@
                             <span class="proj-tag">Ridge Regression</span><span class="proj-tag">Healthcare</span>
                             <span class="proj-tag">Python</span>
                         </div>
-                        <a class="proj-paper" href="https://doi.org/10.1002/adsr.202400079" target="_blank">
+                        <div class="proj-paper">
                             <strong>Linked Publication</strong>
                             Self-Learning e-Skin Respirometer — <em>Adv. Sensor Res.</em> 2024 · 6 citations
-                        </a>
+                        </div>
                         <div class="proj-footer">
                             <a href="https://github.com/ABnano/BreathInfo" target="_blank" class="proj-btn">
                                 <i class="fab fa-github"></i> View Code
@@ -562,10 +741,10 @@
                             <span class="proj-tag">SVM</span><span class="proj-tag">MATLAB</span>
                             <span class="proj-tag">IoT</span><span class="proj-tag">Gesture</span>
                         </div>
-                        <a class="proj-paper" href="https://doi.org/10.1021/acsaem.3c02642" target="_blank">
+                        <div class="proj-paper">
                             <strong>Linked Publication</strong>
                             Roadmap to Human-Machine Interaction via TENG — <em>ACS AEM</em> 2024 · 28 citations
-                        </a>
+                        </div>
                         <div class="proj-footer">
                             <a href="https://github.com/ABnano/Gest-RECOG" target="_blank" class="proj-btn">
                                 <i class="fab fa-github"></i> View Code
@@ -592,10 +771,10 @@
                             <span class="proj-tag">ROC Analysis</span><span class="proj-tag">Triboelectric</span>
                             <span class="proj-tag">Speech</span><span class="proj-tag">Python</span>
                         </div>
-                        <a class="proj-paper" href="https://doi.org/10.1002/smll.202201331" target="_blank">
+                        <div class="proj-paper">
                             <strong>Linked Publication</strong>
                             Surface Potential Tuned TENG for Voice Recognition — <em>Small</em> 2022 · 68 citations
-                        </a>
+                        </div>
                         <div class="proj-footer">
                             <a href="https://github.com/ABnano/TriboLexNet" target="_blank" class="proj-btn">
                                 <i class="fab fa-github"></i> View Code
@@ -635,20 +814,28 @@
                     <a href="mailto:ababu.nano@gmail.com" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
                 </div>
                 <div class="about-metrics">
-                    <div class="metric-box"><span class="metric-val" id="met-cit">550</span><span class="metric-lbl">Citations</span></div>
+                    <div class="metric-box"><span class="metric-val" id="met-cit">547</span><span class="metric-lbl">Citations</span></div>
                     <div class="metric-box"><span class="metric-val" id="met-h">12</span><span class="metric-lbl">h-index</span></div>
                     <div class="metric-box"><span class="metric-val" id="met-i10">13</span><span class="metric-lbl">i10</span></div>
                 </div>
             </div>
             <div>
                 <div class="about-text">
-                    <p>I am a <strong>Postdoctoral Research Scientist at UCLouvain, Belgium</strong>, deploying generative AI models — <strong>VAEs and Diffusion Models</strong> — for multimodal machine learning and inverse design of materials.</p>
-                    <p>I completed my <strong>Ph.D. at INST-IISER Mohali, India</strong>, building AI-integrated piezo-, tribo-, and flexo-electric sensors for digital health. As a <strong>Raman-Charpak Fellow at IMS, University of Bordeaux</strong>, I developed Voiceprint Biometrics, e-skin Respirometers, and Emotion Sensing devices.</p>
-                    <p>My research spans <strong>AI for Materials, MLIP, Self-Driving Laboratories, Quantum ML, and Wearable Sensor Systems</strong>. I serve on the Editorial Advisory Board of <strong>APL Machine Learning</strong> and as Guest Editor for <strong>Nanotechnology (IOP)</strong>.</p>
+                    <p>I am a <strong>Postdoctoral Research Scientist at UCLouvain, Belgium</strong>, working at the intersection of <strong>condensed matter physics and artificial intelligence</strong> — deploying generative AI (VAEs, Diffusion Models) and machine learning interatomic potentials for the inverse design of quantum and functional materials.</p>
+                    <p>My physics roots run deep: I hold a <strong>Ph.D. in Nanoscience & Technology from INST-IISER Mohali</strong> (an Institute of National Importance), with a thesis on AI-integrated piezo-, tribo-, and flexo-electric physics — spanning electromechanical coupling, quantum confinement, and condensed matter phenomena in nanoscale systems.</p>
+                    <p>As a <strong>Raman-Charpak Fellow at IMS, University of Bordeaux</strong>, I bridged quantum sensor physics with explainable AI: Voiceprint Biometrics from acoustic physics, e-skin Respirometers grounded in thin-film mechanics, and emotion sensors exploiting piezoresistive physics. My <strong>Quantum ML</strong> work demonstrates entanglement-enhanced kernels outperforming classical SVMs on structured physics datasets.</p>
+                    <p>I serve on the Editorial Advisory Board of <strong>APL Machine Learning</strong>, as Guest Editor for <strong>Nanotechnology (IOP)</strong>, and as a Student Ambassador of <strong>APS</strong> — active at the frontier where physics foundations power the next generation of AI.</p>
                 </div>
                 <div class="thesis-box">
                     <strong>Ph.D. Thesis</strong>
                     Bio-Integrated Artificial Intelligence: Synergizing Nanomaterials, Machine Learning Algorithms, and Self-Powered Devices for Early-Stage Healthcare Diagnostics
+                </div>
+                <div class="teaching-highlight" style="margin-top:20px">
+                    <div class="th-icon"><i class="fas fa-chalkboard"></i></div>
+                    <div>
+                        <h4>Teaching & Mentorship Philosophy</h4>
+                        <p>I believe physics intuition is the most durable foundation for AI literacy. My teaching connects the two — students learn why a variational autoencoder minimises free energy before they tune its hyperparameters, and why a quantum kernel can see structure that a classical SVM cannot. Science is most alive when it is both deep and useful.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -659,14 +846,48 @@
 <section id="research">
     <div class="container">
         <div class="section-label">Focus Areas</div>
-        <h2 class="section-title">Research <span>Interests</span></h2>
+        <h2 class="section-title">Research — <span>Physics × AI</span></h2>
+
+        <!-- Dual axis -->
+        <div class="research-axis fade-up">
+            <!-- Physics for AI -->
+            <div class="axis-block phys-block">
+                <div class="axis-title phys"><i class="fas fa-wave-square"></i> Physics for AI</div>
+                <div class="axis-desc">Physics provides the theoretical substrate — quantum mechanics, electromechanics, condensed matter — that gives AI its most powerful inductive biases and physically consistent constraints.</div>
+                <div class="axis-tags">
+                    <span class="axis-tag">Quantum Kernels</span>
+                    <span class="axis-tag">Entanglement Features</span>
+                    <span class="axis-tag">Variational Quantum Circuits</span>
+                    <span class="axis-tag">Electromechanical Coupling</span>
+                    <span class="axis-tag">Mott Physics</span>
+                    <span class="axis-tag">Condensed Matter</span>
+                    <span class="axis-tag">Physical Neural Networks</span>
+                </div>
+            </div>
+            <!-- AI for Physics -->
+            <div class="axis-block ai-block">
+                <div class="axis-title ai"><i class="fas fa-brain"></i> AI for Physics</div>
+                <div class="axis-desc">AI accelerates physics discovery — from inverse design of quantum materials to self-driving laboratories that navigate vast compositional spaces guided by physical priors.</div>
+                <div class="axis-tags">
+                    <span class="axis-tag">Generative AI (VAEs, Diffusion)</span>
+                    <span class="axis-tag">MLIP</span>
+                    <span class="axis-tag">Self-Driving Labs</span>
+                    <span class="axis-tag">Phase Prediction</span>
+                    <span class="axis-tag">Inverse Design</span>
+                    <span class="axis-tag">Property Prediction</span>
+                    <span class="axis-tag">Active Learning</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed research cards -->
         <div class="research-grid">
-            <div class="research-card fade-up"><div class="icon" style="background:rgba(56,189,248,.15);color:var(--primary)"><i class="fas fa-brain"></i></div><h3>AI for Materials</h3><p>Generative models, diffusion models and VAEs for inverse design and property prediction</p></div>
-            <div class="research-card fade-up"><div class="icon" style="background:rgba(129,140,248,.15);color:var(--secondary)"><i class="fas fa-robot"></i></div><h3>MLIP & Self-Driving Labs</h3><p>Machine learning interatomic potentials, automated materials discovery pipelines</p></div>
-            <div class="research-card fade-up"><div class="icon" style="background:rgba(52,211,153,.15);color:var(--green)"><i class="fas fa-heartbeat"></i></div><h3>Wearable Health Sensors</h3><p>AI-integrated piezoelectric and triboelectric nanogenerators for healthcare diagnostics</p></div>
-            <div class="research-card fade-up"><div class="icon" style="background:rgba(251,191,36,.15);color:var(--gold)"><i class="fas fa-atom"></i></div><h3>Nanomaterials</h3><p>PVDF nanocomposites, perovskites, electrospun nanofibres and advanced characterization</p></div>
-            <div class="research-card fade-up"><div class="icon" style="background:rgba(249,115,22,.15);color:var(--orange)"><i class="fas fa-project-diagram"></i></div><h3>Quantum ML</h3><p>Entanglement-enhanced quantum kernels, quantum computing for data classification</p></div>
-            <div class="research-card fade-up"><div class="icon" style="background:rgba(236,72,153,.15);color:#f472b6"><i class="fas fa-microchip"></i></div><h3>Smart IoT Systems</h3><p>ESP32/Raspberry Pi IoT sensor platforms for real-time biomonitoring</p></div>
+            <div class="research-card fade-up"><div class="icon" style="background:rgba(167,139,250,.15);color:var(--secondary)"><i class="fas fa-atom"></i></div><h3>Quantum ML</h3><p>Entanglement-enhanced quantum kernels and VQCs outperforming classical SVMs on condensed matter classification tasks</p></div>
+            <div class="research-card fade-up"><div class="icon" style="background:rgba(96,165,250,.15);color:var(--primary)"><i class="fas fa-brain"></i></div><h3>AI for Materials</h3><p>Diffusion models and VAEs for multimodal inverse design — crystal structure, electronic properties, and synthesizability</p></div>
+            <div class="research-card fade-up"><div class="icon" style="background:rgba(96,165,250,.15);color:var(--primary)"><i class="fas fa-robot"></i></div><h3>MLIP & Self-Driving Labs</h3><p>Machine learning interatomic potentials driving autonomous experimental loops in materials discovery pipelines</p></div>
+            <div class="research-card fade-up"><div class="icon" style="background:rgba(52,211,153,.15);color:var(--green)"><i class="fas fa-heartbeat"></i></div><h3>Physics-Based Wearable Sensors</h3><p>Piezoelectric and triboelectric nanophysics fused with AI for healthcare diagnostics and human-machine interfaces</p></div>
+            <div class="research-card fade-up"><div class="icon" style="background:rgba(245,158,11,.15);color:var(--gold)"><i class="fas fa-project-diagram"></i></div><h3>Condensed Matter & Nanomaterials</h3><p>PVDF polymorphism, perovskite Mott physics, electrospun nanofibre engineering and SPM characterization</p></div>
+            <div class="research-card fade-up"><div class="icon" style="background:rgba(244,63,94,.15);color:var(--rose)"><i class="fas fa-microchip"></i></div><h3>Quantum Sensors & IoT</h3><p>Self-powered quantum-inspired sensor platforms for real-time biomonitoring and smart material systems</p></div>
         </div>
     </div>
 </section>
@@ -677,10 +898,10 @@
         <div class="section-label">Expertise</div>
         <h2 class="section-title">Technical <span>Skills</span></h2>
         <div class="skills-grid fade-up">
-            <div class="card skill-category"><h3><i class="fas fa-code"></i> AI / ML & Data Science</h3><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">PyTorch</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">Deep Neural Networks</span><span class="skill-tag">VAEs</span><span class="skill-tag">Diffusion Models</span><span class="skill-tag">Random Forest</span><span class="skill-tag">SVM</span><span class="skill-tag">MATLAB</span><span class="skill-tag">R</span></div></div>
+            <div class="card skill-category" style="border-color:rgba(167,139,250,.2)"><h3 style="color:var(--secondary)"><i class="fas fa-atom"></i> Physics & Theory</h3><div class="skill-tags"><span class="skill-tag">Quantum Mechanics</span><span class="skill-tag">Condensed Matter Physics</span><span class="skill-tag">Statistical Mechanics</span><span class="skill-tag">Piezoelectricity</span><span class="skill-tag">Triboelectricity</span><span class="skill-tag">Flexoelectricity</span><span class="skill-tag">DFT</span><span class="skill-tag">Perovskite Physics</span><span class="skill-tag">Mott Physics</span><span class="skill-tag">Quantum Computing</span></div></div>
+            <div class="card skill-category" style="border-color:rgba(96,165,250,.2)"><h3 style="color:var(--primary)"><i class="fas fa-code"></i> AI / ML & Data Science</h3><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">PyTorch</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">Deep Neural Networks</span><span class="skill-tag">VAEs</span><span class="skill-tag">Diffusion Models</span><span class="skill-tag">Quantum ML (Qiskit)</span><span class="skill-tag">Random Forest</span><span class="skill-tag">SVM</span><span class="skill-tag">MATLAB</span><span class="skill-tag">R</span></div></div>
             <div class="card skill-category"><h3><i class="fas fa-flask"></i> Device Fabrication</h3><div class="skill-tags"><span class="skill-tag">3D Printing</span><span class="skill-tag">Screen Printing</span><span class="skill-tag">Lithography</span><span class="skill-tag">Electrospinning</span><span class="skill-tag">MEMS/NEMS</span><span class="skill-tag">Micro Writer</span><span class="skill-tag">Stencil Printer (Ekra X5)</span></div></div>
             <div class="card skill-category"><h3><i class="fas fa-microscope"></i> Characterization</h3><div class="skill-tags"><span class="skill-tag">AFM</span><span class="skill-tag">PFM</span><span class="skill-tag">KPFM</span><span class="skill-tag">EFM</span><span class="skill-tag">MFM</span><span class="skill-tag">XPS</span><span class="skill-tag">UPS</span><span class="skill-tag">XRD</span><span class="skill-tag">FTIR</span><span class="skill-tag">Impedance Analysis</span></div></div>
-            <div class="card skill-category"><h3><i class="fas fa-microchip"></i> Electronics & IoT</h3><div class="skill-tags"><span class="skill-tag">ESP32</span><span class="skill-tag">ESP8266</span><span class="skill-tag">Arduino</span><span class="skill-tag">Raspberry Pi</span><span class="skill-tag">FEA Simulation</span><span class="skill-tag">HTML/JS</span></div></div>
         </div>
     </div>
 </section>
@@ -806,12 +1027,12 @@
             <div>
                 <div class="contact-info">
                     <h3>Let's Collaborate</h3>
-                    <p>Open to research collaborations, invited talks, peer review requests, and mentorship opportunities in AI for Materials and Sensor Systems.</p>
+                    <p>Open to research collaborations, invited talks, peer review, mentorship, and any conversation at the intersection of physics and machine intelligence. Let's build something meaningful.</p>
                 </div>
                 <div class="contact-links">
                     <a href="mailto:ababu.nano@gmail.com" class="contact-link"><div class="contact-link-icon" style="color:var(--primary)"><i class="fas fa-envelope"></i></div><div class="contact-link-body"><small>Email</small><span>ababu.nano@gmail.com</span></div><i class="fas fa-external-link-alt" style="color:var(--text-dim);font-size:.73rem"></i></a>
                     <a href="https://github.com/ABnano" target="_blank" class="contact-link"><div class="contact-link-icon" style="color:var(--text)"><i class="fab fa-github"></i></div><div class="contact-link-body"><small>GitHub</small><span>ABnano</span></div><i class="fas fa-external-link-alt" style="color:var(--text-dim);font-size:.73rem"></i></a>
-                    <a href="https://scholar.google.com/citations?user=J5UZz7sAAAAJ&hl=en" target="_blank" class="contact-link"><div class="contact-link-icon" style="color:var(--gold)"><i class="fas fa-graduation-cap"></i></div><div class="contact-link-body"><small>Google Scholar</small><span>550 citations · h-index 12</span></div><i class="fas fa-external-link-alt" style="color:var(--text-dim);font-size:.73rem"></i></a>
+                    <a href="https://scholar.google.com/citations?user=J5UZz7sAAAAJ&hl=en" target="_blank" class="contact-link"><div class="contact-link-icon" style="color:var(--gold)"><i class="fas fa-graduation-cap"></i></div><div class="contact-link-body"><small>Google Scholar</small><span>547 citations · h-index 12</span></div><i class="fas fa-external-link-alt" style="color:var(--text-dim);font-size:.73rem"></i></a>
                     <a href="https://orcid.org/0000-0003-4746-6011" target="_blank" class="contact-link"><div class="contact-link-icon" style="color:var(--green)"><i class="fab fa-orcid"></i></div><div class="contact-link-body"><small>ORCID</small><span>0000-0003-4746-6011</span></div><i class="fas fa-external-link-alt" style="color:var(--text-dim);font-size:.73rem"></i></a>
                 </div>
             </div>
@@ -829,6 +1050,7 @@
 </section>
 
 <footer>
+    <p style="margin-bottom:6px;opacity:.5;font-family:'Space Grotesk',sans-serif;letter-spacing:.06em;font-size:.75rem">ψ(AI) ⊗ φ(Physics) → emergent discovery</p>
     <p>&copy; 2025 <strong>Anand Babu, Ph.D.</strong> · <a href="https://abnano.github.io/">abnano.github.io</a> · <a href="https://scholar.google.com/citations?user=J5UZz7sAAAAJ&hl=en" target="_blank">Google Scholar</a> · <a href="https://orcid.org/0000-0003-4746-6011" target="_blank">ORCID</a> · <a href="https://github.com/ABnano" target="_blank">GitHub</a></p>
 </footer>
 
@@ -881,100 +1103,17 @@ const cntObs = new IntersectionObserver(entries => {
 }, { threshold: 0.6 });
 document.querySelectorAll('[data-target]').forEach(el => cntObs.observe(el));
 
-/* ── NEURAL NETWORK HERO BACKGROUND ── */
+/* ── HERO PARTICLES ── */
 (function(){
-    const canvas = document.getElementById('nnCanvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let W, H, nodes = [], pulses = [], tick = 0;
-    const ARCH = [4, 7, 10, 10, 7, 4]; // nodes per layer
-
-    function buildNet() {
-        nodes = [];
-        const padX = W * 0.08, padY = H * 0.12;
-        const uw = W - padX * 2, uh = H - padY * 2;
-        ARCH.forEach((n, li) => {
-            const x = padX + (li / (ARCH.length - 1)) * uw;
-            for (let ni = 0; ni < n; ni++) {
-                const y = padY + (n === 1 ? uh / 2 : (ni / (n - 1)) * uh);
-                nodes.push({ x, y, layer: li, glow: 0 });
-            }
-        });
+    const c = document.getElementById('particles');
+    const cols = ['#60a5fa','#a78bfa','#f43f5e','#34d399'];
+    for (let i = 0; i < 30; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const s = Math.random()*4+2;
+        p.style.cssText = `width:${s}px;height:${s}px;left:${Math.random()*100}%;background:${cols[i%4]};animation-duration:${Math.random()*18+10}s;animation-delay:${Math.random()*-22}s`;
+        c.appendChild(p);
     }
-
-    function lnodes(li) { return nodes.filter(n => n.layer === li); }
-
-    function spawnPulse() {
-        const li = Math.floor(Math.random() * (ARCH.length - 1));
-        const from = lnodes(li), to = lnodes(li + 1);
-        if (!from.length || !to.length) return;
-        const a = from[Math.floor(Math.random() * from.length)];
-        const b = to[Math.floor(Math.random() * to.length)];
-        const cyan = Math.random() > 0.42;
-        pulses.push({ a, b, t: 0, spd: 0.005 + Math.random() * 0.009, cyan });
-    }
-
-    function draw() {
-        ctx.clearRect(0, 0, W, H);
-
-        // Edges
-        for (let li = 0; li < ARCH.length - 1; li++) {
-            const fa = lnodes(li), tb = lnodes(li + 1);
-            fa.forEach(a => tb.forEach(b => {
-                ctx.beginPath();
-                ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
-                ctx.strokeStyle = 'rgba(56,189,248,0.045)';
-                ctx.lineWidth = 0.7;
-                ctx.stroke();
-            }));
-        }
-
-        // Nodes
-        nodes.forEach(n => {
-            const gAlpha = n.glow > 0.01 ? n.glow : 0;
-            if (gAlpha > 0) {
-                const g = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, 18);
-                g.addColorStop(0, `rgba(56,189,248,${gAlpha * 0.5})`);
-                g.addColorStop(1, 'rgba(56,189,248,0)');
-                ctx.beginPath(); ctx.arc(n.x, n.y, 18, 0, Math.PI*2);
-                ctx.fillStyle = g; ctx.fill();
-                n.glow *= 0.90;
-            }
-            ctx.beginPath(); ctx.arc(n.x, n.y, 3.5, 0, Math.PI*2);
-            ctx.fillStyle = 'rgba(56,189,248,0.28)'; ctx.fill();
-            ctx.beginPath(); ctx.arc(n.x, n.y, 6, 0, Math.PI*2);
-            ctx.strokeStyle = 'rgba(56,189,248,0.10)'; ctx.lineWidth = 1; ctx.stroke();
-        });
-
-        // Pulses
-        if (tick % 10 === 0 && pulses.length < 30) spawnPulse();
-        for (let i = pulses.length - 1; i >= 0; i--) {
-            const p = pulses[i];
-            p.t += p.spd;
-            if (p.t >= 1) { p.b.glow = Math.min(p.b.glow + 1, 1); pulses.splice(i, 1); continue; }
-            const x = p.a.x + (p.b.x - p.a.x) * p.t;
-            const y = p.a.y + (p.b.y - p.a.y) * p.t;
-            const col = p.cyan ? '56,189,248' : '129,140,248';
-            const gr = ctx.createRadialGradient(x, y, 0, x, y, 9);
-            gr.addColorStop(0, `rgba(${col},0.85)`);
-            gr.addColorStop(1, `rgba(${col},0)`);
-            ctx.beginPath(); ctx.arc(x, y, 9, 0, Math.PI*2);
-            ctx.fillStyle = gr; ctx.fill();
-            ctx.beginPath(); ctx.arc(x, y, 2.2, 0, Math.PI*2);
-            ctx.fillStyle = `rgba(${col},1)`; ctx.fill();
-        }
-        tick++;
-        requestAnimationFrame(draw);
-    }
-
-    function resize() {
-        W = canvas.width = canvas.offsetWidth;
-        H = canvas.height = canvas.offsetHeight;
-        buildNet(); pulses.length = 0;
-    }
-    resize();
-    window.addEventListener('resize', resize);
-    draw();
 })();
 
 /* ── GALAXY CANVAS (projects background) ── */
@@ -1114,26 +1253,26 @@ fetch('./publications.json?v=' + Date.now())
     .catch(() => {
         // Fallback static data
         const fallback = {"publications":[
-          {"rank":1,"title":"Revisiting of δ-PVDF nanoparticles via phase separation with giant piezoelectric response","authors":"HK Mishra, V Gupta, K Roy, A Babu, A Kumar, D Mandal","journal":"Nano Energy","year":"2022","citations":78,"url":"https://doi.org/10.1016/j.nanoen.2022.107052","badges":[]},
+          {"rank":1,"title":"Revisiting of δ-PVDF nanoparticles via phase separation with giant piezoelectric response","authors":"HK Mishra, V Gupta, K Roy, A Babu, A Kumar, D Mandal","journal":"Nano Energy","year":"2022","citations":78,"url":"","badges":[]},
           {"rank":2,"title":"Surface potential tuned single active material comprised triboelectric nanogenerator","authors":"A Babu, P Malik, N Das, D Mandal","journal":"Small","year":"2022","citations":68,"url":"https://doi.org/10.1002/smll.202201331","badges":["Hot Article"]},
-          {"rank":3,"title":"Lead-Free Perovskite Cs₃Bi₂I₉-Derived Electroactive PVDF Composite","authors":"B Mondal, HK Mishra, D Sengupta, A Kumar, A Babu, et al.","journal":"Langmuir","year":"2022","citations":56,"url":"https://doi.org/10.1021/acs.langmuir.2c01686","badges":[]},
+          {"rank":3,"title":"Lead-Free Perovskite Cs₃Bi₂I₉-Derived Electroactive PVDF Composite","authors":"B Mondal, HK Mishra, D Sengupta, A Kumar, A Babu, et al.","journal":"Langmuir","year":"2022","citations":56,"url":"https://doi.org/10.1021/acs.langmuir.2c01016","badges":[]},
           {"rank":4,"title":"Revisiting δ-PVDF based piezoelectric nanogenerator for self-powered pressure mapping sensor","authors":"V Gupta, A Babu, SK Ghosh, Z Mallick, HK Mishra, et al.","journal":"Applied Physics Letters","year":"2021","citations":50,"url":"https://doi.org/10.1063/5.0082797","badges":[]},
-          {"rank":5,"title":"Tunable, conductive, self-healing, adhesive and injectable hydrogels","authors":"V Panwar, A Babu, A Sharma, J Thomas, V Chopra, et al.","journal":"J. Materials Chemistry B","year":"2021","citations":50,"url":"https://doi.org/10.1039/D1TB01075A","badges":[]},
-          {"rank":6,"title":"PVDF/Ag₂CO₃ nanocomposites for efficient dye degradation and flexible piezoelectric energy harvester","authors":"HK Mishra, D Sengupta, A Babu, BM Pirzada, R Sarkar, et al.","journal":"Sustainable Energy & Fuels","year":"2022","citations":40,"url":"https://doi.org/10.1039/D1SE01889B","badges":[]},
+          {"rank":5,"title":"Tunable, conductive, self-healing, adhesive and injectable hydrogels","authors":"V Panwar, A Babu, A Sharma, J Thomas, V Chopra, et al.","journal":"J. Materials Chemistry B","year":"2021","citations":50,"url":"https://doi.org/10.1039/D1TB00835G","badges":[]},
+          {"rank":6,"title":"PVDF/Ag₂CO₃ nanocomposites for efficient dye degradation and flexible piezoelectric energy harvester","authors":"HK Mishra, D Sengupta, A Babu, BM Pirzada, R Sarkar, et al.","journal":"Sustainable Energy & Fuels","year":"2022","citations":40,"url":"https://doi.org/10.1039/D1SE00425A","badges":[]},
           {"rank":7,"title":"Deep learning enabled perceptive wearable sensor for tracking movement disorder","authors":"A Babu, S Ranpariya, DK Sinha, D Mandal","journal":"Advanced Materials Technologies","year":"2023","citations":34,"url":"https://doi.org/10.1002/admt.202300046","badges":["Hot Article"]},
           {"rank":8,"title":"Deep learning enabled early predicting cardiovascular status using piezoelectric Nylon-11 sensor","authors":"A Babu, S Ranpariya, DK Sinha, A Chatterjee, D Mandal","journal":"Advanced Materials Technologies","year":"2023","citations":32,"url":"https://doi.org/10.1002/admt.202202021","badges":["Hot Article"]},
-          {"rank":9,"title":"Roadmap to human–machine interaction through triboelectric nanogenerator and ML convergence","authors":"A Babu, D Mandal","journal":"ACS Applied Energy Materials","year":"2024","citations":28,"url":"https://doi.org/10.1021/acsaem.3c02642","badges":[]},
+          {"rank":9,"title":"Roadmap to human–machine interaction through triboelectric nanogenerator and ML convergence","authors":"A Babu, D Mandal","journal":"ACS Applied Energy Materials","year":"2024","citations":28,"url":"https://doi.org/10.1021/acsaem.1c02782","badges":[]},
           {"rank":10,"title":"Programmable Polymeric-Interface for Voiceprint Biometrics","authors":"A Babu, E Raoul, G Kassahun, I Dufour, D Mandal, D Thuau","journal":"Advanced Materials Technologies","year":"2024","citations":24,"url":"https://doi.org/10.1002/admt.202301551","badges":["Journal Cover"]},
-          {"rank":11,"title":"Machine learning-aided all-organic air-permeable piezoelectric nanogenerator","authors":"V Gupta, A Kumar, B Mondal, A Babu, S Ranpariya, DK Sinha, D Mandal","journal":"ACS Sus. Chemistry & Engineering","year":"2023","citations":21,"url":"https://doi.org/10.1021/acssuschemeng.2c06779","badges":[]},
-          {"rank":12,"title":"Negatively bias driven enhancement in piezo response for self-powered facial expression sensor","authors":"A Babu, V Gupta, D Mandal","journal":"Applied Physics Letters","year":"2022","citations":14,"url":"https://doi.org/10.1063/5.0085655","badges":[]},
-          {"rank":13,"title":"AI-enabled wearable sensor for real-time monitored personalized training for sportspersons","authors":"A Babu, D Thuau, D Mandal","journal":"MRS Communications","year":"2023","citations":12,"url":"https://doi.org/10.1557/s43579-023-00464-w","badges":["Invited"]},
-          {"rank":14,"title":"Entanglement-Enabled Quantum Kernels for Enhanced Feature Mapping","authors":"A Babu, SG Ghatnekar, A Saxena, D Mandal","journal":"APL Quantum","year":"2025","citations":6,"url":"https://doi.org/10.1063/5.0240894","badges":[]},
+          {"rank":11,"title":"Machine learning-aided all-organic air-permeable piezoelectric nanogenerator","authors":"V Gupta, A Kumar, B Mondal, A Babu, S Ranpariya, DK Sinha, D Mandal","journal":"ACS Sus. Chemistry & Engineering","year":"2023","citations":21,"url":"https://doi.org/10.1021/acssuschemeng.3c02358","badges":[]},
+          {"rank":12,"title":"Negatively bias driven enhancement in piezo response for self-powered facial expression sensor","authors":"A Babu, V Gupta, D Mandal","journal":"Applied Physics Letters","year":"2022","citations":14,"url":"https://doi.org/10.1063/5.0079451","badges":[]},
+          {"rank":13,"title":"AI-enabled wearable sensor for real-time monitored personalized training for sportspersons","authors":"A Babu, D Thuau, D Mandal","journal":"MRS Communications","year":"2023","citations":12,"url":"https://doi.org/10.1557/s43579-023-00185-1","badges":["Invited"]},
+          {"rank":14,"title":"Entanglement-Enabled Quantum Kernels for Enhanced Feature Mapping","authors":"A Babu, SG Ghatnekar, A Saxena, D Mandal","journal":"APL Quantum","year":"2025","citations":6,"url":"","badges":[]},
           {"rank":15,"title":"Machine Learning-Enabled Nanoscale Phase Prediction in Engineered PVDF","authors":"A Babu, BM Abraham, S Naskar, S Ranpariya, D Mandal","journal":"Small","year":"2024","citations":6,"url":"https://doi.org/10.1002/smll.202405393","badges":[]},
-          {"rank":16,"title":"Self-Learning e-Skin Respirometer for Pulmonary Disease Detection","authors":"A Babu, G Kassahun, I Dufour, D Mandal, D Thuau","journal":"Advanced Sensor Research","year":"2024","citations":6,"url":"https://doi.org/10.1002/adsr.202400079","badges":[]},
+          {"rank":16,"title":"Self-Learning e-Skin Respirometer for Pulmonary Disease Detection","authors":"A Babu, G Kassahun, I Dufour, D Mandal, D Thuau","journal":"Advanced Sensor Research","year":"2024","citations":6,"url":"","badges":[]},
           {"rank":17,"title":"Can Entanglement-enhanced Quantum Kernels Improve Data Classification?","authors":"A Babu, SG Ghatnekar, A Saxena, D Mandal","journal":"arXiv preprint","year":"2024","citations":6,"url":"https://arxiv.org/abs/2406.01948","badges":[]},
           {"rank":18,"title":"Algorithmically Enhanced Wearable Multimodal Emotion Sensor","authors":"A Babu, G Kassahun, I Dufour, D Mandal, D Thuau","journal":"Advanced Intelligent Systems","year":"2025","citations":4,"url":"https://doi.org/10.1002/aisy.202400567","badges":[]},
-          {"rank":19,"title":"Mott interactions driven insulating behaviour in ruthenium based perovskites","authors":"S Dani, R Pandit, A Babu, R Kumar","journal":"J. Alloys and Compounds","year":"2024","citations":4,"url":"https://doi.org/10.1016/j.jallcom.2024.176184","badges":[]},
-          {"rank":20,"title":"Futuristic Alzheimer's therapy: acoustic-stimulated piezoelectric nanospheres","authors":"M Sharma, S Choudhury, A Babu, V Gupta, D Sengupta, SA Ali","journal":"Biomaterials Science","year":"2024","citations":3,"url":"https://doi.org/10.1039/D3BM01688A","badges":[]}
+          {"rank":19,"title":"Mott interactions driven insulating behaviour in ruthenium based perovskites","authors":"S Dani, R Pandit, A Babu, R Kumar","journal":"J. Alloys and Compounds","year":"2024","citations":4,"url":"https://doi.org/10.1016/j.jallcom.2023.176184","badges":[]},
+          {"rank":20,"title":"Futuristic Alzheimer's therapy: acoustic-stimulated piezoelectric nanospheres","authors":"M Sharma, S Choudhury, A Babu, V Gupta, D Sengupta, SA Ali","journal":"Biomaterials Science","year":"2024","citations":3,"url":"https://doi.org/10.1039/D3BM01231H","badges":[]}
         ],"total_citations":547,"h_index":12,"i10_index":13};
         renderPubs(fallback);
     });
