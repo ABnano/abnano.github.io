@@ -116,8 +116,62 @@
             background:var(--bg-2);border:1px solid var(--border);color:var(--text-dim);
         }
 
+        /* ── CONTRIBUTION NARRATIVE ── */
+        #contributions { background:var(--bg-1) }
+        .contrib-intro {
+            max-width:780px;margin-bottom:52px;
+        }
+        .contrib-intro p { font-size:.97rem;color:var(--text-muted);line-height:1.85; }
+        .contrib-axis {
+            display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:0;
+        }
+        .contrib-block {
+            background:var(--card-bg);border:1px solid var(--border);
+            border-radius:var(--radius);padding:30px 26px;
+            backdrop-filter:blur(14px);position:relative;overflow:hidden;
+        }
+        .contrib-block::before {
+            content:'';position:absolute;top:0;left:0;right:0;height:3px;
+        }
+        .contrib-block.mat-phys::before { background:linear-gradient(90deg,var(--gold),var(--green)); }
+        .contrib-block.ai-mat::before   { background:linear-gradient(90deg,var(--primary),var(--secondary)); }
+        .contrib-block-title {
+            font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:700;
+            margin-bottom:20px;display:flex;align-items:center;gap:10px;
+        }
+        .contrib-block-title.mat { color:var(--gold); }
+        .contrib-block-title.ai  { color:var(--primary); }
+        .contrib-item {
+            margin-bottom:20px;padding-bottom:20px;
+            border-bottom:1px solid var(--border);
+        }
+        .contrib-item:last-child { margin-bottom:0;padding-bottom:0;border-bottom:none; }
+        .contrib-claim {
+            font-size:.88rem;color:var(--text);line-height:1.65;margin-bottom:9px;font-weight:500;
+        }
+        .contrib-cite {
+            display:flex;flex-wrap:wrap;gap:6px;align-items:center;
+        }
+        .cite-pill {
+            display:inline-flex;align-items:center;gap:5px;
+            font-size:.7rem;font-weight:600;padding:3px 10px;
+            border-radius:20px;text-decoration:none;transition:var(--transition);
+            background:var(--bg-2);border:1px solid var(--border);color:var(--text-dim);
+        }
+        .cite-pill:hover { border-color:var(--primary);color:var(--primary); }
+        .cite-pill.gold  { background:var(--gold-dim);border-color:rgba(245,158,11,.3);color:var(--gold); }
+        .cite-pill.green { background:var(--green-dim);border-color:rgba(52,211,153,.3);color:var(--green); }
+        .cite-pill.blue  { background:var(--primary-dim);border-color:rgba(96,165,250,.3);color:var(--primary); }
+        .cite-pill.violet{ background:var(--secondary-dim);border-color:rgba(167,139,250,.3);color:var(--secondary); }
+        .cite-pill.rose  { background:var(--rose-dim);border-color:rgba(244,63,94,.3);color:var(--rose); }
+        .cite-count {
+            font-size:.65rem;background:rgba(255,255,255,.06);
+            padding:1px 5px;border-radius:8px;margin-left:2px;
+        }
+        @media(max-width:900px) { .contrib-axis { grid-template-columns:1fr; } }
+
         /* ── FACULTY VISION SECTION ── */
-        #vision {background:var(--bg-1)}
+        #vision { background:var(--bg-0) }
         .vision-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
         .vision-card {
             background:var(--card-bg);border:1px solid var(--border);
@@ -488,7 +542,8 @@
             .contact-grid{grid-template-columns:1fr}
             .proj-grid{grid-template-columns:1fr 1fr}
             .proj-card.span-center{grid-column:span 2;max-width:420px;justify-self:center}
-            .research-axis{grid-template-columns:1fr}
+            .research-axis{grid-template-columns:1fr !important}
+            .contrib-axis{grid-template-columns:1fr}
             .teaching-highlight{flex-direction:column;gap:16px}
             .nav-links{display:none;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:rgba(7,9,15,.97);padding:14px 22px;border-bottom:1px solid var(--border);gap:3px}
             .nav-links.open{display:flex}
@@ -517,6 +572,7 @@
     <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#research">Research</a></li>
+        <li><a href="#contributions">Impact</a></li>
         <li><a href="#vision">Teaching</a></li>
         <li><a href="#projects">Code</a></li>
         <li><a href="#publications">Publications</a></li>
@@ -564,10 +620,10 @@
             <div class="hero-chips">
                 <span class="chip" style="border-color:rgba(167,139,250,.3);color:var(--secondary)">Quantum ML</span>
                 <span class="chip" style="border-color:rgba(167,139,250,.3);color:var(--secondary)">Condensed Matter</span>
-                <span class="chip" style="border-color:rgba(96,165,250,.3);color:var(--primary)">MLIP</span>
-                <span class="chip" style="border-color:rgba(96,165,250,.3);color:var(--primary)">Generative AI</span>
+                <span class="chip" style="border-color:rgba(96,165,250,.3);color:var(--primary)">Generative AI · MLIP</span>
                 <span class="chip" style="border-color:rgba(96,165,250,.3);color:var(--primary)">Self-Driving Labs</span>
-                <span class="chip">Piezoelectric · Triboelectric</span>
+                <span class="chip" style="border-color:rgba(52,211,153,.3);color:var(--green)">Nanomaterials · PVDF · Perovskites</span>
+                <span class="chip" style="border-color:rgba(245,158,11,.3);color:var(--gold)">Piezoelectric · Triboelectric</span>
             </div>
             <div class="formula-tag"><i class="fas fa-infinity"></i> ψ(AI) ⊗ φ(Physics) → emergent materials intelligence</div>
             <div class="hero-stats" style="margin-top:22px">
@@ -581,6 +637,93 @@
                 <a href="#vision" class="btn-outline"><i class="fas fa-telescope"></i> Vision & Teaching</a>
                 <a href="#publications" class="btn-outline"><i class="fas fa-book-open"></i> Publications</a>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ CONTRIBUTIONS ═══════ -->
+<section id="contributions">
+    <div class="container">
+        <div class="section-label">Research Impact</div>
+        <h2 class="section-title">Where <span>Materials Science, Physics &amp; AI</span> Meet</h2>
+        <div class="contrib-intro">
+            <p>My research does not place one discipline above another. <strong style="color:var(--text)">Physics</strong> provides the governing laws — piezoelectricity, quantum mechanics, condensed matter. <strong style="color:var(--text)">Materials science</strong> provides the tangible medium — PVDF nanocomposites, perovskites, polymer laminates, 2D nanosheets. <strong style="color:var(--text)">AI</strong> connects them — reading physical signals, predicting material properties, and designing new compounds. The loop runs in both directions, and it is grounded in 32 peer-reviewed papers across these three worlds.</p>
+        </div>
+        <div class="contrib-axis fade-up">
+
+            <!-- Left: Materials & Physics → AI -->
+            <div class="contrib-block mat-phys">
+                <div class="contrib-block-title mat"><i class="fas fa-layer-group"></i> Physics &amp; Materials → AI</div>
+
+                <div class="contrib-item">
+                    <div class="contrib-claim">Piezoelectric polymer physics as a living dataset for deep learning — PVDF nanomaterials whose phase-transition physics encodes features no synthetic dataset can replicate.</div>
+                    <div class="contrib-cite">
+                        <a href="https://doi.org/10.1002/smll.202405393" target="_blank" class="cite-pill blue"><i class="fas fa-file-alt"></i> ML-Enabled Phase Prediction, <em>Small</em> 2024 <span class="cite-count">6 cites</span></a>
+                        <a href="https://doi.org/10.1063/5.0082797" target="_blank" class="cite-pill"><i class="fas fa-file-alt"></i> δ-PVDF Nanogenerator, <em>APL</em> 2021 <span class="cite-count">50 cites</span></a>
+                    </div>
+                </div>
+
+                <div class="contrib-item">
+                    <div class="contrib-claim">Triboelectric surface-potential physics as the physical prior for voice recognition AI — contact electrification laws, not labelled audio data, govern what the model learns.</div>
+                    <div class="contrib-cite">
+                        <a href="https://doi.org/10.1002/smll.202201331" target="_blank" class="cite-pill gold"><i class="fas fa-fire"></i> Voice Recognition TENG, <em>Small</em> 2022 <span class="cite-count">70 cites</span></a>
+                        <a href="https://doi.org/10.1021/acsaem.1c02782" target="_blank" class="cite-pill"><i class="fas fa-file-alt"></i> HMI Roadmap, <em>ACS AEM</em> 2024 <span class="cite-count">31 cites</span></a>
+                    </div>
+                </div>
+
+                <div class="contrib-item">
+                    <div class="contrib-claim">Quantum entanglement structure as a feature map for machine learning — using the Hilbert space geometry of quantum mechanics to separate classes that classical kernels cannot.</div>
+                    <div class="contrib-cite">
+                        <a href="https://arxiv.org/abs/2406.01948" target="_blank" class="cite-pill violet"><i class="fas fa-atom"></i> Quantum Kernels arXiv 2024 <span class="cite-count">7 cites</span></a>
+                        <span class="cite-pill violet"><i class="fas fa-journal-whills"></i> APL Quantum 2025 <span class="cite-count">7 cites</span></span>
+                    </div>
+                </div>
+
+                <div class="contrib-item">
+                    <div class="contrib-claim">Condensed matter Mott physics as interpretable structure for AI models — Mott insulating behaviour in ruthenium perovskites providing physically meaningful latent representations.</div>
+                    <div class="contrib-cite">
+                        <a href="https://doi.org/10.1016/j.jallcom.2023.176184" target="_blank" class="cite-pill"><i class="fas fa-file-alt"></i> Mott Physics in Ru Perovskites, <em>J. Alloys Compd.</em> 2024 <span class="cite-count">4 cites</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: AI → Materials & Physics -->
+            <div class="contrib-block ai-mat">
+                <div class="contrib-block-title ai"><i class="fas fa-brain"></i> AI → Materials &amp; Physics</div>
+
+                <div class="contrib-item">
+                    <div class="contrib-claim">Generative AI for inverse materials design — multimodal VAEs and diffusion models navigating crystal structure, composition, and electronic property space simultaneously.</div>
+                    <div class="contrib-cite">
+                        <span class="cite-pill blue"><i class="fas fa-journal-whills"></i> MEIDNet, <em>npj Comput. Mater.</em> 2026</span>
+                        <a href="https://arxiv.org/abs/2606.02507" target="_blank" class="cite-pill blue"><i class="fas fa-file-alt"></i> Inverse Design Review, arXiv 2026</a>
+                    </div>
+                </div>
+
+                <div class="contrib-item">
+                    <div class="contrib-claim">Deep learning transforming wearable sensor signals into clinical-grade health diagnostics — cardiovascular status from Nylon-11 piezo-signals, movement disorder from triboelectric data.</div>
+                    <div class="contrib-cite">
+                        <a href="https://doi.org/10.1002/admt.202202021" target="_blank" class="cite-pill gold"><i class="fas fa-fire"></i> Cardiovascular DL, <em>Adv. Mater. Technol.</em> 2023 <span class="cite-count">32 cites</span></a>
+                        <a href="https://doi.org/10.1002/admt.202300046" target="_blank" class="cite-pill gold"><i class="fas fa-fire"></i> Movement Disorder DL, <em>Adv. Mater. Technol.</em> 2023 <span class="cite-count">34 cites</span></a>
+                    </div>
+                </div>
+
+                <div class="contrib-item">
+                    <div class="contrib-claim">Machine learning predicting optimal piezoelectric nanomaterial synthesis conditions — ML-aided all-organic air-permeable nanogenerators designed without exhaustive fabrication trials.</div>
+                    <div class="contrib-cite">
+                        <a href="https://doi.org/10.1021/acssuschemeng.3c02358" target="_blank" class="cite-pill green"><i class="fas fa-file-alt"></i> ML-Aided Nanogenerator, <em>ACS Sus. Chem.</em> 2023 <span class="cite-count">21 cites</span></a>
+                        <a href="https://doi.org/10.1039/D1SE00425A" target="_blank" class="cite-pill"><i class="fas fa-file-alt"></i> PVDF/Ag₂CO₃, <em>Sust. Energy Fuels</em> 2022 <span class="cite-count">40 cites</span></a>
+                    </div>
+                </div>
+
+                <div class="contrib-item">
+                    <div class="contrib-claim">AI closing the loop on acoustic materials — programmable polymer interface for voiceprint biometrics; AI-enabled self-powered acoustics from energy harvesting to healthcare.</div>
+                    <div class="contrib-cite">
+                        <a href="https://doi.org/10.1002/admt.202301551" target="_blank" class="cite-pill rose"><i class="fas fa-book-open"></i> Voiceprint Biometrics, <em>Adv. Mater. Technol.</em> 2024 <span class="cite-count">24 cites · Cover</span></a>
+                        <span class="cite-pill rose"><i class="fas fa-journal-whills"></i> AI Acoustics, <em>Adv. Mater. Technol.</em> 2026 <span class="cite-count">2 cites</span></span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -836,10 +979,10 @@
             </div>
             <div>
                 <div class="about-text">
-                    <p>I am a <strong>Postdoctoral Research Scientist at UCLouvain, Belgium</strong>, working at the intersection of <strong>condensed matter physics and artificial intelligence</strong> — deploying generative AI (VAEs, Diffusion Models) and machine learning interatomic potentials for the inverse design of quantum and functional materials.</p>
-                    <p>My physics roots run deep: I hold a <strong>Ph.D. in Nanoscience & Technology from INST-IISER Mohali</strong> (an Institute of National Importance), with a thesis on AI-integrated piezo-, tribo-, and flexo-electric physics — spanning electromechanical coupling, quantum confinement, and condensed matter phenomena in nanoscale systems.</p>
-                    <p>As a <strong>Raman-Charpak Fellow at IMS, University of Bordeaux</strong>, I bridged quantum sensor physics with explainable AI: Voiceprint Biometrics from acoustic physics, e-skin Respirometers grounded in thin-film mechanics, and emotion sensors exploiting piezoresistive physics. My <strong>Quantum ML</strong> work demonstrates entanglement-enhanced kernels outperforming classical SVMs on structured physics datasets.</p>
-                    <p>I serve on the Editorial Advisory Board of <strong>APL Machine Learning</strong>, as Guest Editor for <strong>Nanotechnology (IOP)</strong>, and as a Student Ambassador of <strong>APS</strong> — active at the frontier where physics foundations power the next generation of AI.</p>
+                    <p>I am a <strong>Postdoctoral Research Scientist at UCLouvain, Belgium</strong>, working at the convergence of <strong>condensed matter physics, functional nanomaterials, and artificial intelligence</strong>. My current work deploys generative AI — VAEs, Diffusion Models, and multimodal networks — for the inverse design of quantum and functional materials, resulting in the <strong>MEIDNet framework</strong> published in <em>npj Computational Materials</em> (2026).</p>
+                    <p>My roots span both <strong>materials synthesis and physics theory</strong>. During my <strong>Ph.D. at INST-IISER Mohali</strong>, I engineered piezoelectric PVDF nanocomposites, lead-free perovskite hybrids (Cs₃Bi₂I₉), and triboelectric polymer laminates — then fused deep learning directly onto these physical systems to create self-powered sensors capable of recognising voice (<em>Small</em>, 70 citations), tracking cardiovascular health (<em>Adv. Mater. Technol.</em>, 32 citations), and classifying movement disorder (<em>Adv. Mater. Technol.</em>, 34 citations).</p>
+                    <p>As a <strong>Raman-Charpak Fellow at IMS, University of Bordeaux</strong>, I extended this materials-AI loop to thin-film polymer acoustics: voiceprint biometrics from a programmable PVDF interface (<em>Adv. Mater. Technol.</em>, Journal Cover, 24 citations), an e-skin respirometer built on flexoelectric nanofibre physics (<em>Adv. Sensor Res.</em>), and an emotion sensor exploiting multimodal piezoresistive response (<em>Adv. Intell. Syst.</em>). My <strong>Quantum ML</strong> work shows entanglement-enhanced kernels outperforming classical SVMs on structured materials datasets (<em>APL Quantum</em>, 2025).</p>
+                    <p>I serve on the Editorial Advisory Board of <strong>APL Machine Learning</strong>, as Guest Editor for <strong>Nanotechnology (IOP)</strong>, and as Student Ambassador of <strong>APS</strong> — bridging the materials, physics, and AI communities from the inside.</p>
                 </div>
                 <div class="thesis-box">
                     <strong>Ph.D. Thesis</strong>
@@ -861,48 +1004,55 @@
 <section id="research">
     <div class="container">
         <div class="section-label">Focus Areas</div>
-        <h2 class="section-title">Research — <span>Physics × AI</span></h2>
+        <h2 class="section-title">Research — <span>Materials · Physics · AI</span></h2>
 
-        <!-- Dual axis -->
-        <div class="research-axis fade-up">
-            <!-- Physics for AI -->
+        <!-- Triple axis -->
+        <div class="research-axis fade-up" style="grid-template-columns:1fr 1fr 1fr">
             <div class="axis-block phys-block">
                 <div class="axis-title phys"><i class="fas fa-wave-square"></i> Physics for AI</div>
-                <div class="axis-desc">Physics provides the theoretical substrate — quantum mechanics, electromechanics, condensed matter — that gives AI its most powerful inductive biases and physically consistent constraints.</div>
+                <div class="axis-desc">Quantum mechanics, condensed matter, and electromechanics provide the most powerful inductive biases for intelligent systems.</div>
                 <div class="axis-tags">
                     <span class="axis-tag">Quantum Kernels</span>
                     <span class="axis-tag">Entanglement Features</span>
-                    <span class="axis-tag">Variational Quantum Circuits</span>
-                    <span class="axis-tag">Electromechanical Coupling</span>
+                    <span class="axis-tag">VQCs</span>
                     <span class="axis-tag">Mott Physics</span>
                     <span class="axis-tag">Condensed Matter</span>
-                    <span class="axis-tag">Physical Neural Networks</span>
                 </div>
             </div>
-            <!-- AI for Physics -->
-            <div class="axis-block ai-block">
-                <div class="axis-title ai"><i class="fas fa-brain"></i> AI for Physics</div>
-                <div class="axis-desc">AI accelerates physics discovery — from inverse design of quantum materials to self-driving laboratories that navigate vast compositional spaces guided by physical priors.</div>
+            <div class="axis-block" style="--card-color:var(--gold);--card-glow:radial-gradient(ellipse at top,rgba(245,158,11,.07),transparent 70%)">
+                <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--green))"></div>
+                <div class="axis-title" style="color:var(--gold)"><i class="fas fa-layer-group"></i> Materials Science</div>
+                <div class="axis-desc">From PVDF polymorphism to lead-free perovskites and flexocatalytic nanosheets — designing matter with atomic precision.</div>
                 <div class="axis-tags">
-                    <span class="axis-tag">Generative AI (VAEs, Diffusion)</span>
+                    <span class="axis-tag">PVDF Nanocomposites</span>
+                    <span class="axis-tag">Perovskites</span>
+                    <span class="axis-tag">Electrospinning</span>
+                    <span class="axis-tag">Flexoelectrics</span>
+                    <span class="axis-tag">2D Nanosheets</span>
+                    <span class="axis-tag">Hydrogels</span>
+                </div>
+            </div>
+            <div class="axis-block ai-block">
+                <div class="axis-title ai"><i class="fas fa-brain"></i> AI for Materials</div>
+                <div class="axis-desc">Generative models, MLIPs, and self-driving labs accelerate the discovery of materials that would take decades by trial and error.</div>
+                <div class="axis-tags">
+                    <span class="axis-tag">VAEs · Diffusion Models</span>
                     <span class="axis-tag">MLIP</span>
                     <span class="axis-tag">Self-Driving Labs</span>
                     <span class="axis-tag">Phase Prediction</span>
                     <span class="axis-tag">Inverse Design</span>
-                    <span class="axis-tag">Property Prediction</span>
-                    <span class="axis-tag">Active Learning</span>
                 </div>
             </div>
         </div>
 
         <!-- Detailed research cards -->
-        <div class="research-grid">
-            <div class="research-card fade-up"><div class="icon" style="background:rgba(167,139,250,.15);color:var(--secondary)"><i class="fas fa-atom"></i></div><h3>Quantum ML</h3><p>Entanglement-enhanced quantum kernels and VQCs outperforming classical SVMs on condensed matter classification tasks</p></div>
-            <div class="research-card fade-up"><div class="icon" style="background:rgba(96,165,250,.15);color:var(--primary)"><i class="fas fa-brain"></i></div><h3>AI for Materials</h3><p>Diffusion models and VAEs for multimodal inverse design — crystal structure, electronic properties, and synthesizability</p></div>
-            <div class="research-card fade-up"><div class="icon" style="background:rgba(96,165,250,.15);color:var(--primary)"><i class="fas fa-robot"></i></div><h3>MLIP & Self-Driving Labs</h3><p>Machine learning interatomic potentials driving autonomous experimental loops in materials discovery pipelines</p></div>
-            <div class="research-card fade-up"><div class="icon" style="background:rgba(52,211,153,.15);color:var(--green)"><i class="fas fa-heartbeat"></i></div><h3>Physics-Based Wearable Sensors</h3><p>Piezoelectric and triboelectric nanophysics fused with AI for healthcare diagnostics and human-machine interfaces</p></div>
-            <div class="research-card fade-up"><div class="icon" style="background:rgba(245,158,11,.15);color:var(--gold)"><i class="fas fa-project-diagram"></i></div><h3>Condensed Matter & Nanomaterials</h3><p>PVDF polymorphism, perovskite Mott physics, electrospun nanofibre engineering and SPM characterization</p></div>
-            <div class="research-card fade-up"><div class="icon" style="background:rgba(244,63,94,.15);color:var(--rose)"><i class="fas fa-microchip"></i></div><h3>Quantum Sensors & IoT</h3><p>Self-powered quantum-inspired sensor platforms for real-time biomonitoring and smart material systems</p></div>
+        <div class="research-grid" style="margin-top:24px">
+            <div class="research-card fade-up"><div class="icon" style="background:rgba(245,158,11,.15);color:var(--gold)"><i class="fas fa-layer-group"></i></div><h3>Functional Nanomaterials</h3><p>PVDF nanocomposites, lead-free perovskites (Cs₃Bi₂I₉), ZnIn₂S₄ nanosheets, and electrospun fibres — synthesised and characterised with AFM, XPS, XRD</p></div>
+            <div class="research-card fade-up"><div class="icon" style="background:rgba(52,211,153,.15);color:var(--green)"><i class="fas fa-heartbeat"></i></div><h3>AI-Integrated Sensors</h3><p>Piezo-, tribo-, and flexo-electric materials fused with deep learning for voice recognition, cardiovascular health, movement disorder, and emotion sensing</p></div>
+            <div class="research-card fade-up"><div class="icon" style="background:rgba(96,165,250,.15);color:var(--primary)"><i class="fas fa-brain"></i></div><h3>Generative AI for Materials</h3><p>Diffusion models and VAEs for multimodal inverse design of crystal structure, electronic band gaps, and synthesizability — MEIDNet framework</p></div>
+            <div class="research-card fade-up"><div class="icon" style="background:rgba(167,139,250,.15);color:var(--secondary)"><i class="fas fa-atom"></i></div><h3>Quantum ML</h3><p>Entanglement-enhanced quantum kernels outperforming classical SVMs on materials classification; VQCs for structured physics datasets</p></div>
+            <div class="research-card fade-up"><div class="icon" style="background:rgba(96,165,250,.15);color:var(--primary)"><i class="fas fa-robot"></i></div><h3>Self-Driving Laboratories</h3><p>Closed-loop autonomous discovery pipelines with MLIP guidance, active learning, and robotic synthesis for accelerated materials exploration</p></div>
+            <div class="research-card fade-up"><div class="icon" style="background:rgba(244,63,94,.15);color:var(--rose)"><i class="fas fa-project-diagram"></i></div><h3>Condensed Matter Physics</h3><p>Mott interactions in ruthenium double perovskites, electromechanical coupling, bias-controlled phase tuning, and piezoresponse force microscopy</p></div>
         </div>
     </div>
 </section>
