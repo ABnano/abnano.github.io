@@ -389,8 +389,12 @@
         /* ── PUBLICATIONS ── */
         #publications{background:var(--bg-0)}
         .pub-header-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:24px}
-        .pub-live-label{font-size:.72rem;display:flex;align-items:center;gap:6px;color:var(--green);background:var(--green-dim);border:1px solid rgba(52,211,153,.3);padding:4px 12px;border-radius:20px}
-        #pubLastUpdated{font-size:.68rem;color:var(--text-dim);margin-top:4px}
+        .pub-live-label{font-size:.72rem;display:flex;align-items:center;gap:6px;color:var(--green);background:var(--green-dim);border:1px solid rgba(52,211,153,.3);padding:4px 12px;border-radius:20px;transition:all .4s ease}
+        .pub-live-label.syncing{color:var(--gold);background:var(--gold-dim);border-color:rgba(245,158,11,.3)}
+        .pub-live-label.error{color:var(--text-muted);background:var(--bg-2);border-color:var(--border)}
+        #pubLastUpdated{font-size:.68rem;color:var(--text-dim);margin-top:4px;text-align:right}
+        @keyframes spin-icon{to{transform:rotate(360deg)}}
+        .spin{display:inline-block;animation:spin-icon .8s linear infinite}
         .pub-filter{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:28px}
         .filter-btn{font-size:.76rem;font-weight:600;padding:6px 15px;border-radius:20px;border:1px solid var(--border);background:var(--bg-2);color:var(--text-muted);cursor:pointer;transition:var(--transition)}
         .filter-btn:hover,.filter-btn.active{background:var(--primary);border-color:var(--primary);color:#0f172a}
@@ -926,8 +930,11 @@
                 <h2 class="section-title" style="margin-bottom:0">Publications <span>(Scholar)</span></h2>
             </div>
             <div style="text-align:right">
-                <div class="pub-live-label"><span class="live-dot"></span> Auto-synced with Google Scholar</div>
-                <div id="pubLastUpdated" style="font-size:.68rem;color:var(--text-dim);margin-top:4px"></div>
+                <div class="pub-live-label" id="pubSyncLabel">
+                    <span class="live-dot" id="pubSyncDot"></span>
+                    <span id="pubSyncText">Loading from Google Scholar…</span>
+                </div>
+                <div id="pubLastUpdated"></div>
             </div>
         </div>
         <div class="pub-filter">
@@ -1203,23 +1210,72 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     });
 });
 
-/* ── LOAD PUBLICATIONS.JSON (live Scholar sync) ── */
+/* ── PUBLICATIONS — live fetch from Scholar-synced JSON ── */
 const BADGE_HTML = {
-    'Hot Article':'<span class="pub-badge badge-hot">Hot Article</span>',
-    'Journal Cover':'<span class="pub-badge badge-cover">Journal Cover</span>',
-    'Invited':'<span class="pub-badge badge-invited">Invited</span>'
+    'Hot Article':   '<span class="pub-badge badge-hot">🔥 Hot Article</span>',
+    'Journal Cover': '<span class="pub-badge badge-cover">📰 Journal Cover</span>',
+    'Invited':       '<span class="pub-badge badge-invited">✦ Invited</span>'
 };
+
 function boldName(authors) {
-    return authors.replace(/A\.\s*Babu|Anand\s+Babu/g, '<strong>$&</strong>');
+    return (authors || '').replace(/\bA\.\s*Babu\b|Anand\s+Babu/g, '<strong>$&</strong>');
 }
+
+function setSyncState(state) {
+    const label = document.getElementById('pubSyncLabel');
+    const dot   = document.getElementById('pubSyncDot');
+    const text  = document.getElementById('pubSyncText');
+    if (!label) return;
+    label.className = 'pub-live-label ' + (state === 'loading' ? 'syncing' : state === 'error' ? 'error' : '');
+    if (state === 'loading') {
+        dot.className = '';
+        dot.innerHTML = '<i class="fas fa-sync spin" style="font-size:.65rem"></i>';
+        text.textContent = 'Fetching from Google Scholar…';
+    } else if (state === 'live') {
+        dot.className = 'live-dot';
+        dot.innerHTML = '';
+        text.textContent = 'Live · Google Scholar';
+    } else if (state === 'cached') {
+        dot.className = '';
+        dot.innerHTML = '<i class="fas fa-clock" style="font-size:.65rem"></i>';
+        text.textContent = 'Cached data';
+    } else {
+        dot.className = '';
+        dot.innerHTML = '';
+        text.textContent = 'Data loaded';
+    }
+}
+
 function renderPubs(data) {
     const list = document.getElementById('pubList');
     if (!list) return;
-    list.innerHTML = data.publications.map((p,i) => {
-        const badges = (p.badges||[]).map(b => BADGE_HTML[b]||'').join('');
-        const link = p.url ? `<a href="${p.url}" target="_blank">${p.title}</a>` : p.title;
+
+    const years = [...new Set(data.publications.map(p => p.year))].sort((a,b) => b-a);
+    // Rebuild year filter buttons dynamically
+    const filterBar = document.querySelector('.pub-filter');
+    if (filterBar) {
+        const total = data.publications.length;
+        filterBar.innerHTML = `<button class="filter-btn active" data-filter="all">All (${total})</button>`
+            + years.map(y => `<button class="filter-btn" data-filter="${y}">${y}</button>`).join('');
+        filterBar.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const f = btn.dataset.filter;
+                document.querySelectorAll('.pub-item').forEach(item => {
+                    item.style.display = (f === 'all' || item.dataset.year === f) ? 'flex' : 'none';
+                });
+            });
+        });
+    }
+
+    list.innerHTML = data.publications.map((p, i) => {
+        const badges = (p.badges || []).map(b => BADGE_HTML[b] || '').join('');
+        const link = p.url
+            ? `<a href="${p.url}" target="_blank" rel="noopener">${p.title}</a>`
+            : p.title;
         return `<div class="pub-item fade-up" data-year="${p.year}">
-            <div class="pub-rank">#${p.rank||i+1}</div>
+            <div class="pub-rank">#${p.rank || i+1}</div>
             <div class="pub-body">
                 <div class="pub-title">${link}</div>
                 <div class="pub-authors">${boldName(p.authors)}</div>
@@ -1235,35 +1291,47 @@ function renderPubs(data) {
             </div>
         </div>`;
     }).join('');
-    // Re-observe new fade-up elements
     list.querySelectorAll('.fade-up').forEach(el => fadeObs.observe(el));
 }
+
 function updateStats(cit, h, i10, pubs) {
-    const map = [['sc-cit',cit],['sc-h',h],['sc-i10',i10],['sc-pubs',pubs||20],
-                 ['met-cit',cit],['met-h',h],['met-i10',i10]];
-    map.forEach(([id,val]) => {
+    [['sc-cit',cit],['sc-h',h],['sc-i10',i10],['sc-pubs',pubs],
+     ['met-cit',cit],['met-h',h],['met-i10',i10]].forEach(([id, val]) => {
         const el = document.getElementById(id);
-        if(el) { el.dataset.target = val; el.textContent = val; }
+        if (el) { el.dataset.target = val; animateNum(el, +val); }
     });
-    // Update Scholar link text
-    const sl = document.querySelector('a[href*="scholar.google"]');
-    if(sl && sl.closest('.contact-link')) sl.querySelector('.contact-link-body span').textContent = `${cit} citations · h-index ${h}`;
+    const sl = document.querySelector('.contact-link .contact-link-body span');
+    if (sl && sl.closest('a[href*="scholar"]')) sl.textContent = `${cit} citations · h-index ${h}`;
 }
 
-fetch('./publications.json?v=' + Date.now())
-    .then(r => r.json())
+function formatSyncTime(isoStr) {
+    if (!isoStr) return '';
+    const cached = isoStr.endsWith('_CACHED');
+    const clean  = isoStr.replace('_CACHED', '');
+    const d = new Date(clean);
+    if (isNaN(d)) return '';
+    const label = d.toLocaleDateString('en-GB', {day:'numeric', month:'short', year:'numeric'})
+                + ' ' + d.toLocaleTimeString('en-GB', {hour:'2-digit', minute:'2-digit'}) + ' UTC';
+    return (cached ? 'Cached — last synced: ' : 'Synced: ') + label;
+}
+
+// Show syncing state immediately
+setSyncState('loading');
+
+fetch('./publications.json?nocache=' + Date.now())
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(data => {
         renderPubs(data);
         updateStats(data.total_citations, data.h_index, data.i10_index, data.publications.length);
-        const el = document.getElementById('pubLastUpdated');
-        if (el) {
-            const d = new Date(data.updated);
-            el.textContent = 'Last synced: ' + d.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
-        }
+        const cached = (data.updated || '').includes('_CACHED');
+        setSyncState(cached ? 'cached' : 'live');
+        const ts = document.getElementById('pubLastUpdated');
+        if (ts) ts.textContent = formatSyncTime(data.updated);
     })
     .catch(() => {
-        // Fallback static data
-        const fallback = {"publications":[
+        setSyncState('error');
+        // Hard-coded fallback — GitHub Actions keeps this current via daily sync
+        const fallback = {"updated":"2026-04-20T00:00:00Z","total_citations":547,"h_index":12,"i10_index":13,"publications":[
           {"rank":1,"title":"Revisiting of δ-PVDF nanoparticles via phase separation with giant piezoelectric response","authors":"HK Mishra, V Gupta, K Roy, A Babu, A Kumar, D Mandal","journal":"Nano Energy","year":"2022","citations":78,"url":"","badges":[]},
           {"rank":2,"title":"Surface potential tuned single active material comprised triboelectric nanogenerator","authors":"A Babu, P Malik, N Das, D Mandal","journal":"Small","year":"2022","citations":68,"url":"https://doi.org/10.1002/smll.202201331","badges":["Hot Article"]},
           {"rank":3,"title":"Lead-Free Perovskite Cs₃Bi₂I₉-Derived Electroactive PVDF Composite","authors":"B Mondal, HK Mishra, D Sengupta, A Kumar, A Babu, et al.","journal":"Langmuir","year":"2022","citations":56,"url":"https://doi.org/10.1021/acs.langmuir.2c01016","badges":[]},
@@ -1284,8 +1352,11 @@ fetch('./publications.json?v=' + Date.now())
           {"rank":18,"title":"Algorithmically Enhanced Wearable Multimodal Emotion Sensor","authors":"A Babu, G Kassahun, I Dufour, D Mandal, D Thuau","journal":"Advanced Intelligent Systems","year":"2025","citations":4,"url":"https://doi.org/10.1002/aisy.202400567","badges":[]},
           {"rank":19,"title":"Mott interactions driven insulating behaviour in ruthenium based perovskites","authors":"S Dani, R Pandit, A Babu, R Kumar","journal":"J. Alloys and Compounds","year":"2024","citations":4,"url":"https://doi.org/10.1016/j.jallcom.2023.176184","badges":[]},
           {"rank":20,"title":"Futuristic Alzheimer's therapy: acoustic-stimulated piezoelectric nanospheres","authors":"M Sharma, S Choudhury, A Babu, V Gupta, D Sengupta, SA Ali","journal":"Biomaterials Science","year":"2024","citations":3,"url":"https://doi.org/10.1039/D3BM01231H","badges":[]}
-        ],"total_citations":547,"h_index":12,"i10_index":13};
+        ]};
         renderPubs(fallback);
+        updateStats(fallback.total_citations, fallback.h_index, fallback.i10_index, fallback.publications.length);
+        const ts = document.getElementById('pubLastUpdated');
+        if (ts) ts.textContent = 'Showing cached data';
     });
 </script>
 </body>

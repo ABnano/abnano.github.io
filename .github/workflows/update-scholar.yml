@@ -2,8 +2,12 @@ name: Update Publications from Google Scholar
 
 on:
   schedule:
-    - cron: '0 6 * * 1'   # Every Monday at 06:00 UTC
-  workflow_dispatch:       # Manual trigger from GitHub Actions tab
+    - cron: '0 0 * * *'     # Every day at 00:00 UTC
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'publications.json'  # avoid infinite loop when the action commits
+  workflow_dispatch:
 
 jobs:
   update-publications:
@@ -20,14 +24,16 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install scholarly
-        run: pip install scholarly
+      - name: Install dependencies
+        run: pip install scholarly requests
 
-      - name: Fetch publications
+      - name: Fetch publications from Google Scholar
         run: python update_scholar.py
+        env:
+          SCHOLAR_ID: J5UZz7sAAAAJ
 
       - name: Commit updated publications.json
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: 'chore: auto-update publications from Google Scholar'
+          commit_message: 'chore: auto-update publications from Google Scholar [skip ci]'
           file_pattern: publications.json
