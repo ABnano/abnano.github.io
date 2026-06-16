@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-15T04:24:30Z_CACHED",
-  "total_citations": 560,
+  "updated": "2026-06-16T04:00:12Z",
+  "total_citations": 561,
   "h_index": 12,
   "i10_index": 13,
   "publications": [
@@ -62,7 +62,7 @@
       "authors": "Hari Krishna Mishra and Dipanjan Sengupta and Anand Babu and Bilal Masood Pirzada and Ranjini Sarkar and Boddu S Naidu and Tarun Kumar Kundu and Dipankar Mandal",
       "journal": "Sustainable Energy & Fuels",
       "year": "2022",
-      "citations": 40,
+      "citations": 41,
       "url": "https://pubs.rsc.org/en/content/articlehtml/2021/xx/d1se01889b",
       "badges": []
     },
@@ -80,6 +80,16 @@
     },
     {
       "rank": 8,
+      "title": "Roadmap to human–machine interaction through triboelectric nanogenerator and machine learning convergence",
+      "authors": "Anand Babu and Dipankar Mandal",
+      "journal": "ACS Applied Energy Materials",
+      "year": "2024",
+      "citations": 32,
+      "url": "https://pubs.acs.org/doi/abs/10.1021/acsaem.3c02642",
+      "badges": []
+    },
+    {
+      "rank": 9,
       "title": "Deep learning enabled early predicting cardiovascular status using highly sensitive piezoelectric sensor of solution‐processable Nylon‐11",
       "authors": "Anand Babu and Spandan Ranpariya and Dhirendra Kumar Sinha and Arpitam Chatterjee and Dipankar Mandal",
       "journal": "Advanced Materials Technologies",
@@ -89,16 +99,6 @@
       "badges": [
         "Hot Article"
       ]
-    },
-    {
-      "rank": 9,
-      "title": "Roadmap to human–machine interaction through triboelectric nanogenerator and machine learning convergence",
-      "authors": "Anand Babu and Dipankar Mandal",
-      "journal": "ACS Applied Energy Materials",
-      "year": "2024",
-      "citations": 31,
-      "url": "https://pubs.acs.org/doi/abs/10.1021/acsaem.3c02642",
-      "badges": []
     },
     {
       "rank": 10,
@@ -154,16 +154,6 @@
     },
     {
       "rank": 15,
-      "title": "Can Entanglement-enhanced Quantum Kernels Improve Data Classification?",
-      "authors": "Anand Babu and Saurabh G Ghatnekar and Amit Saxena and Dipankar Mandal",
-      "journal": "arXiv preprint arXiv:2406.01948",
-      "year": "2024",
-      "citations": 7,
-      "url": "https://arxiv.org/abs/2406.01948",
-      "badges": []
-    },
-    {
-      "rank": 16,
       "title": "Machine Learning‐Enabled Nanoscale Phase Prediction in Engineered Poly (Vinylidene Fluoride)",
       "authors": "Anand Babu and B Moses Abraham and Sudip Naskar and Spandan Ranpariya and Dipankar Mandal",
       "journal": "Small",
@@ -173,13 +163,23 @@
       "badges": []
     },
     {
-      "rank": 17,
+      "rank": 16,
       "title": "Self‐Learning e‐Skin Respirometer for Pulmonary Disease Detection",
       "authors": "Anand Babu and Getnet Kassahun and Isabelle Dufour and Dipankar Mandal and Damien Thuau",
       "journal": "Advanced Sensor Research",
       "year": "2024",
       "citations": 6,
       "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adsr.202400079",
+      "badges": []
+    },
+    {
+      "rank": 17,
+      "title": "Can Entanglement-enhanced Quantum Kernels Improve Data Classification?",
+      "authors": "Anand Babu and Saurabh G Ghatnekar and Amit Saxena and Dipankar Mandal",
+      "journal": "arXiv preprint arXiv:2406.01948",
+      "year": "2024",
+      "citations": 6,
+      "url": "https://arxiv.org/abs/2406.01948",
       "badges": []
     },
     {
