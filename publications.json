@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-24T03:44:54Z_CACHED",
-  "total_citations": 561,
+  "updated": "2026-06-25T03:27:33Z",
+  "total_citations": 562,
   "h_index": 12,
   "i10_index": 13,
   "publications": [
@@ -184,22 +184,22 @@
     },
     {
       "rank": 18,
+      "title": "Mott interactions driven insulating behaviour in ruthenium based double perovskites: A2SmRuO6 (A= Ba & Sr)",
+      "authors": "Sahil Dani and Rabia Pandit and Anand Babu and Rakesh Kumar",
+      "journal": "Journal of Alloys and Compounds",
+      "year": "2024",
+      "citations": 5,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0925838824027713",
+      "badges": []
+    },
+    {
+      "rank": 19,
       "title": "Algorithmically Enhanced Wearable Multimodal Emotion Sensor",
       "authors": "Anand Babu and Getnet Kassahun and Isabelle Dufour and Dipankar Mandal and Damien Thuau",
       "journal": "Advanced Intelligent Systems",
       "year": "2025",
       "citations": 4,
       "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/aisy.202400567",
-      "badges": []
-    },
-    {
-      "rank": 19,
-      "title": "Mott interactions driven insulating behaviour in ruthenium based double perovskites: A2SmRuO6 (A= Ba & Sr)",
-      "authors": "Sahil Dani and Rabia Pandit and Anand Babu and Rakesh Kumar",
-      "journal": "Journal of Alloys and Compounds",
-      "year": "2024",
-      "citations": 4,
-      "url": "https://www.sciencedirect.com/science/article/pii/S0925838824027713",
       "badges": []
     },
     {
