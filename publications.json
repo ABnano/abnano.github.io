@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-28T03:41:15Z",
+  "updated": "2026-06-29T03:46:30Z",
   "total_citations": 562,
   "h_index": 12,
   "i10_index": 13,
@@ -274,7 +274,7 @@
     },
     {
       "rank": 27,
-      "title": "MEIDNet: Multimodal generative AI framework for inverse materials design",
+      "title": "MEIDNet: multimodal generative AI framework for inverse materials design",
       "authors": "Anand Babu and Rogério Almeida Gouvêa and Pierre Vandergheynst and Gian-Marco Rignanese",
       "journal": "npj Computational Materials",
       "year": "2026",
