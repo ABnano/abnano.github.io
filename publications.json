@@ -1,7 +1,7 @@
 {
-  "updated": "2026-07-21T02:46:11Z_CACHED",
-  "total_citations": 562,
-  "h_index": 12,
+  "updated": "2026-07-22T02:32:04Z",
+  "total_citations": 571,
+  "h_index": 13,
   "i10_index": 13,
   "publications": [
     {
@@ -10,7 +10,7 @@
       "authors": "Hari Krishna Mishra and Varun Gupta and Krittish Roy and Anand Babu and Ajay Kumar and Dipankar Mandal",
       "journal": "Nano Energy",
       "year": "2022",
-      "citations": 81,
+      "citations": 82,
       "url": "https://www.sciencedirect.com/science/article/pii/S2211285522001367",
       "badges": []
     },
@@ -32,12 +32,22 @@
       "authors": "Bidya Mondal and Hari Krishna Mishra and Dipanjan Sengupta and Ajay Kumar and Anand Babu and Dalip Saini and Varun Gupta and Dipankar Mandal",
       "journal": "Langmuir",
       "year": "2022",
-      "citations": 56,
+      "citations": 58,
       "url": "https://pubs.acs.org/doi/abs/10.1021/acs.langmuir.2c01686",
       "badges": []
     },
     {
       "rank": 4,
+      "title": "Tunable, conductive, self-healing, adhesive and injectable hydrogels for bioelectronics and tissue regeneration applications",
+      "authors": "Vineeta Panwar and Anand Babu and Anjana Sharma and Jijo Thomas and Vianni Chopra and Pinki Malik and Swati Rajput and Monika Mittal and Rajdeep Guha and Naibedya Chattopadhyay and Dipankar Mandal and Deepa Ghosh",
+      "journal": "Journal of Materials Chemistry B",
+      "year": "2021",
+      "citations": 51,
+      "url": "https://pubs.rsc.org/tb/article-abstract/9/31/6260/751873",
+      "badges": []
+    },
+    {
+      "rank": 5,
       "title": "Revisiting δ-PVDF based piezoelectric nanogenerator for self-powered pressure mapping sensor",
       "authors": "Varun Gupta and Anand Babu and Sujoy Kumar Ghosh and Zinnia Mallick and Hari Krishna Mishra and Dalip Saini and Dipankar Mandal",
       "journal": "Applied Physics Letters",
@@ -47,23 +57,13 @@
       "badges": []
     },
     {
-      "rank": 5,
-      "title": "Tunable, conductive, self-healing, adhesive and injectable hydrogels for bioelectronics and tissue regeneration applications",
-      "authors": "Vineeta Panwar and Anand Babu and Anjana Sharma and Jijo Thomas and Vianni Chopra and Pinki Malik and Swati Rajput and Monika Mittal and Rajdeep Guha and Naibedya Chattopadhyay and Dipankar Mandal and Deepa Ghosh",
-      "journal": "Journal of Materials Chemistry B",
-      "year": "2021",
-      "citations": 50,
-      "url": "https://pubs.rsc.org/en/content/articlehtml/2021/tb/d1tb01075a",
-      "badges": []
-    },
-    {
       "rank": 6,
-      "title": "PVDF/Ag 2 CO 3 nanocomposites for efficient dye degradation and flexible piezoelectric mechanical energy harvester",
+      "title": "PVDF/Ag2CO3 nanocomposites for efficient dye degradation and flexible piezoelectric mechanical energy harvester",
       "authors": "Hari Krishna Mishra and Dipanjan Sengupta and Anand Babu and Bilal Masood Pirzada and Ranjini Sarkar and Boddu S Naidu and Tarun Kumar Kundu and Dipankar Mandal",
       "journal": "Sustainable Energy & Fuels",
       "year": "2022",
       "citations": 41,
-      "url": "https://pubs.rsc.org/en/content/articlehtml/2021/xx/d1se01889b",
+      "url": "https://pubs.rsc.org/se/article-abstract/6/6/1625/747918",
       "badges": []
     },
     {
@@ -116,7 +116,7 @@
       "authors": "Varun Gupta and Ajay Kumar and Bidya Mondal and Anand Babu and Spandan Ranpariya and Dhirendra Kumar Sinha and Dipankar Mandal",
       "journal": "ACS Sustainable Chemistry & Engineering",
       "year": "2023",
-      "citations": 21,
+      "citations": 22,
       "url": "https://pubs.acs.org/doi/abs/10.1021/acssuschemeng.2c06779",
       "badges": []
     },
@@ -136,7 +136,7 @@
       "authors": "Anand Babu and Damien Thuau and Dipankar Mandal",
       "journal": "MRS Communications",
       "year": "2023",
-      "citations": 12,
+      "citations": 13,
       "url": "https://link.springer.com/article/10.1557/s43579-023-00464-w",
       "badges": [
         "Invited"
@@ -148,7 +148,7 @@
       "authors": "Anand Babu and Saurabh G. Ghatnekar and Amit Saxena and Dipankar Mandal",
       "journal": "APL Quantum",
       "year": "2025",
-      "citations": 7,
+      "citations": 8,
       "url": "https://pubs.aip.org/aip/apq/article/2/1/016116/3334477",
       "badges": []
     },
@@ -204,32 +204,32 @@
     },
     {
       "rank": 20,
+      "title": "Artificial Intelligence Enabled Self-Powered Acoustics Sensing: From Energy Harvesting to Healthcare Monitoring",
+      "authors": "Anand Babu and Andris Šutka and Dipankar Mandal",
+      "journal": "Advanced Materials Technologies",
+      "year": "2026",
+      "citations": 3,
+      "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/admt.202501635",
+      "badges": []
+    },
+    {
+      "rank": 21,
+      "title": "Flexocatalytically driven water splitting: unprecedented hydrogen production using symmetry invariant ZnIn2S4 nanosheets",
+      "authors": "Jatin Mahajan and Shivali Dhingra and Anand Babu and Ajay Partap Singh Rana and Arpna Jaryal and Chandan Bera and Dipankar Mandal and Kamalakannan Kailasam",
+      "journal": "Journal of Materials Chemistry A",
+      "year": "2025",
+      "citations": 3,
+      "url": "https://pubs.rsc.org/ta/article-abstract/13/44/37962/915438",
+      "badges": []
+    },
+    {
+      "rank": 22,
       "title": "Futuristic Alzheimer's therapy: acoustic-stimulated piezoelectric nanospheres for amyloid reduction",
       "authors": "Manju Sharma and Samraggi Choudhury and Anand Babu and Varun Gupta and Dipanjan Sengupta and Syed Afroz Ali and Mrunali D Dhokne and Ashok Kumar Datusalia and Dipankar Mandal and Jiban Jyoti Panda",
       "journal": "Biomaterials Science",
       "year": "2024",
       "citations": 3,
-      "url": "https://pubs.rsc.org/en/content/articlehtml/2024/bm/d3bm01688a",
-      "badges": []
-    },
-    {
-      "rank": 21,
-      "title": "Artificial Intelligence Enabled Self-Powered Acoustics Sensing: From Energy Harvesting to Healthcare Monitoring",
-      "authors": "Anand Babu and Andris Šutka and Dipankar Mandal",
-      "journal": "Advanced Materials Technologies",
-      "year": "2026",
-      "citations": 2,
-      "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/admt.202501635",
-      "badges": []
-    },
-    {
-      "rank": 22,
-      "title": "Flexocatalytically driven water splitting: unprecedented hydrogen production using symmetry invariant ZnIn 2 S 4 nanosheets",
-      "authors": "Jatin Mahajan and Shivali Dhingra and Anand Babu and Ajay Partap Singh Rana and Arpna Jaryal and Chandan Bera and Dipankar Mandal and Kamalakannan Kailasam",
-      "journal": "Journal of Materials Chemistry A",
-      "year": "2025",
-      "citations": 2,
-      "url": "https://pubs.rsc.org/en/content/articlehtml/2025/ta/d5ta05386b",
+      "url": "https://pubs.rsc.org/bm/article-abstract/12/7/1801/796594",
       "badges": []
     },
     {
