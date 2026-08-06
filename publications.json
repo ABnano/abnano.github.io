@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-05T02:36:25Z_CACHED",
-  "total_citations": 571,
+  "updated": "2026-08-06T02:26:40Z",
+  "total_citations": 575,
   "h_index": 13,
   "i10_index": 13,
   "publications": [
@@ -20,7 +20,7 @@
       "authors": "Anand Babu and Pinki Malik and Nityananda Das and Dipankar Mandal",
       "journal": "Small",
       "year": "2022",
-      "citations": 71,
+      "citations": 72,
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/smll.202201331",
       "badges": [
         "Hot Article"
@@ -28,12 +28,12 @@
     },
     {
       "rank": 3,
-      "title": "Lead-free perovskite Cs3Bi2I9-derived electroactive PVDF composite-based piezoelectric nanogenerators for physiological signal monitoring and piezo-phototronic-aided strain modulated photodetectors",
+      "title": "Lead-Free Perovskite Cs3Bi2I9‑Derived Electroactive PVDF Composite-Based Piezoelectric Nanogenerators for Physiological Signal Monitoring and Piezo-Phototronic-Aided Strain Modulated Photodetectors",
       "authors": "Bidya Mondal and Hari Krishna Mishra and Dipanjan Sengupta and Ajay Kumar and Anand Babu and Dalip Saini and Varun Gupta and Dipankar Mandal",
       "journal": "Langmuir",
       "year": "2022",
       "citations": 58,
-      "url": "https://pubs.acs.org/doi/abs/10.1021/acs.langmuir.2c01686",
+      "url": "https://pubs.acs.org/langd5/article/38/40/12157/425241",
       "badges": []
     },
     {
@@ -68,25 +68,25 @@
     },
     {
       "rank": 7,
-      "title": "Deep learning enabled perceptive wearable sensor: an interactive gadget for tracking movement disorder",
-      "authors": "Anand Babu and Spandan Ranpariya and Dhirendra Kumar Sinha and Dipankar Mandal",
-      "journal": "Advanced Materials Technologies",
-      "year": "2023",
-      "citations": 34,
-      "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/admt.202300046",
-      "badges": [
-        "Hot Article"
-      ]
-    },
-    {
-      "rank": 8,
       "title": "Roadmap to human–machine interaction through triboelectric nanogenerator and machine learning convergence",
       "authors": "Anand Babu and Dipankar Mandal",
       "journal": "ACS Applied Energy Materials",
       "year": "2024",
-      "citations": 32,
+      "citations": 33,
       "url": "https://pubs.acs.org/doi/abs/10.1021/acsaem.3c02642",
       "badges": []
+    },
+    {
+      "rank": 8,
+      "title": "Deep learning enabled perceptive wearable sensor: an interactive gadget for tracking movement disorder",
+      "authors": "Anand Babu and Spandan Ranpariya and Dhirendra Kumar Sinha and Dipankar Mandal",
+      "journal": "Advanced Materials Technologies",
+      "year": "2023",
+      "citations": 33,
+      "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/admt.202300046",
+      "badges": [
+        "Hot Article"
+      ]
     },
     {
       "rank": 9,
@@ -94,7 +94,7 @@
       "authors": "Anand Babu and Spandan Ranpariya and Dhirendra Kumar Sinha and Arpitam Chatterjee and Dipankar Mandal",
       "journal": "Advanced Materials Technologies",
       "year": "2023",
-      "citations": 32,
+      "citations": 33,
       "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/admt.202202021",
       "badges": [
         "Hot Article"
@@ -102,7 +102,7 @@
     },
     {
       "rank": 10,
-      "title": "Programmable Polymeric‐Interface for Voiceprint Biometrics",
+      "title": "Programmable polymeric‐interface for voiceprint biometrics",
       "authors": "Anand Babu and Ewen Raoul and Getnet Kassahun and Isabelle Dufour and Dipankar Mandal and Damien Thuau",
       "journal": "Advanced Materials Technologies",
       "year": "2024",
@@ -148,7 +148,7 @@
       "authors": "Anand Babu and Saurabh G. Ghatnekar and Amit Saxena and Dipankar Mandal",
       "journal": "APL Quantum",
       "year": "2025",
-      "citations": 8,
+      "citations": 9,
       "url": "https://pubs.aip.org/aip/apq/article/2/1/016116/3334477",
       "badges": []
     },
@@ -174,32 +174,32 @@
     },
     {
       "rank": 17,
-      "title": "Can Entanglement-enhanced Quantum Kernels Improve Data Classification?",
-      "authors": "Anand Babu and Saurabh G Ghatnekar and Amit Saxena and Dipankar Mandal",
-      "journal": "arXiv preprint arXiv:2406.01948",
-      "year": "2024",
-      "citations": 6,
-      "url": "https://arxiv.org/abs/2406.01948",
-      "badges": []
-    },
-    {
-      "rank": 18,
       "title": "Mott interactions driven insulating behaviour in ruthenium based double perovskites: A2SmRuO6 (A= Ba & Sr)",
       "authors": "Sahil Dani and Rabia Pandit and Anand Babu and Rakesh Kumar",
       "journal": "Journal of Alloys and Compounds",
       "year": "2024",
-      "citations": 5,
+      "citations": 6,
       "url": "https://www.sciencedirect.com/science/article/pii/S0925838824027713",
       "badges": []
     },
     {
-      "rank": 19,
+      "rank": 18,
       "title": "Algorithmically Enhanced Wearable Multimodal Emotion Sensor",
       "authors": "Anand Babu and Getnet Kassahun and Isabelle Dufour and Dipankar Mandal and Damien Thuau",
       "journal": "Advanced Intelligent Systems",
       "year": "2025",
-      "citations": 4,
+      "citations": 5,
       "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/aisy.202400567",
+      "badges": []
+    },
+    {
+      "rank": 19,
+      "title": "Can Entanglement-enhanced Quantum Kernels Improve Data Classification?",
+      "authors": "Anand Babu and Saurabh G Ghatnekar and Amit Saxena and Dipankar Mandal",
+      "journal": "arXiv preprint arXiv:2406.01948",
+      "year": "2024",
+      "citations": 5,
+      "url": "https://arxiv.org/abs/2406.01948",
       "badges": []
     },
     {
@@ -274,7 +274,7 @@
     },
     {
       "rank": 27,
-      "title": "MEIDNet: multimodal generative AI framework for inverse materials design",
+      "title": "MEIDNet: Multimodal generative AI framework for inverse materials design",
       "authors": "Anand Babu and Rogério Almeida Gouvêa and Pierre Vandergheynst and Gian-Marco Rignanese",
       "journal": "npj Computational Materials",
       "year": "2026",
