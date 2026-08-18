@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-17T01:23:26Z_CACHED",
-  "total_citations": 579,
+  "updated": "2026-08-18T01:07:38Z",
+  "total_citations": 581,
   "h_index": 13,
   "i10_index": 13,
   "publications": [
@@ -20,7 +20,7 @@
       "authors": "Anand Babu and Pinki Malik and Nityananda Das and Dipankar Mandal",
       "journal": "Small",
       "year": "2022",
-      "citations": 72,
+      "citations": 73,
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/smll.202201331",
       "badges": [
         "Hot Article"
@@ -154,22 +154,22 @@
     },
     {
       "rank": 15,
+      "title": "Self‐Learning e‐Skin Respirometer for Pulmonary Disease Detection",
+      "authors": "Anand Babu and Getnet Kassahun and Isabelle Dufour and Dipankar Mandal and Damien Thuau",
+      "journal": "Advanced Sensor Research",
+      "year": "2024",
+      "citations": 7,
+      "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adsr.202400079",
+      "badges": []
+    },
+    {
+      "rank": 16,
       "title": "Machine Learning‐Enabled Nanoscale Phase Prediction in Engineered Poly (Vinylidene Fluoride)",
       "authors": "Anand Babu and B Moses Abraham and Sudip Naskar and Spandan Ranpariya and Dipankar Mandal",
       "journal": "Small",
       "year": "2024",
       "citations": 6,
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/smll.202405393",
-      "badges": []
-    },
-    {
-      "rank": 16,
-      "title": "Self‐Learning e‐Skin Respirometer for Pulmonary Disease Detection",
-      "authors": "Anand Babu and Getnet Kassahun and Isabelle Dufour and Dipankar Mandal and Damien Thuau",
-      "journal": "Advanced Sensor Research",
-      "year": "2024",
-      "citations": 6,
-      "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adsr.202400079",
       "badges": []
     },
     {
