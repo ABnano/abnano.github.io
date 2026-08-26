@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-25T01:23:41Z_CACHED",
-  "total_citations": 581,
+  "updated": "2026-08-26T01:12:10Z",
+  "total_citations": 583,
   "h_index": 13,
   "i10_index": 13,
   "publications": [
@@ -10,7 +10,7 @@
       "authors": "Hari Krishna Mishra and Varun Gupta and Krittish Roy and Anand Babu and Ajay Kumar and Dipankar Mandal",
       "journal": "Nano Energy",
       "year": "2022",
-      "citations": 82,
+      "citations": 83,
       "url": "https://www.sciencedirect.com/science/article/pii/S2211285522001367",
       "badges": []
     },
@@ -32,7 +32,7 @@
       "authors": "Bidya Mondal and Hari Krishna Mishra and Dipanjan Sengupta and Ajay Kumar and Anand Babu and Dalip Saini and Varun Gupta and Dipankar Mandal",
       "journal": "Langmuir",
       "year": "2022",
-      "citations": 59,
+      "citations": 60,
       "url": "https://pubs.acs.org/langd5/article/38/40/12157/425241",
       "badges": []
     },
