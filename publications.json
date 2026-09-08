@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-07T03:11:41Z_CACHED",
-  "total_citations": 583,
+  "updated": "2026-09-08T03:09:04Z",
+  "total_citations": 589,
   "h_index": 13,
   "i10_index": 13,
   "publications": [
@@ -32,28 +32,28 @@
       "authors": "Bidya Mondal and Hari Krishna Mishra and Dipanjan Sengupta and Ajay Kumar and Anand Babu and Dalip Saini and Varun Gupta and Dipankar Mandal",
       "journal": "Langmuir",
       "year": "2022",
-      "citations": 60,
+      "citations": 62,
       "url": "https://pubs.acs.org/langd5/article/38/40/12157/425241",
       "badges": []
     },
     {
       "rank": 4,
+      "title": "Revisiting δ-PVDF based piezoelectric nanogenerator for self-powered pressure mapping sensor",
+      "authors": "Varun Gupta and Anand Babu and Sujoy Kumar Ghosh and Zinnia Mallick and Hari Krishna Mishra and Dalip Saini and Dipankar Mandal",
+      "journal": "Applied Physics Letters",
+      "year": "2021",
+      "citations": 51,
+      "url": "https://pubs.aip.org/aip/apl/article/119/25/252902/40635",
+      "badges": []
+    },
+    {
+      "rank": 5,
       "title": "Tunable, conductive, self-healing, adhesive and injectable hydrogels for bioelectronics and tissue regeneration applications",
       "authors": "Vineeta Panwar and Anand Babu and Anjana Sharma and Jijo Thomas and Vianni Chopra and Pinki Malik and Swati Rajput and Monika Mittal and Rajdeep Guha and Naibedya Chattopadhyay and Dipankar Mandal and Deepa Ghosh",
       "journal": "Journal of Materials Chemistry B",
       "year": "2021",
       "citations": 51,
       "url": "https://pubs.rsc.org/tb/article-abstract/9/31/6260/751873",
-      "badges": []
-    },
-    {
-      "rank": 5,
-      "title": "Revisiting δ-PVDF based piezoelectric nanogenerator for self-powered pressure mapping sensor",
-      "authors": "Varun Gupta and Anand Babu and Sujoy Kumar Ghosh and Zinnia Mallick and Hari Krishna Mishra and Dalip Saini and Dipankar Mandal",
-      "journal": "Applied Physics Letters",
-      "year": "2021",
-      "citations": 50,
-      "url": "https://pubs.aip.org/aip/apl/article/119/25/252902/40635",
       "badges": []
     },
     {
@@ -126,7 +126,7 @@
       "authors": "Anand Babu and Varun Gupta and Dipankar Mandal",
       "journal": "Applied Physics Letters",
       "year": "2022",
-      "citations": 14,
+      "citations": 15,
       "url": "https://pubs.aip.org/aip/apl/article/120/9/093701/2833196",
       "badges": []
     },
@@ -234,6 +234,26 @@
     },
     {
       "rank": 23,
+      "title": "Towards Automated Discovery: A Review of Generative Models, Multimodal Learning and Closed-Loop Workflows in Inverse Materials Design",
+      "authors": "Anand Babu and Rogério Almeida Gouvêa and Gian-Marco Rignanese",
+      "journal": "",
+      "year": "2026",
+      "citations": 1,
+      "url": "https://arxiv.org/abs/2606.02507",
+      "badges": []
+    },
+    {
+      "rank": 24,
+      "title": "MEIDNet: Multimodal generative AI framework for inverse materials design",
+      "authors": "Anand Babu and Rogério Almeida Gouvêa and Pierre Vandergheynst and Gian-Marco Rignanese",
+      "journal": "npj Computational Materials",
+      "year": "2026",
+      "citations": 1,
+      "url": "https://www.nature.com/articles/s41524-026-02153-3",
+      "badges": []
+    },
+    {
+      "rank": 25,
       "title": "Emergence of Intelligent Photonic Technologies in Early Medical Diagnostics",
       "authors": "Deepak Kumar and Piyush Agarwal and Anand Babu",
       "journal": "Physica Status Solidi A: Applications and Materials Science",
@@ -243,7 +263,7 @@
       "badges": []
     },
     {
-      "rank": 24,
+      "rank": 26,
       "title": "Curcumin Monoglucuronide Protects Cartilage from Progressive Degeneration by Blocking MMP-13",
       "authors": "HS Roy and K Chirag and KM Neethu and A Babu and M Arora and J Govindasamy and D Mandal and R Guha and N Chattopadhyay and D Ghosh",
       "journal": "Archives of Pharmacal Research (ARPR)",
@@ -253,7 +273,7 @@
       "badges": []
     },
     {
-      "rank": 25,
+      "rank": 27,
       "title": "-PVDF Based Flexible Nanogenerator",
       "authors": "Varun Gupta and Anand Babu and Sujoy Kumar Ghosh and Zinnia Mallick and Hari Krishna Mishra and Dipankar Mandal",
       "journal": "arXiv preprint arXiv:2108.09581",
@@ -263,27 +283,17 @@
       "badges": []
     },
     {
-      "rank": 26,
-      "title": "Towards Automated Discovery: A Review of Generative Models, Multimodal Learning and Closed-Loop Workflows in Inverse Materials Design",
-      "authors": "Anand Babu and Rogério Almeida Gouvêa and Gian-Marco Rignanese",
-      "journal": "",
-      "year": "2026",
-      "citations": 0,
-      "url": "https://arxiv.org/abs/2606.02507",
-      "badges": []
-    },
-    {
-      "rank": 27,
-      "title": "MEIDNet: Multimodal generative AI framework for inverse materials design",
-      "authors": "Anand Babu and Rogério Almeida Gouvêa and Pierre Vandergheynst and Gian-Marco Rignanese",
-      "journal": "npj Computational Materials",
-      "year": "2026",
-      "citations": 0,
-      "url": "https://www.nature.com/articles/s41524-026-02153-3",
-      "badges": []
-    },
-    {
       "rank": 28,
+      "title": "Multimodal and cross-modal learning techniques",
+      "authors": "Anand Babu and NM Krishnan",
+      "journal": "APL Machine Learning",
+      "year": "2026",
+      "citations": 0,
+      "url": "https://pubs.aip.org/aip/aml/article/4/3/030901/3403257",
+      "badges": []
+    },
+    {
+      "rank": 29,
       "title": "Bias-controlled electrospinning for improved performance of electronic devices",
       "authors": "Anand Babu and Dipankar Mandal",
       "journal": "Energy Harvesting Properties of Electrospun Nanofibers (Second Edition)",
@@ -293,7 +303,7 @@
       "badges": []
     },
     {
-      "rank": 29,
+      "rank": 30,
       "title": "Programmable Polymeric‐Interface for Voiceprint Biometrics (Adv. Mater. Technol. 4/2024)",
       "authors": "Anand Babu and Ewen Raoul and Getnet Kassahun and Isabelle Dufour and Dipankar Mandal and Damien Thuau",
       "journal": "Advanced Materials Technologies",
@@ -303,7 +313,7 @@
       "badges": []
     },
     {
-      "rank": 30,
+      "rank": 31,
       "title": "Machine Learning Enabled Potential Approach for Cardiovascular Risks Prediction",
       "authors": "Anand Babu and Dipankar Mandal",
       "journal": "APS March Meeting Abstracts",
@@ -313,7 +323,7 @@
       "badges": []
     },
     {
-      "rank": 31,
+      "rank": 32,
       "title": "Machine Learning Enabled Intelligent Self-Powered Sensors for Next-Generation Electronic Devices",
       "authors": "Anand Babu and Dipankar Mandal",
       "journal": "APS April Meeting Abstracts",
@@ -323,7 +333,7 @@
       "badges": []
     },
     {
-      "rank": 32,
+      "rank": 33,
       "title": "Lead-Free and Highly Stable Cs3bi2i9-Pvdf Composite Based Piezoelectric Nanogenerator for Physiological Signal Monitoring and Piezo-Phototronic Aided Strained Modulated Photodetector",
       "authors": "Bidya Mondal and Hari Krishna Mishra and Dipanjan Sengupta and Ajay Kumar and Anand Babu and Dalip Sahani and Varun Gupta and Dipankar Mandal",
       "journal": "Available at SSRN 4130132",
