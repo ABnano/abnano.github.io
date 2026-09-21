@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-20T03:29:01Z_CACHED",
-  "total_citations": 594,
+  "updated": "2026-09-21T03:24:03Z",
+  "total_citations": 596,
   "h_index": 13,
-  "i10_index": 13,
+  "i10_index": 14,
   "publications": [
     {
       "rank": 1,
@@ -68,6 +68,16 @@
     },
     {
       "rank": 7,
+      "title": "Roadmap to human–machine interaction through triboelectric nanogenerator and machine learning convergence",
+      "authors": "A Babu, D Mandal",
+      "journal": "ACS Applied Energy Materials 7 (3), 822-833, 2024",
+      "year": "2024",
+      "citations": 34,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:u-x6o8ySG0sC",
+      "badges": []
+    },
+    {
+      "rank": 8,
       "title": "Deep learning enabled perceptive wearable sensor: an interactive gadget for tracking movement disorder",
       "authors": "A Babu, S Ranpariya, DK Sinha, D Mandal",
       "journal": "Advanced Materials Technologies 8 (14), 2300046, 2023",
@@ -77,16 +87,6 @@
       "badges": [
         "Hot Article"
       ]
-    },
-    {
-      "rank": 8,
-      "title": "Roadmap to human–machine interaction through triboelectric nanogenerator and machine learning convergence",
-      "authors": "A Babu, D Mandal",
-      "journal": "ACS Applied Energy Materials 7 (3), 822-833, 2024",
-      "year": "2024",
-      "citations": 33,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:u-x6o8ySG0sC",
-      "badges": []
     },
     {
       "rank": 9,
@@ -148,7 +148,7 @@
       "authors": "A Babu, S G. Ghatnekar, A Saxena, D Mandal",
       "journal": "APL Quantum 28 (DOI: 10.1063/5.0240894), 2025, 2025",
       "year": "2025",
-      "citations": 9,
+      "citations": 10,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:Zph67rFs4hoC",
       "badges": []
     },
