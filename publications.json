@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-28T03:44:28Z_CACHED",
-  "total_citations": 596,
+  "updated": "2026-09-29T04:19:25Z",
+  "total_citations": 599,
   "h_index": 13,
   "i10_index": 14,
   "publications": [
@@ -116,7 +116,7 @@
       "authors": "V Gupta, A Kumar, B Mondal, A Babu, S Ranpariya, DK Sinha, D Mandal",
       "journal": "ACS Sustainable Chemistry & Engineering 11 (16), 6173-6182, 2023",
       "year": "2023",
-      "citations": 24,
+      "citations": 25,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:Y0pCki6q_DkC",
       "badges": []
     },
@@ -184,6 +184,16 @@
     },
     {
       "rank": 18,
+      "title": "Artificial Intelligence Enabled Self-Powered Acoustics Sensing: From Energy Harvesting to Healthcare Monitoring",
+      "authors": "A Babu, A Šutka, D Mandal",
+      "journal": "Advanced Materials Technologies 1, 2026, 2026",
+      "year": "2026",
+      "citations": 5,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:qxL8FJ1GzNcC",
+      "badges": []
+    },
+    {
+      "rank": 19,
       "title": "Algorithmically Enhanced Wearable Multimodal Emotion Sensor",
       "authors": "A Babu, G Kassahun, I Dufour, D Mandal, D Thuau",
       "journal": "Advanced Intelligent Systems, DOI: 10.1002/aisy.202400567, 2025, 2025",
@@ -193,23 +203,13 @@
       "badges": []
     },
     {
-      "rank": 19,
+      "rank": 20,
       "title": "Can Entanglement-enhanced Quantum Kernels Improve Data Classification?",
       "authors": "A Babu, SG Ghatnekar, A Saxena, D Mandal",
       "journal": "arXiv preprint arXiv:2406.01948, 2024",
       "year": "2024",
       "citations": 5,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:LkGwnXOMwfcC",
-      "badges": []
-    },
-    {
-      "rank": 20,
-      "title": "Artificial Intelligence Enabled Self-Powered Acoustics Sensing: From Energy Harvesting to Healthcare Monitoring",
-      "authors": "A Babu, A Šutka, D Mandal",
-      "journal": "Advanced Materials Technologies 1, 2026, 2026",
-      "year": "2026",
-      "citations": 3,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:qxL8FJ1GzNcC",
       "badges": []
     },
     {
