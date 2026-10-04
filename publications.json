@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-03T03:51:24Z_CACHED",
-  "total_citations": 599,
+  "updated": "2026-10-04T04:22:50Z",
+  "total_citations": 601,
   "h_index": 13,
   "i10_index": 14,
   "publications": [
@@ -20,7 +20,7 @@
       "authors": "A Babu, P Malik, N Das, D Mandal",
       "journal": "Small 18 (22), 2201331, 2022",
       "year": "2022",
-      "citations": 73,
+      "citations": 74,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:Tyk-4Ss8FVUC",
       "badges": [
         "Hot Article"
@@ -32,7 +32,7 @@
       "authors": "B Mondal, HK Mishra, D Sengupta, A Kumar, A Babu, D Saini, V Gupta, ...",
       "journal": "Langmuir 38 (40), 12157-12172, 2022",
       "year": "2022",
-      "citations": 64,
+      "citations": 65,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:W7OEmFMy1HYC",
       "badges": []
     },
@@ -184,16 +184,6 @@
     },
     {
       "rank": 18,
-      "title": "Artificial Intelligence Enabled Self-Powered Acoustics Sensing: From Energy Harvesting to Healthcare Monitoring",
-      "authors": "A Babu, A Šutka, D Mandal",
-      "journal": "Advanced Materials Technologies 1, 2026, 2026",
-      "year": "2026",
-      "citations": 5,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:qxL8FJ1GzNcC",
-      "badges": []
-    },
-    {
-      "rank": 19,
       "title": "Algorithmically Enhanced Wearable Multimodal Emotion Sensor",
       "authors": "A Babu, G Kassahun, I Dufour, D Mandal, D Thuau",
       "journal": "Advanced Intelligent Systems, DOI: 10.1002/aisy.202400567, 2025, 2025",
@@ -203,13 +193,23 @@
       "badges": []
     },
     {
-      "rank": 20,
+      "rank": 19,
       "title": "Can Entanglement-enhanced Quantum Kernels Improve Data Classification?",
       "authors": "A Babu, SG Ghatnekar, A Saxena, D Mandal",
       "journal": "arXiv preprint arXiv:2406.01948, 2024",
       "year": "2024",
       "citations": 5,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:LkGwnXOMwfcC",
+      "badges": []
+    },
+    {
+      "rank": 20,
+      "title": "Artificial Intelligence Enabled Self-Powered Acoustics Sensing: From Energy Harvesting to Healthcare Monitoring",
+      "authors": "A Babu, A Šutka, D Mandal",
+      "journal": "Advanced Materials Technologies 1, 2026, 2026",
+      "year": "2026",
+      "citations": 4,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:qxL8FJ1GzNcC",
       "badges": []
     },
     {
@@ -234,22 +234,22 @@
     },
     {
       "rank": 23,
+      "title": "MEIDNet: Multimodal generative AI framework for inverse materials design",
+      "authors": "A Babu, RA Gouvêa, P Vandergheynst, GM Rignanese",
+      "journal": "npj Computational Materials, 2026",
+      "year": "2026",
+      "citations": 2,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:4DMP91E08xMC",
+      "badges": []
+    },
+    {
+      "rank": 24,
       "title": "Towards Automated Discovery: A Review of Generative Models, Multimodal Learning and Closed-Loop Workflows in Inverse Materials Design",
       "authors": "A Babu, RA Gouvêa, GM Rignanese",
       "journal": "arXiv preprint arXiv:2606.02507, 2026",
       "year": "2026",
       "citations": 1,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:Wp0gIr-vW9MC",
-      "badges": []
-    },
-    {
-      "rank": 24,
-      "title": "MEIDNet: Multimodal generative AI framework for inverse materials design",
-      "authors": "A Babu, RA Gouvêa, P Vandergheynst, GM Rignanese",
-      "journal": "npj Computational Materials, 2026",
-      "year": "2026",
-      "citations": 1,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:4DMP91E08xMC",
       "badges": []
     },
     {
