@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-09T04:38:33Z_CACHED",
-  "total_citations": 605,
+  "updated": "2026-10-10T04:24:32Z",
+  "total_citations": 606,
   "h_index": 13,
   "i10_index": 14,
   "publications": [
@@ -68,6 +68,18 @@
     },
     {
       "rank": 7,
+      "title": "Deep learning enabled perceptive wearable sensor: an interactive gadget for tracking movement disorder",
+      "authors": "A Babu, S Ranpariya, DK Sinha, D Mandal",
+      "journal": "Advanced Materials Technologies 8 (14), 2300046, 2023",
+      "year": "2023",
+      "citations": 35,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:2osOgNQ5qMEC",
+      "badges": [
+        "Hot Article"
+      ]
+    },
+    {
+      "rank": 8,
       "title": "Roadmap to human–machine interaction through triboelectric nanogenerator and machine learning convergence",
       "authors": "A Babu, D Mandal",
       "journal": "ACS Applied Energy Materials 7 (3), 822-833, 2024",
@@ -75,18 +87,6 @@
       "citations": 34,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:u-x6o8ySG0sC",
       "badges": []
-    },
-    {
-      "rank": 8,
-      "title": "Deep learning enabled perceptive wearable sensor: an interactive gadget for tracking movement disorder",
-      "authors": "A Babu, S Ranpariya, DK Sinha, D Mandal",
-      "journal": "Advanced Materials Technologies 8 (14), 2300046, 2023",
-      "year": "2023",
-      "citations": 34,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:2osOgNQ5qMEC",
-      "badges": [
-        "Hot Article"
-      ]
     },
     {
       "rank": 9,
@@ -286,7 +286,7 @@
       "rank": 28,
       "title": "Toward automated discovery with generative models multimodal learning and closed loop workflows in inverse materials design",
       "authors": "A Babu, RA Gouvêa, GM Rignanese",
-      "journal": "Cell Reports Physical Science 7 (10), 103561, 2026",
+      "journal": "Cell Reports Physical Science 7 (10), 2026",
       "year": "2026",
       "citations": 0,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:9ZlFYXVOiuMC",
