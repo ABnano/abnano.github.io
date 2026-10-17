@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-16T03:12:15Z_CACHED",
-  "total_citations": 606,
+  "updated": "2026-10-17T03:02:58Z",
+  "total_citations": 610,
   "h_index": 13,
   "i10_index": 14,
   "publications": [
@@ -116,7 +116,7 @@
       "authors": "V Gupta, A Kumar, B Mondal, A Babu, S Ranpariya, DK Sinha, D Mandal",
       "journal": "ACS Sustainable Chemistry & Engineering 11 (16), 6173-6182, 2023",
       "year": "2023",
-      "citations": 25,
+      "citations": 26,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:Y0pCki6q_DkC",
       "badges": []
     },
@@ -184,6 +184,16 @@
     },
     {
       "rank": 18,
+      "title": "Artificial Intelligence Enabled Self-Powered Acoustics Sensing: From Energy Harvesting to Healthcare Monitoring",
+      "authors": "A Babu, A Šutka, D Mandal",
+      "journal": "Advanced Materials Technologies 1, 2026, 2026",
+      "year": "2026",
+      "citations": 5,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:qxL8FJ1GzNcC",
+      "badges": []
+    },
+    {
+      "rank": 19,
       "title": "Algorithmically Enhanced Wearable Multimodal Emotion Sensor",
       "authors": "A Babu, G Kassahun, I Dufour, D Mandal, D Thuau",
       "journal": "Advanced Intelligent Systems, DOI: 10.1002/aisy.202400567, 2025, 2025",
@@ -193,7 +203,7 @@
       "badges": []
     },
     {
-      "rank": 19,
+      "rank": 20,
       "title": "Can Entanglement-enhanced Quantum Kernels Improve Data Classification?",
       "authors": "A Babu, SG Ghatnekar, A Saxena, D Mandal",
       "journal": "arXiv preprint arXiv:2406.01948, 2024",
@@ -203,22 +213,12 @@
       "badges": []
     },
     {
-      "rank": 20,
-      "title": "Artificial Intelligence Enabled Self-Powered Acoustics Sensing: From Energy Harvesting to Healthcare Monitoring",
-      "authors": "A Babu, A Šutka, D Mandal",
-      "journal": "Advanced Materials Technologies 1, 2026, 2026",
-      "year": "2026",
-      "citations": 4,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:qxL8FJ1GzNcC",
-      "badges": []
-    },
-    {
       "rank": 21,
       "title": "MEIDNet: Multimodal generative AI framework for inverse materials design",
       "authors": "A Babu, RA Gouvêa, P Vandergheynst, GM Rignanese",
       "journal": "npj Computational Materials, 2026",
       "year": "2026",
-      "citations": 3,
+      "citations": 4,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:4DMP91E08xMC",
       "badges": []
     },
@@ -244,6 +244,16 @@
     },
     {
       "rank": 24,
+      "title": "Toward automated discovery with generative models multimodal learning and closed loop workflows in inverse materials design",
+      "authors": "A Babu, RA Gouvêa, GM Rignanese",
+      "journal": "Cell Reports Physical Science 7 (10), 2026",
+      "year": "2026",
+      "citations": 1,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:9ZlFYXVOiuMC",
+      "badges": []
+    },
+    {
+      "rank": 25,
       "title": "Towards Automated Discovery: A Review of Generative Models, Multimodal Learning and Closed-Loop Workflows in Inverse Materials Design",
       "authors": "A Babu, RA Gouvêa, GM Rignanese",
       "journal": "arXiv preprint arXiv:2606.02507, 2026",
@@ -253,7 +263,7 @@
       "badges": []
     },
     {
-      "rank": 25,
+      "rank": 26,
       "title": "Emergence of Intelligent Photonic Technologies in Early Medical Diagnostics",
       "authors": "D Kumar, P Agarwal, A Babu",
       "journal": "Physica Status Solidi A: Applications and Materials Science 637, 1, 2025",
@@ -263,7 +273,7 @@
       "badges": []
     },
     {
-      "rank": 26,
+      "rank": 27,
       "title": "Curcumin Monoglucuronide Protects Cartilage from Progressive Degeneration by Blocking MMP-13",
       "authors": "HS Roy, K Chirag, KM Neethu, A Babu, M Arora, J Govindasamy, ...",
       "journal": "Archives of Pharmacal Research (ARPR) 1, 2025, 2025",
@@ -273,23 +283,13 @@
       "badges": []
     },
     {
-      "rank": 27,
+      "rank": 28,
       "title": "-PVDF Based Flexible Nanogenerator",
       "authors": "V Gupta, A Babu, SK Ghosh, Z Mallick, HK Mishra, D Mandal",
       "journal": "arXiv preprint arXiv:2108.09581, 2021",
       "year": "2021",
       "citations": 1,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:roLk4NBRz8UC",
-      "badges": []
-    },
-    {
-      "rank": 28,
-      "title": "Toward automated discovery with generative models multimodal learning and closed loop workflows in inverse materials design",
-      "authors": "A Babu, RA Gouvêa, GM Rignanese",
-      "journal": "Cell Reports Physical Science 7 (10), 2026",
-      "year": "2026",
-      "citations": 0,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:9ZlFYXVOiuMC",
       "badges": []
     },
     {
