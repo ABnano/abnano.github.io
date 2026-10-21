@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-20T03:28:00Z_CACHED",
-  "total_citations": 610,
+  "updated": "2026-10-21T03:22:26Z",
+  "total_citations": 611,
   "h_index": 13,
   "i10_index": 14,
   "publications": [
@@ -164,6 +164,16 @@
     },
     {
       "rank": 16,
+      "title": "Artificial Intelligence Enabled Self-Powered Acoustics Sensing: From Energy Harvesting to Healthcare Monitoring",
+      "authors": "A Babu, A Šutka, D Mandal",
+      "journal": "Advanced Materials Technologies 1, 2026, 2026",
+      "year": "2026",
+      "citations": 6,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:qxL8FJ1GzNcC",
+      "badges": []
+    },
+    {
+      "rank": 17,
       "title": "Machine Learning‐Enabled Nanoscale Phase Prediction in Engineered Poly (Vinylidene Fluoride)",
       "authors": "A Babu, BM Abraham, S Naskar, S Ranpariya, D Mandal",
       "journal": "Small 20 (51), 2405393, 2024",
@@ -173,23 +183,13 @@
       "badges": []
     },
     {
-      "rank": 17,
+      "rank": 18,
       "title": "Mott interactions driven insulating behaviour in ruthenium based double perovskites: A2SmRuO6 (A= Ba & Sr)",
       "authors": "S Dani, R Pandit, A Babu, R Kumar",
       "journal": "Journal of Alloys and Compounds 1006, 176184, 2024",
       "year": "2024",
       "citations": 6,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:kNdYIx-mwKoC",
-      "badges": []
-    },
-    {
-      "rank": 18,
-      "title": "Artificial Intelligence Enabled Self-Powered Acoustics Sensing: From Energy Harvesting to Healthcare Monitoring",
-      "authors": "A Babu, A Šutka, D Mandal",
-      "journal": "Advanced Materials Technologies 1, 2026, 2026",
-      "year": "2026",
-      "citations": 5,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:qxL8FJ1GzNcC",
       "badges": []
     },
     {
