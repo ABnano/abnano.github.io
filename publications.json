@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-27T03:46:23Z_CACHED",
-  "total_citations": 611,
+  "updated": "2026-10-28T04:03:28Z",
+  "total_citations": 622,
   "h_index": 13,
   "i10_index": 14,
   "publications": [
@@ -20,7 +20,7 @@
       "authors": "A Babu, P Malik, N Das, D Mandal",
       "journal": "Small 18 (22), 2201331, 2022",
       "year": "2022",
-      "citations": 74,
+      "citations": 75,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:Tyk-4Ss8FVUC",
       "badges": [
         "Hot Article"
@@ -68,25 +68,25 @@
     },
     {
       "rank": 7,
-      "title": "Deep learning enabled perceptive wearable sensor: an interactive gadget for tracking movement disorder",
-      "authors": "A Babu, S Ranpariya, DK Sinha, D Mandal",
-      "journal": "Advanced Materials Technologies 8 (14), 2300046, 2023",
-      "year": "2023",
-      "citations": 35,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:2osOgNQ5qMEC",
-      "badges": [
-        "Hot Article"
-      ]
-    },
-    {
-      "rank": 8,
       "title": "Roadmap to human–machine interaction through triboelectric nanogenerator and machine learning convergence",
       "authors": "A Babu, D Mandal",
       "journal": "ACS Applied Energy Materials 7 (3), 822-833, 2024",
       "year": "2024",
-      "citations": 34,
+      "citations": 36,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:u-x6o8ySG0sC",
       "badges": []
+    },
+    {
+      "rank": 8,
+      "title": "Deep learning enabled perceptive wearable sensor: an interactive gadget for tracking movement disorder",
+      "authors": "A Babu, S Ranpariya, DK Sinha, D Mandal",
+      "journal": "Advanced Materials Technologies 8 (14), 2300046, 2023",
+      "year": "2023",
+      "citations": 36,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:2osOgNQ5qMEC",
+      "badges": [
+        "Hot Article"
+      ]
     },
     {
       "rank": 9,
@@ -106,7 +106,7 @@
       "authors": "A Babu, E Raoul, G Kassahun, I Dufour, D Mandal, D Thuau",
       "journal": "Advanced Materials Technologies 9 (4), 2301551, 2024",
       "year": "2024",
-      "citations": 26,
+      "citations": 27,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:d1gkVwhDpl0C",
       "badges": []
     },
@@ -126,7 +126,7 @@
       "authors": "A Babu, V Gupta, D Mandal",
       "journal": "Applied Physics Letters 120 (9), 2022",
       "year": "2022",
-      "citations": 15,
+      "citations": 16,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:eQOLeE2rZwMC",
       "badges": []
     },
@@ -136,7 +136,7 @@
       "authors": "A Babu, D Thuau, D Mandal",
       "journal": "MRS Communications 13 (6), 1071-1075, 2023",
       "year": "2023",
-      "citations": 13,
+      "citations": 14,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:MXK_kJrjxJIC",
       "badges": [
         "Invited"
@@ -154,6 +154,16 @@
     },
     {
       "rank": 15,
+      "title": "Artificial Intelligence Enabled Self-Powered Acoustics Sensing: From Energy Harvesting to Healthcare Monitoring",
+      "authors": "A Babu, A Šutka, D Mandal",
+      "journal": "Advanced Materials Technologies 1, 2026, 2026",
+      "year": "2026",
+      "citations": 7,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:qxL8FJ1GzNcC",
+      "badges": []
+    },
+    {
+      "rank": 16,
       "title": "Self‐Learning e‐Skin Respirometer for Pulmonary Disease Detection",
       "authors": "A Babu, G Kassahun, I Dufour, D Mandal, D Thuau",
       "journal": "Advanced Sensor Research 3 (12), 2400079, 2024",
@@ -163,17 +173,17 @@
       "badges": []
     },
     {
-      "rank": 16,
-      "title": "Artificial Intelligence Enabled Self-Powered Acoustics Sensing: From Energy Harvesting to Healthcare Monitoring",
-      "authors": "A Babu, A Šutka, D Mandal",
-      "journal": "Advanced Materials Technologies 1, 2026, 2026",
-      "year": "2026",
+      "rank": 17,
+      "title": "Algorithmically Enhanced Wearable Multimodal Emotion Sensor",
+      "authors": "A Babu, G Kassahun, I Dufour, D Mandal, D Thuau",
+      "journal": "Advanced Intelligent Systems, DOI: 10.1002/aisy.202400567, 2025, 2025",
+      "year": "2025",
       "citations": 6,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:qxL8FJ1GzNcC",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:KlAtU1dfN6UC",
       "badges": []
     },
     {
-      "rank": 17,
+      "rank": 18,
       "title": "Machine Learning‐Enabled Nanoscale Phase Prediction in Engineered Poly (Vinylidene Fluoride)",
       "authors": "A Babu, BM Abraham, S Naskar, S Ranpariya, D Mandal",
       "journal": "Small 20 (51), 2405393, 2024",
@@ -183,23 +193,13 @@
       "badges": []
     },
     {
-      "rank": 18,
+      "rank": 19,
       "title": "Mott interactions driven insulating behaviour in ruthenium based double perovskites: A2SmRuO6 (A= Ba & Sr)",
       "authors": "S Dani, R Pandit, A Babu, R Kumar",
       "journal": "Journal of Alloys and Compounds 1006, 176184, 2024",
       "year": "2024",
       "citations": 6,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:kNdYIx-mwKoC",
-      "badges": []
-    },
-    {
-      "rank": 19,
-      "title": "Algorithmically Enhanced Wearable Multimodal Emotion Sensor",
-      "authors": "A Babu, G Kassahun, I Dufour, D Mandal, D Thuau",
-      "journal": "Advanced Intelligent Systems, DOI: 10.1002/aisy.202400567, 2025, 2025",
-      "year": "2025",
-      "citations": 5,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:KlAtU1dfN6UC",
       "badges": []
     },
     {
@@ -228,7 +228,7 @@
       "authors": "J Mahajan, S Dhingra, A Babu, AP Singh Rana, A Jaryal, C Bera, ...",
       "journal": "Journal of Materials Chemistry A 13 (44), 37962-37969, 2025",
       "year": "2025",
-      "citations": 3,
+      "citations": 4,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:4TOpqqG69KYC",
       "badges": []
     },
@@ -244,6 +244,16 @@
     },
     {
       "rank": 24,
+      "title": "Emergence of Intelligent Photonic Technologies in Early Medical Diagnostics",
+      "authors": "D Kumar, P Agarwal, A Babu",
+      "journal": "Physica Status Solidi A: Applications and Materials Science 637, 1, 2025",
+      "year": "2025",
+      "citations": 2,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:aqlVkmm33-oC",
+      "badges": []
+    },
+    {
+      "rank": 25,
       "title": "Toward automated discovery with generative models multimodal learning and closed loop workflows in inverse materials design",
       "authors": "A Babu, RA Gouvêa, GM Rignanese",
       "journal": "Cell Reports Physical Science 7 (10), 2026",
@@ -253,23 +263,13 @@
       "badges": []
     },
     {
-      "rank": 25,
+      "rank": 26,
       "title": "Towards Automated Discovery: A Review of Generative Models, Multimodal Learning and Closed-Loop Workflows in Inverse Materials Design",
       "authors": "A Babu, RA Gouvêa, GM Rignanese",
       "journal": "arXiv preprint arXiv:2606.02507, 2026",
       "year": "2026",
       "citations": 1,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:Wp0gIr-vW9MC",
-      "badges": []
-    },
-    {
-      "rank": 26,
-      "title": "Emergence of Intelligent Photonic Technologies in Early Medical Diagnostics",
-      "authors": "D Kumar, P Agarwal, A Babu",
-      "journal": "Physica Status Solidi A: Applications and Materials Science 637, 1, 2025",
-      "year": "2025",
-      "citations": 1,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:aqlVkmm33-oC",
       "badges": []
     },
     {
@@ -294,6 +294,16 @@
     },
     {
       "rank": 29,
+      "title": "Interpretable Machine Learning-Enabled Time-Resolved Speech Command Recognition Using Triboelectric Laminate Acoustic Sensors",
+      "authors": "A Babu, A Šutka, Y Lee, A Linarts, PC Sherrell, D Mandal, CK Jeong, ...",
+      "journal": "ACS Applied Electronic Materials, 2026",
+      "year": "2026",
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:QIV2ME_5wuYC",
+      "badges": []
+    },
+    {
+      "rank": 30,
       "title": "Multimodal and cross-modal learning techniques",
       "authors": "A Babu, NM Krishnan",
       "journal": "APL Machine Learning 4 (3), 2026",
@@ -303,7 +313,7 @@
       "badges": []
     },
     {
-      "rank": 30,
+      "rank": 31,
       "title": "Bias-controlled electrospinning for improved performance of electronic devices",
       "authors": "A Babu, D Mandal",
       "journal": "Energy Harvesting Properties of Electrospun Nanofibers (Second Edition), 2-27, 2025",
@@ -313,7 +323,7 @@
       "badges": []
     },
     {
-      "rank": 31,
+      "rank": 32,
       "title": "Programmable Polymeric‐Interface for Voiceprint Biometrics (Adv. Mater. Technol. 4/2024)",
       "authors": "A Babu, E Raoul, G Kassahun, I Dufour, D Mandal, D Thuau",
       "journal": "Advanced Materials Technologies 9 (4), 2470019, 2024",
@@ -323,7 +333,7 @@
       "badges": []
     },
     {
-      "rank": 32,
+      "rank": 33,
       "title": "Machine Learning Enabled Potential Approach for Cardiovascular Risks Prediction",
       "authors": "A Babu, D Mandal",
       "journal": "APS March Meeting Abstracts 2023, Q52. 006, 2023",
@@ -333,7 +343,7 @@
       "badges": []
     },
     {
-      "rank": 33,
+      "rank": 34,
       "title": "Machine Learning Enabled Intelligent Self-Powered Sensors for Next-Generation Electronic Devices",
       "authors": "A Babu, D Mandal",
       "journal": "APS April Meeting Abstracts 2023, Q12. 003, 2023",
@@ -343,7 +353,7 @@
       "badges": []
     },
     {
-      "rank": 34,
+      "rank": 35,
       "title": "Lead-Free and Highly Stable Cs3bi2i9-Pvdf Composite Based Piezoelectric Nanogenerator for Physiological Signal Monitoring and Piezo-Phototronic Aided Strained Modulated …",
       "authors": "B Mondal, HK Mishra, D Sengupta, A Kumar, A Babu, D Sahani, V Gupta, ...",
       "journal": "Available at SSRN 4130132, 0",
