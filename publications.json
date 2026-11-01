@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-31T04:07:49Z_CACHED",
-  "total_citations": 622,
+  "updated": "2026-11-01T04:28:54Z",
+  "total_citations": 625,
   "h_index": 13,
   "i10_index": 14,
   "publications": [
@@ -10,7 +10,7 @@
       "authors": "HK Mishra, V Gupta, K Roy, A Babu, A Kumar, D Mandal",
       "journal": "Nano Energy 95, 107052, 2022",
       "year": "2022",
-      "citations": 86,
+      "citations": 87,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:9yKSN-GCB0IC",
       "badges": []
     },
@@ -158,7 +158,7 @@
       "authors": "A Babu, A Šutka, D Mandal",
       "journal": "Advanced Materials Technologies 1, 2026, 2026",
       "year": "2026",
-      "citations": 7,
+      "citations": 8,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:qxL8FJ1GzNcC",
       "badges": []
     },
@@ -234,22 +234,22 @@
     },
     {
       "rank": 23,
+      "title": "Emergence of Intelligent Photonic Technologies in Early Medical Diagnostics",
+      "authors": "D Kumar, P Agarwal, A Babu",
+      "journal": "Physica Status Solidi A: Applications and Materials Science 637, 1, 2025",
+      "year": "2025",
+      "citations": 3,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:aqlVkmm33-oC",
+      "badges": []
+    },
+    {
+      "rank": 24,
       "title": "Futuristic Alzheimer's therapy: acoustic-stimulated piezoelectric nanospheres for amyloid reduction",
       "authors": "M Sharma, S Choudhury, A Babu, V Gupta, D Sengupta, SA Ali, ...",
       "journal": "Biomaterials Science 12 (7), 1801-1821, 2024",
       "year": "2024",
       "citations": 3,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:u5HHmVD_uO8C",
-      "badges": []
-    },
-    {
-      "rank": 24,
-      "title": "Emergence of Intelligent Photonic Technologies in Early Medical Diagnostics",
-      "authors": "D Kumar, P Agarwal, A Babu",
-      "journal": "Physica Status Solidi A: Applications and Materials Science 637, 1, 2025",
-      "year": "2025",
-      "citations": 2,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:aqlVkmm33-oC",
       "badges": []
     },
     {
