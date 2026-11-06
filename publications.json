@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-05T05:12:13Z",
-  "total_citations": 627,
+  "updated": "2026-11-06T05:11:30Z",
+  "total_citations": 628,
   "h_index": 13,
   "i10_index": 14,
   "publications": [
@@ -214,6 +214,16 @@
     },
     {
       "rank": 21,
+      "title": "Futuristic Alzheimer's therapy: acoustic-stimulated piezoelectric nanospheres for amyloid reduction",
+      "authors": "M Sharma, S Choudhury, A Babu, V Gupta, D Sengupta, SA Ali, ...",
+      "journal": "Biomaterials Science 12 (7), 1801-1821, 2024",
+      "year": "2024",
+      "citations": 5,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:u5HHmVD_uO8C",
+      "badges": []
+    },
+    {
+      "rank": 22,
       "title": "MEIDNet: Multimodal generative AI framework for inverse materials design",
       "authors": "A Babu, RA Gouvêa, P Vandergheynst, GM Rignanese",
       "journal": "npj Computational Materials, 2026",
@@ -223,23 +233,13 @@
       "badges": []
     },
     {
-      "rank": 22,
+      "rank": 23,
       "title": "Flexocatalytically driven water splitting: unprecedented hydrogen production using symmetry invariant ZnIn2S4 nanosheets",
       "authors": "J Mahajan, S Dhingra, A Babu, AP Singh Rana, A Jaryal, C Bera, ...",
       "journal": "Journal of Materials Chemistry A 13 (44), 37962-37969, 2025",
       "year": "2025",
       "citations": 4,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:4TOpqqG69KYC",
-      "badges": []
-    },
-    {
-      "rank": 23,
-      "title": "Futuristic Alzheimer's therapy: acoustic-stimulated piezoelectric nanospheres for amyloid reduction",
-      "authors": "M Sharma, S Choudhury, A Babu, V Gupta, D Sengupta, SA Ali, ...",
-      "journal": "Biomaterials Science 12 (7), 1801-1821, 2024",
-      "year": "2024",
-      "citations": 4,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J5UZz7sAAAAJ&pagesize=100&citation_for_view=J5UZz7sAAAAJ:u5HHmVD_uO8C",
       "badges": []
     },
     {
